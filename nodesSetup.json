@@ -7,7 +7,7 @@
   "metaChainMinNodes": 86,
   "hysteresis": 0.2,
   "adaptivity": false,
-  "chainID": "m-dry-run01",
+  "chainID": "v1.0.143",
   "minTransactionVersion": 1,
   "initialNodes": [
     {
