@@ -1,0 +1,79 @@
+#P2P config file
+
+#NodeConfig holds the P2P settings
+[Node]
+    #Port is the port that will be opened by the node on all interfaces so other peers can connect to it
+    #If the port = 0, the node will search for a free port on the machine and use it
+    Port = "37373-38383"
+
+    #Seed represents the seed string generator for p2p identity (used during authentication and message passing).
+    #An empty Seed value will mean that the identity will be generated randomly in a secure cryptographically manner.
+    #The seed provided in this string can be of any length.
+    #########################################################################################
+    # WARNING! FOR SECURITY REASONS, ONE MIGHT USE A GENERATED STRING AS LONG AS POSSIBLE!  #
+    # IT IS RECOMMENDED THAT THE SEED FIELD SHOULD REMAIN EMPTY (NO CHARACTERS BETWEEN "")  #
+    # THIS SEED WILL BE USED FOR P2P'S PRIVATE KEY GENERATION. SAME SEED USED WILL LEAD TO  #
+    # THE GENERATION OF THE SAME P2P IDENTITY.                                              #
+    # SPECIFY A SEED VALUE IF YOU KNOW WHAT YOU ARE DOING!                                  #
+    #########################################################################################
+    #The seed provided will be hashed using SHA256 and the resulting 32 byte length byte array will be used in
+    #p2p identity generation
+    Seed = ""
+
+# P2P peer discovery section
+
+#The following sections correspond to the way new peers will be discovered
+#If all config types are disabled then the peer will run in single mode (will not try to find other peers)
+#If more than one peer discovery mechanism is enabled, the application will output an error and will not start
+
+[KadDhtPeerDiscovery]
+    #Enabled: true/false to enable/disable this discovery mechanism
+    Enabled = true
+
+    #RefreshIntervalInSec represents the time in seconds between querying for new peers
+    RefreshIntervalInSec = 10
+
+    #ProtocolID represents the protocol that this node will advertize to other peers
+    #To connect to other nodes, those nodes should have the same ProtocolID string
+    ProtocolID = "/erd/kad/1.0.0"
+
+    #InitialPeerList represents the list of strings of some known nodes that will bootstrap this node
+    #The address will be in a self-describing addressing format.
+    #More can be found here: https://github.com/libp2p/specs/blob/master/3-requirements.md#34-transport-agnostic
+    #Example:
+    #   /ip6/fe80::8823:6dff:fee7:f172/tcp/4001/p2p/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+    #   /ip4/162.246.145.218/udp/4001/utp/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+    #   /ether/ac:fd:ec:0b:7c:fe/ipfs/QmYJyUMAcXEw1b5bFfbBbzYu5wyyjLMRHXGUkCXpag74Fu
+    #
+    #If the initial peers list is left empty, the node will not try to connect to other peers during initial bootstrap
+    #phase but will accept connections and will do the network discovery if another peer connects to it
+    InitialPeerList = [
+        "/dns4/gateway.battleofnodes.com/tcp/10000/p2p/16Uiu2HAmFKvSukM3DAHkLj2k9g5zn3ZSqdPSAwSxBPsKgiVSC8DF",
+        "/dns4/gateway2.battleofnodes.com/tcp/10000/p2p/16Uiu2HAmRe5mqP6M9pyP3df1FH3WPtHkshXdgiUy21FSV7fuJrWE",
+        "/dns4/gateway1.viastake.com/tcp/10000/p2p/16Uiu2HAmTFs3BbAFZxQDbRFdbtoa4V88gxKxEAa8SkL31hdqLSzT",
+        "/dns4/gateway.staking.agency/tcp/10000/p2p/16Uiu2HAmSyWJSM42KS7jQerCbrGiUxfpjwyofkJ7Xyfd4tT6Nmeb",
+        "/dns4/gateway.thepalmtree.network/tcp/10000/p2p/16Uiu2HAmC1LABZ7GcVW1gXAUW1rTKTHk4xTVE5DbFjv9E4NTNsEN",
+        "/dns4/gateway2.viastake.com/tcp/10000/p2p/16Uiu2HAmUANZLrwJgjajQHAYgyysvb6AvrfpuAUnzFDn44ycEJxp",
+        "/dns4/gateway3.viastake.com/tcp/10000/p2p/16Uiu2HAmF6N6t5kkzA6WD3wQQygZCJTk9hQzH3ncbC88sQymnbZd",
+        "/dns4/gateway4.viastake.com/tcp/10000/p2p/16Uiu2HAm7CffDbB6io6yyEKFU5DX5Q2NYZDJ5BZEvfrtbqLuzf88"
+    ]
+
+    #kademlia's routing table bucket size
+    BucketSize = 100
+
+    #RoutingTableRefreshIntervalInSec defines how many seconds should pass between 2 kad routing table auto refresh calls
+    RoutingTableRefreshIntervalInSec = 300
+
+[Sharding]
+    # The targeted number of peer connections
+    TargetPeerCount = 47
+    MaxIntraShardValidators = 25
+    MaxCrossShardValidators = 8
+    MaxIntraShardObservers = 7
+    MaxCrossShardObservers = 3
+    #available options:
+    #  `ListsSharder` will split the peers based on the shard membership (intra, cross or unknown)
+    #  `OneListSharder` will do just the connection triming (upto TargetPeerCount value) not taking into account
+    #              the shard membership of the connected peers
+    #  `NilListSharder` will disable conection trimming (sharder is off)
+    Type = "ListsSharder"
