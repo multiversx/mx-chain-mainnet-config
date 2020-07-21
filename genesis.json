@@ -1,19 +1,49 @@
 [
   {
     "address": "erd1d38r2x2kkq00gcg949wc4v8lryh33penffe8kuj03n3asmwjgw9qvl6rf6",
-    "supply": "315000000000000000000000",
+    "supply": "3500000000000000000000000",
     "balance": "0",
     "stakingvalue": "0",
     "delegation": {
       "address": "erd1qqqqqqqqqqqqqpgqcyx6ldw0smx5x3jfq98gz2ergr69lfa8gw9qa407zt",
-      "value": "315000000000000000000000"
+      "value": "3500000000000000000000000"
+    }
+  },
+  {
+    "address": "erd1t5f27wkcdknh332e3aytajv0lx6jsj4v8h7gng0fk7j85tnr33nqgpwzvy",
+    "supply": "25000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "25000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1qytnwyq9llfds0l7hq847hjf9l24d02ja42lka0pze5ayzcaap2sur038q",
+    "supply": "20000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "20000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1eg8syhxp8e0535zh8vny9z47f2esft2tm0m0a5wlhdgee8wx380s9kje85",
+    "supply": "60000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "60000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
     }
   },
   {
     "address": "erd1vjxcwcrhy2j9zes55zj3xxp32k0xwx00s4tzxkwf65h2ceyys83sfvgc6s",
-    "supply": "7500000000000000000000",
+    "supply": "10000000000000000000000",
     "balance": "0",
-    "stakingvalue": "7500000000000000000000",
+    "stakingvalue": "10000000000000000000000",
     "delegation": {
       "address": "",
       "value": "0"
@@ -40,6 +70,16 @@
     }
   },
   {
+    "address": "erd1qv37aya6m36n69enlpknptmqejuy26vr67d7jt5u7dhhav3du0cs4k5er6",
+    "supply": "25000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "25000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
     "address": "erd1pvruc096ph0f6cpd9cg2ukese5276kwjq398hf258avzgnpyxp9qgrr8zh",
     "supply": "37500000000000000000000",
     "balance": "0",
@@ -54,6 +94,16 @@
     "supply": "37500000000000000000000",
     "balance": "0",
     "stakingvalue": "37500000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd196zryqxtt2yte09nq4uappwktk5ah5400y76h7ktju7e48yummvsmw7n0k",
+    "supply": "22500000000000000000000",
+    "balance": "0",
+    "stakingvalue": "22500000000000000000000",
     "delegation": {
       "address": "",
       "value": "0"
@@ -110,6 +160,16 @@
     }
   },
   {
+    "address": "erd1ut2y69uszj35avvvrcdkcm00yglyntukpdp5j6c8gm7yu5vavzysqfvdyq",
+    "supply": "12500000000000000000000",
+    "balance": "0",
+    "stakingvalue": "12500000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
     "address": "erd1ce7lgfl20ht30gnunmcy0j0fue4njpqsu2e6me2j97urgd6w6cgqk9llpg",
     "supply": "2500000000000000000000",
     "balance": "0",
@@ -120,10 +180,20 @@
     }
   },
   {
-    "address": "erd1us4y3prdwpmpvlk7txne6z6xa3u7jgv6rqzl22awq5jrd68znu7sf987sg",
-    "supply": "7500000000000000000000",
+    "address": "erd1z07jlfme2vt28dzkmm3ns6ach9kghpq9h0j88hyzcch7humglxwqy2htk7",
+    "supply": "10000000000000000000000",
     "balance": "0",
-    "stakingvalue": "7500000000000000000000",
+    "stakingvalue": "10000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1us4y3prdwpmpvlk7txne6z6xa3u7jgv6rqzl22awq5jrd68znu7sf987sg",
+    "supply": "10000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "10000000000000000000000",
     "delegation": {
       "address": "",
       "value": "0"
@@ -281,6 +351,16 @@
   },
   {
     "address": "erd1w95dvysxdt68604xfsl6et8hhexkjvd3ngcvwtny6muvzwjlvtrqtv6qyy",
+    "supply": "5000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "5000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd12lwhrh9tpurg7pgn0vvdq8zll9guxzuf892vy6g44unxy2ycjn9qykwgfp",
     "supply": "2500000000000000000000",
     "balance": "0",
     "stakingvalue": "2500000000000000000000",
@@ -301,16 +381,6 @@
   },
   {
     "address": "erd1dec0der27khnjalze60sg6rcqt0pg4g7hkzulcs50d0r7hj2lkkq4ukydg",
-    "supply": "2500000000000000000000",
-    "balance": "0",
-    "stakingvalue": "2500000000000000000000",
-    "delegation": {
-      "address": "",
-      "value": "0"
-    }
-  },
-  {
-    "address": "erd1kdj3d4jhpsxz8fnugqtaf22svq65zs0x9tmawvtuwnktzypjaqss3wn0g0",
     "supply": "2500000000000000000000",
     "balance": "0",
     "stakingvalue": "2500000000000000000000",
@@ -361,6 +431,26 @@
   },
   {
     "address": "erd1urj2sck2pd3x3dmvyv0qhy6wgt2c2qcv4qj0vpj6dd47ucw4lxjqcweqlp",
+    "supply": "2500000000000000000000",
+    "balance": "0",
+    "stakingvalue": "2500000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1rsscxwgnjsckjfrncsjtvgzrf7sjjzwc8hn823plpezzx8yk4k4spcaj68",
+    "supply": "2500000000000000000000",
+    "balance": "0",
+    "stakingvalue": "2500000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd15kprlynkg6u75kv5f4q0fdy8sklz4n9clvq9eqpwn849j75rl45szsl03z",
     "supply": "2500000000000000000000",
     "balance": "0",
     "stakingvalue": "2500000000000000000000",
@@ -500,6 +590,36 @@
     }
   },
   {
+    "address": "erd1uc9ynefsed4mnf3ph78ncjwjma3g6mml94czkedsjy44v3lnlenqryvh9s",
+    "supply": "2500000000000000000000",
+    "balance": "0",
+    "stakingvalue": "2500000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1lulwpf9xmqm3q2lqsur8xxt64vtpjenysrn3pym3fyz0yx73nr2s7zyefe",
+    "supply": "62500000000000000000000",
+    "balance": "0",
+    "stakingvalue": "62500000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1p4dvcrh95g56u4ya4kgrldauhs0cpdn3nz2f7qhavywjt4qk389s7fk7f6",
+    "supply": "65000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "65000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
     "address": "erd1yr4zev3fdfcp9fq4plvv6wmzqvqtmpp08aazeayq7837qw6cfnhq43xy4n",
     "supply": "7500000000000000000000",
     "balance": "0",
@@ -600,10 +720,30 @@
     }
   },
   {
+    "address": "erd1e58m2hjv2c5mwsf9n59gq9nxfanpvfcccacv9jtzeqfjvtrkjy2q0nhcy4",
+    "supply": "15000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "15000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
     "address": "erd1c2a8h27wdxy593w4n4fa9phrt0lxlkd776p409xsvszk5qnj7hkq6tlff5",
     "supply": "5000000000000000000000",
     "balance": "0",
     "stakingvalue": "5000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd1swh5qrs64xg2z04mdxjrg2r33gskdyt38s2efqu6asdc0v273t4qpjp3ss",
+    "supply": "25000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "25000000000000000000000",
     "delegation": {
       "address": "",
       "value": "0"
@@ -731,9 +871,19 @@
   },
   {
     "address": "erd1klsfa5fn2kuqlkh7e9alqxlln4earpqhjdezfpvulumk6d2fnnaqk5njtc",
-    "supply": "20000000000000000000000",
+    "supply": "25000000000000000000000",
     "balance": "0",
-    "stakingvalue": "20000000000000000000000",
+    "stakingvalue": "25000000000000000000000",
+    "delegation": {
+      "address": "",
+      "value": "0"
+    }
+  },
+  {
+    "address": "erd14d8p8nyykmvyvv7ce9akdts5t9za6vvkly3hszp9lajw98wf6deq39auf0",
+    "supply": "25000000000000000000000",
+    "balance": "0",
+    "stakingvalue": "25000000000000000000000",
     "delegation": {
       "address": "",
       "value": "0"
@@ -771,8 +921,8 @@
   },
   {
     "address": "erd1932eft30w753xyvme8d49qejgkjc09n5e49w4mwdjtm0neld797su0dlxp",
-    "supply": "9461250000000000000000000",
-    "balance": "9461250000000000000000000",
+    "supply": "7675000000000000000000000",
+    "balance": "7675000000000000000000000",
     "stakingvalue": "0",
     "delegation": {
       "address": "",
@@ -781,8 +931,8 @@
   },
   {
     "address": "erd1sea63y47u569ns3x5mqjf4vnygn9whkk7p6ry4rfpqyd6rd5addqyd9lf2",
-    "supply": "9461250000000000000000000",
-    "balance": "9461250000000000000000000",
+    "supply": "7675000000000000000000000",
+    "balance": "7675000000000000000000000",
     "stakingvalue": "0",
     "delegation": {
       "address": "",
