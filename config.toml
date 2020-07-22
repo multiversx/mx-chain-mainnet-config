@@ -440,6 +440,7 @@
 [TxSignMarshalizer]
    Type = "tx-json"
 
+# TODO: change this config to real numbers before merging to development
 [EpochStartConfig]
     MinRoundsBetweenEpochs = 1200
     RoundsPerEpoch         = 1200
