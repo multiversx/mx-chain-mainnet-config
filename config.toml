@@ -11,6 +11,12 @@
    # available in local disk
    StartInEpochEnabled = true
 
+   # DisableDeploy represents the flag to enable/disable deployment of smart contracts
+   DisableDeploy = true
+
+   # DisableBuiltInFunctions represents the flag to enable/disable built in functions calls
+   DisableBuiltInFunctions = true
+
 [StoragePruning]
    # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
    Enabled = true
@@ -438,12 +444,12 @@
 
 # The marshalizer used in transaction signing
 [TxSignMarshalizer]
-   Type = "tx-json"
+   Type = "json"
 
 # TODO: change this config to real numbers before merging to development
 [EpochStartConfig]
-    MinRoundsBetweenEpochs = 1200
-    RoundsPerEpoch         = 1200
+    MinRoundsBetweenEpochs = 14400
+    RoundsPerEpoch         = 14400
     # ShuffledOutRestartThreshold represents the maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
     ShuffledOutRestartThreshold = 0.25
@@ -516,7 +522,7 @@
 [Hardfork]
     EnableTrigger = true
     EnableTriggerFromP2P = true
-    PublicKeyToListenFrom = "d6d32e28f2df244624eeaccf5e08f7a6c617a6c948e4a42e19c1b6f68ea0c77eba3ee10501e179f788455d7e77c3cf082bc9a7a4fa8f136a25497189a37d10bc6826cc3ed5da714f6c931bce5af271e5d558e3b8142ad1e367fd95a4c7f88c11"
+    PublicKeyToListenFrom = "36fab427918bd1f86b9fc1a0f5a800753df3322ceb9f06d20245bc15b6ad5a356c246a66a1f1858da2e281e9324cd912a28eb4c759823bdf22a7f9521329fb2c5ffb74097da65b0f7824463e29c2dd19e4d28d7ea3232726b68314d2897b7204"
 	CloseAfterExportInMinutes = 10000
 	AfterHardFork = false
 	ImportFolder = "export"
@@ -603,6 +609,28 @@
     FolderPath = "health-records"
 
 [SoftwareVersionConfig]
-    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-go/releases/latest"
+    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-config-mainnet/releases/latest"
     PollingIntervalInMinutes = 65
 
+[FullHistory]
+    Enabled = false
+    [FullHistory.HistoryTransactionStorageConfig.Cache]
+        Name = "FullHistory.HistoryTransactionsConfig"
+        Capacity = 20000
+        Type = "LRU"
+    [FullHistory.HistoryTransactionStorageConfig.DB]
+        FilePath = "FullHistory.HistoryTransactions/MainDB"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 20000
+        MaxOpenFiles = 10
+    [FullHistory.HashEpochStorageConfig.Cache]
+        Name = "HashEpochStorage"
+        Capacity = 20000
+        Type = "LRU"
+    [FullHistory.HashEpochStorageConfig.DB]
+        FilePath = "HashEpochDB"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 20000
+        MaxOpenFiles = 10
