@@ -450,12 +450,11 @@
 [EpochStartConfig]
     MinRoundsBetweenEpochs = 14400
     RoundsPerEpoch         = 14400
-    # ShuffledOutRestartThreshold represents the maximum duration of an epoch (in percentage) after a node which
+    # Min and Max ShuffledOutRestartThreshold represents the minimum and maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
-    ShuffledOutRestartThreshold = 0.25
+    MinShuffledOutRestartThreshold = 0.01
+    MaxShuffledOutRestartThreshold = 0.05
 
-    # ShuffleBetweenShards enables the shuffling of validators between shards at the end of epoch
-    ShuffleBetweenShards = true
     MinNumConnectedPeersToStart       = 6
     MinNumOfPeersToConsiderBlockValid = 6
 
@@ -522,13 +521,14 @@
 [Hardfork]
     EnableTrigger = true
     EnableTriggerFromP2P = true
-    PublicKeyToListenFrom = "36fab427918bd1f86b9fc1a0f5a800753df3322ceb9f06d20245bc15b6ad5a356c246a66a1f1858da2e281e9324cd912a28eb4c759823bdf22a7f9521329fb2c5ffb74097da65b0f7824463e29c2dd19e4d28d7ea3232726b68314d2897b7204"
+    PublicKeyToListenFrom = "6a02b93375e78aed4e0e3369ef2182dfc060eea01df640eacc5eca5f759f62c8271fbbf90863e896e2453384118be20179433cb1dfc1bd8df962c80f3da94ea42dffaf70025b6fd6a5b4814bc4b15cf6751c990fe21d392f1bc88c15bd354a8c"
 	CloseAfterExportInMinutes = 10000
 	AfterHardFork = false
 	ImportFolder = "export"
 	StartRound = 10000
 	StartNonce = 10000
 	StartEpoch = 100
+	GenesisTime = 0
 	ValidatorGracePeriodInEpochs = 1 #defines how long is the rating computation disabled after hardfork
 	[Hardfork.ExportStateStorageConfig]
 	    [Hardfork.ExportStateStorageConfig.Cache]
