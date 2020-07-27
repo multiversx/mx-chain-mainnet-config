@@ -446,13 +446,12 @@
 [TxSignMarshalizer]
    Type = "json"
 
-# TODO: change this config to real numbers before merging to development
 [EpochStartConfig]
     MinRoundsBetweenEpochs = 14400
     RoundsPerEpoch         = 14400
     # ShuffledOutRestartThreshold represents the maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
-    ShuffledOutRestartThreshold = 0.25
+    ShuffledOutRestartThreshold = 0.08 #TODO resolve here the conflict, make the interval [0.001 - 0.04]
 
     # ShuffleBetweenShards enables the shuffling of validators between shards at the end of epoch
     ShuffleBetweenShards = true
