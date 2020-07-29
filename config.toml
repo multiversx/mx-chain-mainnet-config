@@ -17,6 +17,12 @@
    # DisableBuiltInFunctions represents the flag to enable/disable built in functions calls
    DisableBuiltInFunctions = true
 
+   # DisableRelayedTx represents the flag to enable/disable relayed transaction standard
+   DisableRelayedTx = false
+
+   # GenesisString represents the encoded string for the genesis block
+   GenesisString = "457468657265756d2c2077697468206974732072656c656e746c657373206162696c69747920746f2061646170742c206e657665722063656173657320746f20616d617a652e20496e697469616c6c792c2074686520617474656d7074206f6e20737465616c696e67207468652063726f776e2066726f6d20426974636f696e2e"
+
 [StoragePruning]
    # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
    Enabled = true

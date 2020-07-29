@@ -35,7 +35,7 @@
 
     #ProtocolID represents the protocol that this node will advertize to other peers
     #To connect to other nodes, those nodes should have the same ProtocolID string
-    ProtocolID = "/erd/kad/1.0.148"
+    ProtocolID = "/erd/kad/1.1.0"
 
     #InitialPeerList represents the list of strings of some known nodes that will bootstrap this node
     #The address will be in a self-describing addressing format.
@@ -48,14 +48,10 @@
     #If the initial peers list is left empty, the node will not try to connect to other peers during initial bootstrap
     #phase but will accept connections and will do the network discovery if another peer connects to it
     InitialPeerList = [
-        "/dns4/gateway.battleofnodes.com/tcp/10000/p2p/16Uiu2HAmFKvSukM3DAHkLj2k9g5zn3ZSqdPSAwSxBPsKgiVSC8DF",
-        "/dns4/gateway2.battleofnodes.com/tcp/10000/p2p/16Uiu2HAmRe5mqP6M9pyP3df1FH3WPtHkshXdgiUy21FSV7fuJrWE",
-        "/dns4/gateway1.viastake.com/tcp/10000/p2p/16Uiu2HAmTFs3BbAFZxQDbRFdbtoa4V88gxKxEAa8SkL31hdqLSzT",
-        "/dns4/gateway.staking.agency/tcp/10000/p2p/16Uiu2HAmSyWJSM42KS7jQerCbrGiUxfpjwyofkJ7Xyfd4tT6Nmeb",
-        "/dns4/gateway.thepalmtree.network/tcp/10000/p2p/16Uiu2HAmC1LABZ7GcVW1gXAUW1rTKTHk4xTVE5DbFjv9E4NTNsEN",
-        "/dns4/gateway2.viastake.com/tcp/10000/p2p/16Uiu2HAmUANZLrwJgjajQHAYgyysvb6AvrfpuAUnzFDn44ycEJxp",
-        "/dns4/gateway3.viastake.com/tcp/10000/p2p/16Uiu2HAmF6N6t5kkzA6WD3wQQygZCJTk9hQzH3ncbC88sQymnbZd",
-        "/dns4/gateway4.viastake.com/tcp/10000/p2p/16Uiu2HAm7CffDbB6io6yyEKFU5DX5Q2NYZDJ5BZEvfrtbqLuzf88"
+        "/dns4/gondor.mainnet.elrond.com/tcp/10000/p2p/16Uiu2HAmQihd2Di6JrDCRf6bnxXEmgfFy8C3S7WDnq7WNXscfkrG",
+        "/dns4/isengard.mainnet.elrond.com/tcp/10000/p2p/16Uiu2HAkxWoEwkkxMfUgi2CkxjWkZ7cccjvh4V57gxUQQC6c45N6",
+        "/ip4/188.166.192.50/tcp/10000/p2p/16Uiu2HAmT2rqgzWYnFe7YL4poyjXvKhGtrwkhaAibSDFCjGATDZ7",
+        "/ip4/188.166.203.198/tcp/10000/p2p/16Uiu2HAmJeuEEczm6kLyBKAJQobVn7ARmGFQ5mPrbNVsjdhJz9s1",
     ]
 
     #kademlia's routing table bucket size
@@ -66,7 +62,7 @@
 
 [Sharding]
     # The targeted number of peer connections
-    TargetPeerCount = 47
+    TargetPeerCount = 48
     MaxIntraShardValidators = 25
     MaxCrossShardValidators = 8
     MaxIntraShardObservers = 7
