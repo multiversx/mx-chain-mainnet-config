@@ -12,5 +12,5 @@
 
 # elrond-config for mainnet
 
-Elrond testnet configuration files used in conjunction with elrond-go project. 
-For more info how to connect to the testnet, please check [docs.elrond.com](https://docs.elrond.com/start-a-validator-node/start-the-network)
+Elrond mainnet configuration files used in conjunction with elrond-go project. 
+For more info how to connect to the mainnet, please check [docs.elrond.com](https://docs.elrond.com/start-a-validator-node/start-the-network)
