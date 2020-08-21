@@ -33,6 +33,9 @@
         # /address/:address/balance will return the balance of a given account
         { Name = "/:address/balance", Open = true },
 
+        # /address/:address/username will return the username of a given account
+        { Name = "/:address/username", Open = true },
+
         # /address/:address/key/:key will return the value of a key for a given account
         { Name = "/:address/key/:key", Open = true }
 	]
@@ -85,6 +88,10 @@
          # /transaction/send will receive a single transaction in JSON format and will propagate it through the network
          # if it's fields are valid. It will return the hash of the transaction
         { Name = "/send", Open = true },
+
+        # /transaction/simulate will receive a single transaction in JSON format and will simulate it's execution
+        # in order to check that it will be successfully executed when sending it for propagation
+        { Name = "/simulate", Open = false },
 
          # /transaction/send-multiple will receive an array of transactions in JSON format and will propagate through
          # the network those whose fields are valid. It will return the number of valid transactions propagated
