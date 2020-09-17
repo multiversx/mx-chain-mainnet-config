@@ -1,6 +1,6 @@
 [StakingSystemSCConfig]
-    GenesisNodePrice = "2500000000000000000000" #2.5KERD
-    MinStakeValue = "100000000000000000000" #100ERD
+    GenesisNodePrice = "2500000000000000000000" #2.5K eGLD
+    MinStakeValue = "100000000000000000000" #100 eGLD
     UnBondPeriod = 144000
     MinStepValue = "100000000000000000000"
     AuctionEnableNonce = 100000000000
@@ -14,12 +14,12 @@
     ActivateBLSPubKeyMessageVerification = false
 
 [ESDTSystemSCConfig]
-    BaseIssuingCost = "5000000000000000000" #5ERD
+    BaseIssuingCost = "5000000000000000000" #5 eGLD
     OwnerAddress = "erd1ze6pgefwc7mdx0rhje3h50kkgt26ut3gx8ytezndkz8fjcf96gsqsd7ugw"
     Disabled = true
 
 [GovernanceSystemSCConfig]
-	ProposalCost = "5000000000000000000" #5ERD
+	ProposalCost = "5000000000000000000" #5 eGLD
 	NumNodes     = 500
 	MinQuorum    = 400
 	MinPassThreshold = 300
