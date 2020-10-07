@@ -19,9 +19,9 @@
     EnabledEpoch = 100000000000
 
 [GovernanceSystemSCConfig]
-	ProposalCost = "5000000000000000000" #5 eGLD
-	NumNodes     = 500
-	MinQuorum    = 400
-	MinPassThreshold = 300
-	MinVetoThreshold = 50
+    ProposalCost = "5000000000000000000" #5 eGLD
+    NumNodes     = 500
+    MinQuorum    = 400
+    MinPassThreshold = 300
+    MinVetoThreshold = 50
     EnabledEpoch = 100000000000
