@@ -24,8 +24,8 @@
     ProtocolSustainabilityAddress = "erd135enn78u7fy352ny9mcl26a08wvu02mjdumfkt7cn587cwtnerksagqsfm"
 
 [FeeSettings]
-    MaxGasLimitPerBlock     = "1500000000"
-    MaxGasLimitPerMetaBlock = "15000000000"
+    MaxGasLimitPerBlock     = "750000000"
+    MaxGasLimitPerMetaBlock = "7500000000"
     MinGasPrice = "1000000000" #will yield min tx fee of 0.00005 eGLD
     MinGasLimit = "50000"
     GasPerDataByte = "1500"
