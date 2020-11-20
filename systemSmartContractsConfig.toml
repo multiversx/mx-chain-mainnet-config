@@ -4,7 +4,7 @@
     UnBondPeriod = 144000
     MinStepValue = "100000000000000000000"
     AuctionEnableEpoch = 1000000
-    StakeEnableEpoch = 1000000
+    StakeEnableEpoch = 124
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
     BleedPercentagePerRound = 0.00001
