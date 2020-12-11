@@ -11,7 +11,7 @@
     MaxNumberOfNodesForStake = 2169
     NodesToSelectInAuction = 2169
     UnJailValue = "2500000000000000000" #0.1% of genesis node price
-    ActivateBLSPubKeyMessageVerification = false
+    ActivateBLSPubKeyMessageVerification = true
 
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
