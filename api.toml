@@ -37,7 +37,13 @@
         { Name = "/:address/username", Open = true },
 
         # /address/:address/key/:key will return the value of a key for a given account
-        { Name = "/:address/key/:key", Open = true }
+        { Name = "/:address/key/:key", Open = true },
+
+        # /address/:address/esdt will return the list of esdt tokens for a given account
+        { Name = "/:address/esdt", Open = true },
+
+        # /address/:address/esdt/:tokenName will return data of an esdt token for a given account
+        { Name = "/:address/esdt/:tokenIdentifier", Open = true }
 	]
 
 [APIPackages.hardfork]
@@ -50,6 +56,9 @@
 	Routes = [
          # /network/status will return metrics related to current status of the chain (epoch, nonce, round)
         { Name = "/status", Open = true },
+
+        # /network/total-staked will return total staked value
+        { Name = "/total-staked", Open = true },
 
         # /network/economics will return all economics related metrics
         { Name = "/economics", Open = true },
