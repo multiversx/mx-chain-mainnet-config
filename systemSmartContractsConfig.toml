@@ -6,13 +6,13 @@
     MinStepValue = "100000000000000000000"
     StakeEnableEpoch = 124
     StakingV2Epoch = 1000000
-    DoubleKeyProtectionEnableEpoch = 1000000
+    DoubleKeyProtectionEnableEpoch = 180
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
     BleedPercentagePerRound = 0.00001
     MaxNumberOfNodesForStake = 2169
     UnJailValue = "2500000000000000000" #0.1% of genesis node price
-    ActivateBLSPubKeyMessageVerification = false
+    ActivateBLSPubKeyMessageVerification = true
 
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
