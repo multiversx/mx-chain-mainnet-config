@@ -373,7 +373,7 @@
     Name = "SmartContractDataPool"
     Capacity = 900000
     Type = "SizeLRU"
-    SizeInBytes = 209715200 #400MB
+    SizeInBytes = 209715200 #200MB
 
 [WhiteListPool]
     Name = "WhiteListPool"
