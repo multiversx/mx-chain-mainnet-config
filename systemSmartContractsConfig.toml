@@ -5,7 +5,7 @@
     UnBondPeriod = 144000
     MinStepValue = "100000000000000000000"
     StakeEnableEpoch = 124
-    StakingV2Epoch = 1000000
+    StakingV2Epoch = 235
     DoubleKeyProtectionEnableEpoch = 180
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
@@ -28,12 +28,12 @@
     EnabledEpoch = 1000000
 
 [DelegationManagerSystemSCConfig]
-    BaseIssuingCost = "0" #0 eGLD
     MinCreationDeposit = "1250000000000000000000" #1.25K eGLD
-    EnabledEpoch = 1000000 #enable epoch should not be 0
+    EnabledEpoch = 235
+    MinStakeAmount = "1000000000000000000" #1 eGLD
+    ConfigChangeAddress = "erd1qqkw02dns8zne3huamcmd5l3jkswqs2s9m7cncfd2vfhgq75s65qf5rfa6"
 
 [DelegationSystemSCConfig]
-    MinStakeAmount = "10000000000000000000" #10 eGLD
-    EnabledEpoch   = 1000000 #enable epoch should not be 0
+    EnabledEpoch   = 235
     MinServiceFee  = 0
     MaxServiceFee  = 10000
