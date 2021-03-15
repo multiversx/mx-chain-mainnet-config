@@ -31,7 +31,7 @@
     MinCreationDeposit = "1250000000000000000000" #1.25K eGLD
     EnabledEpoch = 235
     MinStakeAmount = "1000000000000000000" #1 eGLD
-    ConfigChangeAddress = "erd1qqkw02dns8zne3huamcmd5l3jkswqs2s9m7cncfd2vfhgq75s65qf5rfa6"
+    ConfigChangeAddress = "erd1qqqqqqqqqqqqqpgq0gq09608js3gje72v0yzc56k6glc852gl94sgtahk2"
 
 [DelegationSystemSCConfig]
     EnabledEpoch   = 235
