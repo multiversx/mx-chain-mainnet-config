@@ -35,7 +35,7 @@
 
    # TransactionSignedWithTxHashEnableEpoch represents the epoch when the node will also accept transactions that are
    # signed with the hash of transaction
-   TransactionSignedWithTxHashEnableEpoch = 235
+   TransactionSignedWithTxHashEnableEpoch = 239
 
    # MetaProtectionEnableEpoch represents the epoch when the transactions to the metachain are checked to have enough gas
    MetaProtectionEnableEpoch = 180
@@ -47,10 +47,10 @@
    GasPriceModifierEnableEpoch = 180
 
    # RepairCallbackEnableEpoch represents the epoch when the callback repair is activated for scrs
-   RepairCallbackEnableEpoch = 235
+   RepairCallbackEnableEpoch = 239
 
    # BlockGasAndFeesReCheckEnableEpoch represents the epoch when gas and fees used in each created or processed block are re-checked
-   BlockGasAndFeesReCheckEnableEpoch = 235
+   BlockGasAndFeesReCheckEnableEpoch = 239
 
    # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
    MaxNodesChangeEnableEpoch = [
@@ -78,7 +78,7 @@
     GasScheduleByEpochs = [
         { StartEpoch = 0, FileName = "gasScheduleV1.toml" },
         { StartEpoch = 180, FileName = "gasScheduleV2.toml" },
-        { StartEpoch = 235, FileName = "gasScheduleV3.toml" },
+        { StartEpoch = 239, FileName = "gasScheduleV3.toml" },
     ]
 
 [StoragePruning]
