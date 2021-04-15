@@ -7,7 +7,7 @@
     MinStepValue = "100000000000000000000"
     StakeEnableEpoch = 124
     StakingV2Epoch = 239
-    CorrectLastUnjailedEpoch = 1000000
+    CorrectLastUnjailedEpoch = 1000000 #TODO change this
     DoubleKeyProtectionEnableEpoch = 180
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
@@ -19,7 +19,7 @@
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
     OwnerAddress = "erd1ze6pgefwc7mdx0rhje3h50kkgt26ut3gx8ytezndkz8fjcf96gsqsd7ugw"
-    EnabledEpoch = 1000000
+    EnabledEpoch = 1000000 #TODO change this
 
 [GovernanceSystemSCConfig]
     ProposalCost = "5000000000000000000" #5 eGLD

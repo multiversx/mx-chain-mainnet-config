@@ -52,6 +52,19 @@
    # BlockGasAndFeesReCheckEnableEpoch represents the epoch when gas and fees used in each created or processed block are re-checked
    BlockGasAndFeesReCheckEnableEpoch = 239
 
+   # ReturnDataToLastTransferEnableEpoch represents the epoch when returned data is added to last output transfer for callbacks
+   ReturnDataToLastTransferEnableEpoch = 1000000 #TODO change this
+
+   # ArwenESDTFunctionsEnableEpoch represents the epoch when the new ESDT functions are enabled in arwen
+   ArwenESDTFunctionsEnableEpoch = 1000000 #TODO change this
+
+   # SenderInOutTransferEnableEpoch represents the epoch when the feature of having different senders in output transfer is enabled
+   SenderInOutTransferEnableEpoch = 1000000 #TODO change this
+
+   # BalanceWaitingListsEnableEpoch represents the epoch when the shard waiting lists are balanced at the start of an epoch
+   BalanceWaitingListsEnableEpoch = 1000000 #TODO change this
+
+   # TO BE CHANGED IN MAINNET AND PUBLIC TESTNET CONFIGS
    # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
    MaxNodesChangeEnableEpoch = [
         { EpochEnable = 0, MaxNumNodes = 2169, NodesToShufflePerShard = 143 },
@@ -371,9 +384,9 @@
 
 [TrieNodesDataPool]
     Name = "TrieNodesDataPool"
-    Capacity = 900000
+    Capacity = 300000
     Type = "SizeLRU"
-    SizeInBytes = 314572800 #300MB
+    SizeInBytes = 104857600 #100MB
 
 [SmartContractDataPool]
     Name = "SmartContractDataPool"
@@ -778,5 +791,7 @@
     LogFileLifeSpanInSec = 86400
 
 [TrieSync]
-    NumConcurrentTrieSyncers  = 2000
-    MaxHardCapForMissingNodes = 500
+    NumConcurrentTrieSyncers  = 200
+    MaxHardCapForMissingNodes = 5000
+    #available versions: 1 and 2. 1 is the initial version, 2 is updated, more efficient version
+    TrieSyncerVersion         = 2
