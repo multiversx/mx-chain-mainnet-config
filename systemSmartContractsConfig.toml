@@ -9,6 +9,7 @@
     StakingV2Epoch = 239
     CorrectLastUnjailedEpoch = 272
     DoubleKeyProtectionEnableEpoch = 180
+    UnbondTokensV2EnableEpoch = 1000000
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
     BleedPercentagePerRound = 0.00001
