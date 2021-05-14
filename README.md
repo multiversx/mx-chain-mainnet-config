@@ -26,3 +26,4 @@ CONFIG_FOLDER=path/to/folder/with/pem/file
 docker run --mount type=bind,source=${CONFIG_FOLDER}/,destination=/data elrond-node-image-last --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG
 ```
 
+
