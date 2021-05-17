@@ -4,7 +4,7 @@ cd ..
 
 # build docker image
 IMAGE_NAME=elrond-node-image-test
-docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
+#docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
 
 # generate a new BLS key
 OUTPUT_FOLDER=~/output/keys
@@ -55,4 +55,7 @@ export -f check_nonce_grows
 
 TIMEOUT_DURATION=10m
 timeout ${TIMEOUT_DURATION}  bash -c check_nonce_grows
+# stop docker container
+CONTAINER_ID=$(docker ps -q  --filter ancestor=${IMAGE_NAME})
+docker stop "${CONTAINER_ID}"
 
