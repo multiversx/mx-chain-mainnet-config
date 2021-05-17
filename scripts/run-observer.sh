@@ -1,10 +1,10 @@
 #!/bin/bash
-
+SHARD=metachain
 cd ..
 
 # build docker image
 IMAGE_NAME=elrond-node-image-test
-#docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
+docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
 
 # generate a new BLS key
 OUTPUT_FOLDER=~/output/keys
@@ -15,7 +15,7 @@ fi
 
 ## run docker image
 PORT=8080
-gnome-terminal -- docker run -p 8080:${PORT} --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save
+gnome-terminal -- docker run -p 8080:${PORT} --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save --destination-shard-as-observer=${SHARD}
 
 # check network status
 export ADDRESS_WITH_ROUTE=http://localhost:${PORT}/network/status
