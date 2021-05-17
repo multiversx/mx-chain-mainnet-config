@@ -31,7 +31,7 @@ fi
 
 
 check_nonce_grows() {
-  export FIRST_TIME=0
+  FIRST_TIME=0
   PREVIOUS_NONCE=0
   RE='^[0-9]+$'
   while true
@@ -46,7 +46,7 @@ check_nonce_grows() {
     if [ "${CURRENT_NONCE}" -gt 0 ]; then
       # check if is first time when current nonce is greater than zero
       if [ "${FIRST_TIME}" -eq 0 ]; then
-        export FIRST_TIME=1
+        FIRST_TIME=1
         PREVIOUS_NONCE=${CURRENT_NONCE}
         sleep 4s
         continue
