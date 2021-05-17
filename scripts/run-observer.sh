@@ -15,7 +15,7 @@ fi
 
 ## run docker image
 PORT=8080
-gnome-terminal -- docker run -p 8080:${PORT} --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save --destination-shard-as-observer=${SHARD}
+docker run -d -p 8080:${PORT} --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save --destination-shard-as-observer=${SHARD}
 
 export ADDRESS_WITH_ROUTE=http://localhost:${PORT}/network/status
 
