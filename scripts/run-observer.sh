@@ -26,7 +26,7 @@ check_nonce_grows() {
   RE='^[0-9]+$'
   while true
   do
-    CURRENT_NONCE=$(curl ${ADDRESS_WITH_ROUTE} | jq '.data["status"]["erd_nonce"]')
+    CURRENT_NONCE=$(curl -s ${ADDRESS_WITH_ROUTE} | jq '.data["status"]["erd_nonce"]')
     #check if the current nonce is number
     if ! [[ ${CURRENT_NONCE} =~ ${RE} ]] ; then
        sleep 4s
