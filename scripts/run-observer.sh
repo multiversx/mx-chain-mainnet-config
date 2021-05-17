@@ -34,6 +34,7 @@ check_nonce_grows() {
   FIRST_TIME=0
   PREVIOUS_NONCE=0
   RE='^[0-9]+$'
+  echo "node is running...wait for the tree to be synced"
   while true
   do
     CURRENT_NONCE=$(curl -s ${ADDRESS_WITH_ROUTE} | jq '.data["status"]["erd_nonce"]')
