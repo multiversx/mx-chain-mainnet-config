@@ -30,4 +30,4 @@ COPY --from=builder "/go/elrond-go/cmd/node" "/go/elrond-go/cmd/node/"
 COPY --from=builder "/lib/libwasmer_linux_amd64.so" "/lib/libwasmer_linux_amd64.so"
 WORKDIR /go/elrond-go/cmd/node/
 EXPOSE 8080
-ENTRYPOINT ["/go/elrond-go/cmd/node/node", "--rest-api-interface=0.0.0.0:8080"]
+ENTRYPOINT ["/go/elrond-go/cmd/node/node", "--rest-api-interface=:8080"]
