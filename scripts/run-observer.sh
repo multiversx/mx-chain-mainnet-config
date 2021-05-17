@@ -2,7 +2,7 @@
 
 cd ..
 
-build docker image
+# build docker image
 IMAGE_NAME=elrond-node-image-test
 docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
 
@@ -18,7 +18,7 @@ PORT=8080
 gnome-terminal -- docker run -p 8080:${PORT} --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save
 
 # check network status
-ADDRESS_WITH_ROUTE=http://localhost:${PORT}/network/status
+export ADDRESS_WITH_ROUTE=http://localhost:${PORT}/network/status
 
 check_nonce_grows() {
   FIRST_TIME=0
