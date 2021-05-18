@@ -2,8 +2,16 @@
 SHARD=metachain
 cd ..
 
+TAG_FROM_BINARY=$(cat binaryVersion)
+#check if the tag binaryVersion file exits on the github
+TAG_EXITS=$(git ls-remote https://github.com/ElrondNetwork/elrond-go.git refs/"${TAG_FROM_BINARY}")
+if [ -z "${TAG_EXITS}" ]; then
+      echo "tag from binaryVersion file(${TAG_FROM_BINARY}) does not exit"
+      exit 1
+fi
+
 # build docker image
-IMAGE_NAME=elrond-node-image-test
+export IMAGE_NAME=elrond-node-image-test
 docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
 
 # generate a new BLS key
@@ -37,6 +45,13 @@ check_nonce_grows() {
   echo "node is running...wait for the tree to be synced"
   while true
   do
+    #check if container is running
+    CONTAINER_ID=$(docker ps -q  --filter ancestor=${IMAGE_NAME})
+    if [ -z "${CONTAINER_ID}" ]; then
+      echo "node is not running"
+      exit 1
+    fi
+
     CURRENT_NONCE=$(curl -s ${ADDRESS_WITH_ROUTE} | jq '.data["status"]["erd_nonce"]')
     #check if the current nonce is number
     if ! [[ ${CURRENT_NONCE} =~ ${RE} ]] ; then
@@ -53,7 +68,7 @@ check_nonce_grows() {
         continue
       fi
       if [ "${CURRENT_NONCE}" -gt "${PREVIOUS_NONCE}" ]; then
-        echo "node is syncing... nonce is growing"
+        echo "node is syncing... nonce is increasing"
         break
       fi
       PREVIOUS_NONCE=${CURRENT_NONCE}
@@ -67,6 +82,10 @@ export -f check_nonce_grows
 TIMEOUT_DURATION=10m
 timeout ${TIMEOUT_DURATION}  bash -c check_nonce_grows
 EXIT_STATUS=$?
+if [ ${EXIT_STATUS} -eq 1 ]; then
+  exit 1
+fi
+
 # stop docker container
 CONTAINER_ID=$(docker ps -q  --filter ancestor=${IMAGE_NAME})
 docker stop "${CONTAINER_ID}"
