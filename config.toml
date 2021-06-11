@@ -55,9 +55,6 @@
    # ReturnDataToLastTransferEnableEpoch represents the epoch when returned data is added to last output transfer for callbacks
    ReturnDataToLastTransferEnableEpoch = 272
 
-   # ArwenESDTFunctionsEnableEpoch represents the epoch when the new ESDT functions are enabled in arwen
-   ArwenESDTFunctionsEnableEpoch = 272
-
    # SenderInOutTransferEnableEpoch represents the epoch when the feature of having different senders in output transfer is enabled
    SenderInOutTransferEnableEpoch = 272
 
@@ -68,7 +65,7 @@
    SaveJailedAlwaysEnableEpoch = 319
 
    # WaitingListFixEnableEpoch represents the epoch when the 6 epoch waiting list fix is enabled
-   WaitingListFixEnableEpoch = 319
+   WaitingListFixEnableEpoch = 1000000
 
    # TO BE CHANGED IN MAINNET AND PUBLIC TESTNET CONFIGS
    # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
@@ -644,17 +641,17 @@
 
 [VirtualMachine]
     [VirtualMachine.Execution]
-        OutOfProcessEnabled = false
-        [VirtualMachine.Execution.OutOfProcessConfig]
-            LogsMarshalizer = "json"
-            MessagesMarshalizer = "json"
-            MaxLoopTime = 1000
+        ArwenVersions = [
+            { StartEpoch = 0, Version = "v1.2" },
+            { StartEpoch = 326, Version = "v1.3" },
+        ]
+
     [VirtualMachine.Querying]
         NumConcurrentVMs = 1
-        [VirtualMachine.Querying.OutOfProcessConfig]
-            LogsMarshalizer = "json"
-            MessagesMarshalizer = "json"
-            MaxLoopTime = 10000
+        ArwenVersions = [
+            { StartEpoch = 0, Version = "v1.2" },
+            { StartEpoch = 326, Version = "v1.3" },
+        ]
 
 [Hardfork]
     EnableTrigger = true
