@@ -23,12 +23,13 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
-      - name: "Build image"
+      - name: Build image
         run: |
           TAG_VERSION=${{ steps.get_version.outputs.VERSION }}
           cd ${GITHUB_WORKSPACE} && docker build -t "${REGISTRY_HOSTNAME}/${IMAGE_NODE}:${TAG_VERSION}" -f ./docker/Dockerfile .
-      - name: "Push image"
+      - name: Push image
         run: |
-          docker login --username lucianmincu --password ${{ secrets.DOCKERHUB_TOKEN }}
+          docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_TOKEN }}
           TAG_VERSION=${{ steps.get_version.outputs.VERSION }}
           docker push "${REGISTRY_HOSTNAME}/${IMAGE_NODE}:${TAG_VERSION}"
+          docker logout
