@@ -16,7 +16,7 @@ WORKDIR /go/elrond-go/cmd/node
 RUN go build -i -v -ldflags="-X main.appVersion=$(git describe --tags --long --dirty)"
 RUN cp /go/pkg/mod/github.com/!elrond!network/arwen-wasm-vm@$(cat /go/elrond-go/go.mod | grep arwen-wasm-vm | sed 's/.* //' | tail -n 1)/wasmer/libwasmer_linux_amd64.so /lib/libwasmer_linux_amd64.so
 
-WORKDIR /go/elrond-go/config
+WORKDIR /config
 RUN cp -r * /go/elrond-go/cmd/node/config/
 
 WORKDIR /go/elrond-go/cmd/node
