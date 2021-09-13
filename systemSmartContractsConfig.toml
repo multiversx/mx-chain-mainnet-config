@@ -5,11 +5,6 @@
     UnBondPeriod = 144000
     UnBondPeriodInEpochs = 10
     MinStepValue = "100000000000000000000"
-    StakeEnableEpoch = 124
-    StakingV2Epoch = 239
-    CorrectLastUnjailedEpoch = 272
-    DoubleKeyProtectionEnableEpoch = 180
-    UnbondTokensV2EnableEpoch = 319
     NumRoundsWithoutBleed = 100
     MaximumPercentageToBleed = 0.5
     BleedPercentagePerRound = 0.00001
@@ -20,25 +15,26 @@
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
     OwnerAddress = "erd1ze6pgefwc7mdx0rhje3h50kkgt26ut3gx8ytezndkz8fjcf96gsqsd7ugw"
-    EnabledEpoch = 272
 
 [GovernanceSystemSCConfig]
-    ProposalCost = "5000000000000000000" #5 eGLD
-    NumNodes     = 500
-    MinQuorum    = 400
-    MinPassThreshold = 300
-    MinVetoThreshold = 50
-    EnabledEpoch = 1000000
+    FirstWhitelistedAddress = "erd1vxy22x0fj4zv6hktmydg8vpfh6euv02cz4yg0aaws6rrad5a5awqgqky80" #should use a multisign contract instead of a wallet address
+    [GovernanceSystemSCConfig.V1]
+        NumNodes           = 500
+        ProposalCost       = "5000000000000000000" #5 eGLD
+        MinQuorum          = 400
+        MinPassThreshold   = 300
+        MinVetoThreshold   = 50
+    [GovernanceSystemSCConfig.Active]
+        ProposalCost       = "5000000000000000000" #5 eGLD
+        MinQuorum          = "500000000000" # MinQuorum is equal to 10*sqrt(NodePrice)
+        MinPassThreshold   = "251000000000"
+        MinVetoThreshold   = "249000000000"
 
 [DelegationManagerSystemSCConfig]
     MinCreationDeposit = "1250000000000000000000" #1.25K eGLD
-    EnabledEpoch = 239
     MinStakeAmount = "1000000000000000000" #1 eGLD
     ConfigChangeAddress = "erd1qqqqqqqqqqqqqpgq0gq09608js3gje72v0yzc56k6glc852gl94sgtahk2"
-    ReDelegateBelowMinCheckEnableEpoch = 319
-    ValidatorToDelegationEnableEpoch = 319
 
 [DelegationSystemSCConfig]
-    EnabledEpoch   = 239
     MinServiceFee  = 0
     MaxServiceFee  = 10000
