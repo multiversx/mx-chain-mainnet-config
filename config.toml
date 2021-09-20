@@ -710,8 +710,8 @@
         ExtraPrintsOnShuffleOut = true
         DoProfileOnShuffleOut = true
     [Debug.EpochStart]
-        GoRoutineAnalyserEnabled = true
-        ProcessDataTrieOnCommitEpoch = true
+        GoRoutineAnalyserEnabled = false
+        ProcessDataTrieOnCommitEpoch = false
 
 [Health]
     IntervalVerifyMemoryInSeconds = 5
