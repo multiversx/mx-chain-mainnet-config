@@ -741,6 +741,7 @@
 
 [DbLookupExtensions]
     Enabled = false
+    DbLookupMaxActivePersisters = 10
     [DbLookupExtensions.MiniblocksMetadataStorageConfig.Cache]
         Name = "DbLookupExtensions.MiniblocksMetadataStorage"
         Capacity = 20000
@@ -787,6 +788,16 @@
         Type = "LRU"
     [DbLookupExtensions.ESDTSuppliesStorageConfig.DB]
         FilePath = "DbLookupExtensions_ESDTSupplies"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 20000
+        MaxOpenFiles = 10
+    [DbLookupExtensions.RoundHashStorageConfig.Cache]
+        Name = "DbLookupExtensions.RoundHashStorage"
+        Capacity = 20000
+        Type = "LRU"
+    [DbLookupExtensions.RoundHashStorageConfig.DB]
+        FilePath = "DbLookupExtensions_RoundHash"
         Type = "LvlDBSerial"
         BatchDelaySeconds = 2
         MaxBatchSize = 20000
