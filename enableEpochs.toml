@@ -117,6 +117,33 @@
     # BackwardCompSaveKeyValueEnableEpoch represents the epoch when the backward compatibility for save key value error is enabled
     BackwardCompSaveKeyValueEnableEpoch = 427
 
+    # ESDTNFTCreateOnMultiShard represents the epoch when esdt nft creation is enabled on multiple shards
+    ESDTNFTCreateOnMultiShard = 457
+
+    # MetaESDTSetEnableEpoch represents the epoch when the backward compatibility for save key value error is enabled
+    MetaESDTSetEnableEpoch = 457
+
+    # AddTokensToDelegationEnableEpoch represents the epoch when adding tokens to delegation is enabled for whitelisted address
+    AddTokensToDelegationEnableEpoch = 457
+
+    # MultiESDTTransferFixOnCallBackOnEnableEpoch represents the epoch when multi esdt transfer on callback fix is enabled
+    MultiESDTTransferFixOnCallBackOnEnableEpoch = 457
+
+    # OptimizeGasUsedInCrossMiniBlocksEnableEpoch represents the epoch when gas used in cross shard mini blocks will be optimized
+    OptimizeGasUsedInCrossMiniBlocksEnableEpoch = 457
+
+    # CorrectFirstQueuedEpoch represents the epoch when the backward compatibility for setting the first queued node is enabled
+    CorrectFirstQueuedEpoch = 457
+
+    # DeleteDelegatorAfterClaimRewardsEnableEpoch represents the epoch when the delegators data is deleted for delegators that have to claim rewards after they widrawal all funds
+    DeleteDelegatorAfterClaimRewardsEnableEpoch = 457
+
+    # FixOOGReturnCodeEnableEpoch represents the epoch when the backward compatibility returning out of gas error is enabled
+    FixOOGReturnCodeEnableEpoch = 457
+
+    # RemoveNonUpdatedStorageEnableEpoch represents the epoch when the backward compatibility for removing non updated storage is enabled
+    RemoveNonUpdatedStorageEnableEpoch = 457
+
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
         { EpochEnable = 0, MaxNumNodes = 2169, NodesToShufflePerShard = 143 },
@@ -128,4 +155,5 @@
         { StartEpoch = 0, FileName = "gasScheduleV1.toml" },
         { StartEpoch = 180, FileName = "gasScheduleV2.toml" },
         { StartEpoch = 239, FileName = "gasScheduleV3.toml" },
+        { StartEpoch = 457, FileName = "gasScheduleV4.toml" },
     ]
