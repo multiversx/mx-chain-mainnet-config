@@ -4,7 +4,7 @@ cd ..
 
 TAG_FROM_BINARY=$(cat binaryVersion)
 #check if the tag binaryVersion file exits on the github
-TAG_EXITS=$(git ls-remote https://github.com/ElrondNetwork/elrond-go.git refs/"${TAG_FROM_BINARY}")
+TAG_EXITS=$(git ls-remote https://github.com/ElrondNetwork/elrond-go.git "${TAG_FROM_BINARY}")
 if [ -z "${TAG_EXITS}" ]; then
       echo "tag from binaryVersion file(${TAG_FROM_BINARY}) does not exit"
       exit 1
