@@ -480,7 +480,7 @@
 
     [Antiflood.PeerMaxOutput]
         BaseMessagesPerInterval  = 75
-        TotalSizePerInterval     = 2097152 #2MB/s
+        TotalSizePerInterval     = 4194304 #4MB/s
 
     [Antiflood.Cache]
         Name = "Antiflood"
