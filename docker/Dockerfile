@@ -1,4 +1,4 @@
-FROM golang:1.15.7 as builder
+FROM golang:1.17.6 as builder
 MAINTAINER ElrondNetwork
 
 RUN apt-get update && apt-get install -y
@@ -9,7 +9,6 @@ COPY . .
 WORKDIR /go
 RUN git clone https://github.com/ElrondNetwork/elrond-go.git && cd elrond-go && git checkout --force $(cat /config/binaryVersion)
 WORKDIR /go/elrond-go
-RUN GO111MODULE=on go mod vendor
 
 #Elrond node
 WORKDIR /go/elrond-go/cmd/node
