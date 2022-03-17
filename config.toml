@@ -1,63 +1,70 @@
 # GeneralSettings section of the node
 [GeneralSettings]
-   # StatusPollingIntervalSec represents the no of seconds between multiple polling for the status for AppStatusHandler
-   StatusPollingIntervalSec = 2
+    # StatusPollingIntervalSec represents the no of seconds between multiple polling for the status for AppStatusHandler
+    StatusPollingIntervalSec = 2
 
-   # MaxComputableRounds represents the max number of rounds computable in a round
-   # by the validator statistics processor
-   MaxComputableRounds = 100
+    # MaxComputableRounds represents the max number of rounds computable in a round
+    # by the validator statistics processor
+    MaxComputableRounds = 100
 
-   # StartInEpochEnabled represents that the fast bootstrap mechanism from the network is enabled if data is not
-   # available in local disk
-   StartInEpochEnabled = true
+    # StartInEpochEnabled represents that the fast bootstrap mechanism from the network is enabled if data is not
+    # available in local disk
+    StartInEpochEnabled = true
 
-   # ChainID identifies the blockChain
-   ChainID = "1"
+    # ChainID identifies the blockChain
+    ChainID = "1"
 
-   # MinTransactionVersion represents the minimum transaction version accepted
-   MinTransactionVersion = 1
+    # MinTransactionVersion represents the minimum transaction version accepted
+    MinTransactionVersion = 1
 
-   # GenesisString represents the encoded string for the genesis block
-   GenesisString = "546f207369676e69666963616e746c7920616363656c657261746520616c6c20746563686e6f6c6f676965732c20616e64207261646963616c6c7920696d70726f766520736f63696574792c2068756d616e6974792077696c6c206861766520746f206d69677261746520746f206120706f737420736361726369747920776f726c642e20456c726f6e642069732074686520666972737420636f6d706c65746520736f6c7574696f6e20746861742077696c6c20617474656d707420616e64206163686965766520746869732e0a0a54686520666f756e64696e67207465616d206f6620456c726f6e642069733a0a42656e69616d696e204d696e63750a4c756369616e204d696e63750a4c756369616e20546f6465610a41647269616e20446f62726974610a526f6265727420536173750a5261647520436869730a49756c69616e2050617363616c61750a53656261737469616e204d617269616e0a416e64726569204d6172696e6963610a437269737469616e20436f72636f7665616e750a44616e20566f6963750a44616e69656c20536572620a0a4e6f7461626c6520636f6e7472696275746f72733a0a42656e69616d696e20447261736f7665616e0a46656c69782043726973616e0a436f6e7374616e74696e20546f766973690a43616d696c2042616e63696f69750a416e647265692042616e63696f69750a416e64726569204164616d0a5365766572204d6f6c646f7665616e"
+    # GenesisString represents the encoded string for the genesis block
+    GenesisString = "546f207369676e69666963616e746c7920616363656c657261746520616c6c20746563686e6f6c6f676965732c20616e64207261646963616c6c7920696d70726f766520736f63696574792c2068756d616e6974792077696c6c206861766520746f206d69677261746520746f206120706f737420736361726369747920776f726c642e20456c726f6e642069732074686520666972737420636f6d706c65746520736f6c7574696f6e20746861742077696c6c20617474656d707420616e64206163686965766520746869732e0a0a54686520666f756e64696e67207465616d206f6620456c726f6e642069733a0a42656e69616d696e204d696e63750a4c756369616e204d696e63750a4c756369616e20546f6465610a41647269616e20446f62726974610a526f6265727420536173750a5261647520436869730a49756c69616e2050617363616c61750a53656261737469616e204d617269616e0a416e64726569204d6172696e6963610a437269737469616e20436f72636f7665616e750a44616e20566f6963750a44616e69656c20536572620a0a4e6f7461626c6520636f6e7472696275746f72733a0a42656e69616d696e20447261736f7665616e0a46656c69782043726973616e0a436f6e7374616e74696e20546f766973690a43616d696c2042616e63696f69750a416e647265692042616e63696f69750a416e64726569204164616d0a5365766572204d6f6c646f7665616e"
 
-   # GenesisMaxNumberOfShards represents the maximum number of shards to be created at genesis (excluding metaChain shard)
-   GenesisMaxNumberOfShards  = 3
+    # GenesisMaxNumberOfShards represents the maximum number of shards to be created at genesis (excluding metaChain shard)
+    GenesisMaxNumberOfShards  = 3
+
+    # MaxConsecutiveRoundsOfRatingDecrease represents the max number of consecutive rounds in which a block is not proposed
+    # on a shard and the validators' rating could be decreased. If, for instance, a shard gets stuck for more rounds
+    # than this value, then the validators rating decrease should stop so they won't get jailed
+    MaxConsecutiveRoundsOfRatingDecrease = 600
 
 [Versions]
-   DefaultVersion = "default"
-   VersionsByEpochs = [
-       { StartEpoch = 0, Version = "*" },
-   ]
-   [Versions.Cache]
+    DefaultVersion = "default"
+    VersionsByEpochs = [
+        { StartEpoch = 0, Version = "*" },
+        # The value of StartEpoch parameter for version 2 should be the same with the ScheduledMiniBlocksEnableEpoch flag from enableEpoch.toml file
+        { StartEpoch = 603, Version = "2" },
+    ]
+    [Versions.Cache]
         Name = "VersionsCache"
         Capacity = 100
         Type = "LRU"
 
 [StoragePruning]
-   # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
-   Enabled = true
+    # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
+    Enabled = true
 
-   # If this flag is set to false, the node won't delete any database between epochs
-   # Applicable only for validators
-   ValidatorCleanOldEpochsData = true
+    # If this flag is set to false, the node won't delete any database between epochs
+    # Applicable only for validators
+    ValidatorCleanOldEpochsData = true
 
-   # If this flag is set to false, the node won't delete any database between epochs
-   # Applicable only for observers
-   ObserverCleanOldEpochsData = false
+    # If this flag is set to false, the node won't delete any database between epochs
+    # Applicable only for observers
+    ObserverCleanOldEpochsData = false
 
-   # NumEpochsToKeep - if the flag above is set to true, this will set the number of epochs to keep in the storage.
-   # Epochs older that (current epoch - NumOfEpochsToKeep) will be removed
-   NumEpochsToKeep = 4
+    # NumEpochsToKeep - if the flag above is set to true, this will set the number of epochs to keep in the storage.
+    # Epochs older that (current epoch - NumOfEpochsToKeep) will be removed
+    NumEpochsToKeep = 4
 
-   # NumActivePersisters - this will set the number of persisters to keep active at a moment. This works even if
-   # the node removes old epochs data or not. In case of a node which removes old epochs data, this value has to be
-   # smaller or equal to the NumOfEpochsToKeep flag
-   NumActivePersisters = 3
+    # NumActivePersisters - this will set the number of persisters to keep active at a moment. This works even if
+    # the node removes old epochs data or not. In case of a node which removes old epochs data, this value has to be
+    # smaller or equal to the NumOfEpochsToKeep flag
+    NumActivePersisters = 3
 
-   # FullArchiveNumActivePersisters represents the number of persisters to be kept in cache as to allow better response
-   # to inquiring peers. This value will get multiplied by the number of persisters required by the node to function so
-   # it is a good idea to increase the maximum number of opened files allowed by the operating system
-   FullArchiveNumActivePersisters = 10
+    # FullArchiveNumActivePersisters represents the number of persisters to be kept in cache as to allow better response
+    # to inquiring peers. This value will get multiplied by the number of persisters required by the node to function so
+    # it is a good idea to increase the maximum number of opened files allowed by the operating system
+    FullArchiveNumActivePersisters = 10
 
 [MiniBlocksStorage]
     [MiniBlocksStorage.Cache]
@@ -80,6 +87,19 @@
         SizeInBytes = 10485760 #10MB
     [ReceiptsStorage.DB]
         FilePath = "Receipts"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 100
+        MaxOpenFiles = 10
+
+[ScheduledSCRsStorage]
+    [ScheduledSCRsStorage.Cache]
+        Name = "ScheduledSCRsStorage"
+        Capacity = 1000
+        Type = "SizeLRU"
+        SizeInBytes = 10485760 #10MB
+    [ScheduledSCRsStorage.DB]
+        FilePath = "ScheduledSCRs"
         Type = "LvlDBSerial"
         BatchDelaySeconds = 2
         MaxBatchSize = 100
@@ -266,6 +286,32 @@
         MaxBatchSize = 100
         MaxOpenFiles = 10
 
+[AccountsTrieStorageOld]
+    [AccountsTrieStorageOld.Cache]
+        Name = "AccountsTrieStorage"
+        Capacity = 500000
+        Type = "SizeLRU"
+        SizeInBytes = 52428800 #50MB
+    [AccountsTrieStorageOld.DB]
+        FilePath = "AccountsTrie/MainDB"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 45000
+        MaxOpenFiles = 10
+
+[PeerAccountsTrieStorageOld]
+    [PeerAccountsTrieStorageOld.Cache]
+        Name = "PeerAccountsTrieStorage"
+        Capacity = 5000
+        Type = "SizeLRU"
+        SizeInBytes = 52428800 #50MB
+    [PeerAccountsTrieStorageOld.DB]
+        FilePath = "PeerAccountsTrie/MainDB"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 1000
+        MaxOpenFiles = 10
+
 [AccountsTrieStorage]
     [AccountsTrieStorage.Cache]
         Name = "AccountsTrieStorage"
@@ -273,10 +319,49 @@
         Type = "SizeLRU"
         SizeInBytes = 314572800 #300MB
     [AccountsTrieStorage.DB]
-        FilePath = "AccountsTrie/MainDB"
+        FilePath = "AccountsTrie"
         Type = "LvlDBSerial"
         BatchDelaySeconds = 2
         MaxBatchSize = 45000
+        MaxOpenFiles = 10
+
+[PeerAccountsTrieStorage]
+    [PeerAccountsTrieStorage.Cache]
+        Name = "PeerAccountsTrieStorage"
+        Capacity = 5000
+        Type = "SizeLRU"
+        SizeInBytes = 104857600 #100MB
+    [PeerAccountsTrieStorage.DB]
+        FilePath = "PeerAccountsTrie"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 1000
+        MaxOpenFiles = 10
+
+[AccountsTrieCheckpointsStorage]
+    [AccountsTrieCheckpointsStorage.Cache]
+        Name = "AccountsTrieCheckpointsStorage"
+        Capacity = 100000
+        Type = "SizeLRU"
+        SizeInBytes = 52428800 #50MB
+    [AccountsTrieCheckpointsStorage.DB]
+        FilePath = "AccountsTrieCheckpoints"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 45000
+        MaxOpenFiles = 10
+
+[PeerAccountsTrieCheckpointsStorage]
+    [PeerAccountsTrieCheckpointsStorage.Cache]
+        Name = "PeerAccountsTrieCheckpointsStorage"
+        Capacity = 10000
+        Type = "SizeLRU"
+        SizeInBytes = 52428800 #50MB
+    [PeerAccountsTrieCheckpointsStorage.DB]
+        FilePath = "PeerAccountsTrieCheckpoints"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 1000
         MaxOpenFiles = 10
 
 [EvictionWaitingList]
@@ -291,31 +376,19 @@
         MaxOpenFiles = 10
 
 [TrieSnapshotDB]
-     FilePath = "TrieSnapshot"
-     Type = "LvlDBSerial"
-     BatchDelaySeconds = 2
-     MaxBatchSize = 40000
-     MaxOpenFiles = 10
+    FilePath = "TrieSnapshot"
+    Type = "LvlDBSerial"
+    BatchDelaySeconds = 2
+    MaxBatchSize = 40000
+    MaxOpenFiles = 10
 
 [TrieStorageManagerConfig]
     PruningBufferLen = 100000
     SnapshotsBufferLen = 1000000
+    SnapshotsGoroutineNum = 200
     MaxSnapshots = 3
     KeepSnapshots = false
     CheckpointHashesHolderMaxSize = 52428800 #50MB
-
-[PeerAccountsTrieStorage]
-    [PeerAccountsTrieStorage.Cache]
-        Name = "PeerAccountsTrieStorage"
-        Capacity = 5000
-        Type = "SizeLRU"
-        SizeInBytes = 104857600 #100MB
-    [PeerAccountsTrieStorage.DB]
-        FilePath = "PeerAccountsTrie/MainDB"
-        Type = "LvlDBSerial"
-        BatchDelaySeconds = 2
-        MaxBatchSize = 1000
-        MaxOpenFiles = 10
 
 [HeadersPoolConfig]
     MaxHeadersPerShard = 1000
@@ -569,23 +642,23 @@
 # resource statistics. For example: number of active go routines, memory allocation, number of GC sweeps, etc.
 # RefreshIntervalInSec will tell how often a new line containing stats should be added in stats file
 [ResourceStats]
-   Enabled = true
-   RefreshIntervalInSec = 30
+    Enabled = true
+    RefreshIntervalInSec = 30
 
 # Heartbeat, if enabled, will output a heartbeat signal once x seconds,
 # where x in [MinTimeToWaitBetweenBroadcastsInSec, MaxTimeToWaitBetweenBroadcastsInSec)
 [Heartbeat]
-   MinTimeToWaitBetweenBroadcastsInSec  = 50
-   MaxTimeToWaitBetweenBroadcastsInSec  = 70
-   HeartbeatRefreshIntervalInSec        = 60
-   HideInactiveValidatorIntervalInSec   = 600
-   DurationToConsiderUnresponsiveInSec  = 300
-   [Heartbeat.HeartbeatStorage]
-       [Heartbeat.HeartbeatStorage.Cache]
+    MinTimeToWaitBetweenBroadcastsInSec  = 50
+    MaxTimeToWaitBetweenBroadcastsInSec  = 70
+    HeartbeatRefreshIntervalInSec        = 60
+    HideInactiveValidatorIntervalInSec   = 600
+    DurationToConsiderUnresponsiveInSec  = 300
+    [Heartbeat.HeartbeatStorage]
+        [Heartbeat.HeartbeatStorage.Cache]
             Name = "HeartbeatStorage"
             Capacity = 1000
             Type = "LRU"
-       [Heartbeat.HeartbeatStorage.DB]
+        [Heartbeat.HeartbeatStorage.DB]
             FilePath = "HeartbeatStorage"
             Type = "LvlDBSerial"
             BatchDelaySeconds = 5
@@ -598,14 +671,14 @@
 # Consensus type which will be used (the current implementation can manage "bn" and "bls")
 # When consensus type is "bls" the multisig hasher type should be "blake2b"
 [Consensus]
-   Type = "bls"
+    Type = "bls"
 
 [NTPConfig]
-   Hosts = ["time.google.com", "time.cloudflare.com",  "time.apple.com"]
-   Port = 123
-   TimeoutMilliseconds = 100
-   SyncPeriodSeconds = 3600
-   Version = 0  # Setting 0 means 'use default value'
+    Hosts = ["time.google.com", "time.cloudflare.com",  "time.apple.com"]
+    Port = 123
+    TimeoutMilliseconds = 100
+    SyncPeriodSeconds = 3600
+    Version = 0  # Setting 0 means 'use default value'
 
 [StateTriesConfig]
     CheckpointRoundsModulus = 100
@@ -614,8 +687,8 @@
     PeerStatePruningEnabled = true
     MaxStateTrieLevelInMemory = 5
     MaxPeerTrieLevelInMemory = 5
-    UserStatePruningQueueSize = 0 # setting 0 means no buffering, so pruning is done for the block before final
-    PeerStatePruningQueueSize = 0 # setting 0 means no buffering, so pruning is done for the block before final
+    UserStatePruningQueueSize = 5 # setting 0 means no buffering, so pruning is done for the block before final
+    PeerStatePruningQueueSize = 5 # setting 0 means no buffering, so pruning is done for the block before final
 
 [BlockSizeThrottleConfig]
     MinSizeInBytes = 104857 # 104857 is 10% from 1MB
@@ -641,16 +714,16 @@
     EnableTrigger = true
     EnableTriggerFromP2P = true
     PublicKeyToListenFrom = "6a02b93375e78aed4e0e3369ef2182dfc060eea01df640eacc5eca5f759f62c8271fbbf90863e896e2453384118be20179433cb1dfc1bd8df962c80f3da94ea42dffaf70025b6fd6a5b4814bc4b15cf6751c990fe21d392f1bc88c15bd354a8c"
-	CloseAfterExportInMinutes = 10000
-	AfterHardFork = false
-	ImportFolder = "export"
-	StartRound = 10000
-	StartNonce = 10000
-	StartEpoch = 100
-	GenesisTime = 0
-	ValidatorGracePeriodInEpochs = 1 #defines how long is the rating computation disabled after hardfork
-	[Hardfork.ExportStateStorageConfig]
-	    [Hardfork.ExportStateStorageConfig.Cache]
+    CloseAfterExportInMinutes = 10000
+    AfterHardFork = false
+    ImportFolder = "export"
+    StartRound = 10000
+    StartNonce = 10000
+    StartEpoch = 100
+    GenesisTime = 0
+    ValidatorGracePeriodInEpochs = 1 #defines how long is the rating computation disabled after hardfork
+    [Hardfork.ExportStateStorageConfig]
+        [Hardfork.ExportStateStorageConfig.Cache]
             Name = "HardFork.ExportStateStorageConfig"
             Capacity = 5000
             Type = "LRU"
