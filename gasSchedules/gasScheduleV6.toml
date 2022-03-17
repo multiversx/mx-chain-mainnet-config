@@ -16,6 +16,7 @@
     ESDTNFTUpdateAttributes  = 50000
     ESDTNFTMultiTransfer     = 200000
 
+
 [MetaChainSystemSCsCost]
     Stake                 = 5000000
     UnStake               = 5000000
