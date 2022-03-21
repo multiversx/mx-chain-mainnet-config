@@ -145,50 +145,50 @@
     RemoveNonUpdatedStorageEnableEpoch = 460
 
     # OptimizeNFTStoreEnableEpoch represents the epoch when optimizations on NFT metadata store and send are enabled
-    OptimizeNFTStoreEnableEpoch = 603
+    OptimizeNFTStoreEnableEpoch = 613
 
     # CreateNFTThroughExecByCallerEnableEpoch represents the epoch when nft creation through execution on destination by caller is enabled
-    CreateNFTThroughExecByCallerEnableEpoch = 603
+    CreateNFTThroughExecByCallerEnableEpoch = 613
 
     # StopDecreasingValidatorRatingWhenStuckEnableEpoch represents the epoch when we should stop decreasing validator's rating if, for instance, a shard gets stuck
-    StopDecreasingValidatorRatingWhenStuckEnableEpoch = 603
+    StopDecreasingValidatorRatingWhenStuckEnableEpoch = 613
 
     # FrontRunningProtectionEnableEpoch represents the epoch when the first version of protection against front running is enabled
-    FrontRunningProtectionEnableEpoch = 603
+    FrontRunningProtectionEnableEpoch = 613
 
     # DisableOldTrieStorageEpoch represents the epoch when the old trie storage implementation will be disabled
-    DisableOldTrieStorageEpoch = 605
+    DisableOldTrieStorageEpoch = 615
 
     # IsPayableBySCEnableEpoch represents the epoch when a new flag isPayable by SC is enabled
-    IsPayableBySCEnableEpoch = 603
+    IsPayableBySCEnableEpoch = 613
 
     # CleanUpInformativeSCRsEnableEpoch represents the epoch when the informative-only scrs are cleaned from miniblocks and logs are created from them
-    CleanUpInformativeSCRsEnableEpoch = 603
+    CleanUpInformativeSCRsEnableEpoch = 613
 
     # StorageAPICostOptimizationEnableEpoch represents the epoch when new storage helper functions are enabled and cost is reduced in Arwen
-    StorageAPICostOptimizationEnableEpoch = 603
+    StorageAPICostOptimizationEnableEpoch = 613
 
     # TransformToMultiShardCreateEnableEpoch represents the epoch when the new function on esdt system sc is enabled to transfer create role into multishard
-    TransformToMultiShardCreateEnableEpoch = 603
+    TransformToMultiShardCreateEnableEpoch = 613
 
     # ESDTRegisterAndSetAllRolesEnableEpoch represents the epoch when new function to register tickerID and set all roles is enabled
-    ESDTRegisterAndSetAllRolesEnableEpoch = 603
+    ESDTRegisterAndSetAllRolesEnableEpoch = 613
 
     # ScheduledMiniBlocksEnableEpoch represents the epoch when scheduled mini blocks would be created if needed
-    ScheduledMiniBlocksEnableEpoch = 603
+    ScheduledMiniBlocksEnableEpoch = 613
 
     # CorrectJailedNotUnstakedEpoch represents the epoch when the jailed validators will also be unstaked if the queue is empty
-    CorrectJailedNotUnstakedEmptyQueueEpoch = 603
+    CorrectJailedNotUnstakedEmptyQueueEpoch = 613
 
     # DoNotReturnOldBlockInBlockchainHookEnableEpoch represents the epoch when the fetch old block operation is
     # disabled in the blockchain hook component
-    DoNotReturnOldBlockInBlockchainHookEnableEpoch = 603
+    DoNotReturnOldBlockInBlockchainHookEnableEpoch = 613
 
     # AddFailedRelayedTxToInvalidMBsDisableEpoch represents the epoch when adding the failed relayed txs to invalid miniblocks is disabled
-    AddFailedRelayedTxToInvalidMBsDisableEpoch = 603
+    AddFailedRelayedTxToInvalidMBsDisableEpoch = 613
 
     # SCRSizeInvariantOnBuiltInResultEnableEpoch represents the epoch when scr size invariant on built in result is enabled
-    SCRSizeInvariantOnBuiltInResultEnableEpoch = 603
+    SCRSizeInvariantOnBuiltInResultEnableEpoch = 613
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
@@ -203,5 +203,5 @@
         { StartEpoch = 239, FileName = "gasScheduleV3.toml" },
         { StartEpoch = 460, FileName = "gasScheduleV4.toml" },
         { StartEpoch = 582, FileName = "gasScheduleV5.toml" },
-        { StartEpoch = 603, FileName = "gasScheduleV6.toml" },
+        { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
     ]
