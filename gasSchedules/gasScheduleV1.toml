@@ -16,6 +16,7 @@
     ESDTNFTUpdateAttributes  = 500000
     ESDTNFTMultiTransfer     = 1000000
 
+
 [MetaChainSystemSCsCost]
     Stake                 = 5000000
     UnStake               = 5000000
@@ -62,6 +63,7 @@
     GetNumArguments    = 100
     StorageStore       = 250000
     StorageLoad        = 100000
+    CachedStorageLoad  = 100000
     GetCaller          = 100
     GetCallValue       = 100
     Log                = 3750
@@ -89,6 +91,8 @@
     GetNumReturnData     = 100
     GetReturnDataSize    = 100
     GetOriginalTxHash    = 10000
+    CleanReturnData      = 100
+    DeleteFromReturnData = 100
 
 [EthAPICost]
     UseGas              = 100
@@ -659,3 +663,5 @@
     I16x8RoundingAverageU = 200
     LocalAllocate = 2
     LocalsUnmetered = 100
+    MaxMemoryGrowDelta = 100
+    MaxMemoryGrow = 100
