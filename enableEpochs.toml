@@ -191,7 +191,7 @@
     SCRSizeInvariantOnBuiltInResultEnableEpoch = 613
 
     # CheckCorrectTokenIDForTransferRoleEnableEpoch represents the epoch when the correct token ID check is applied for transfer role verification
-    CheckCorrectTokenIDForTransferRoleEnableEpoch = 1000000
+    CheckCorrectTokenIDForTransferRoleEnableEpoch = 669
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
