@@ -194,7 +194,7 @@
     CheckCorrectTokenIDForTransferRoleEnableEpoch = 669
 
     # CheckValueOnExecByCallerEnableEpoch represents the epoch when the check on value is enabled on exec by caller
-    CheckValueOnExecByCallerEnableEpoch = 1000000
+    CheckValueOnExecByCallerEnableEpoch = 676
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
