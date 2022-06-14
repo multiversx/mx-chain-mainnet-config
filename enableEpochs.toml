@@ -193,6 +193,9 @@
     # CheckValueOnExecByCallerEnableEpoch represents the epoch when the check on value is enabled on exec by caller
     CheckValueOnExecByCallerEnableEpoch = 676
 
+    # RefactorContextEnableEpoch represents the epoch when refactoring/simplifying is enabled in contexts
+    RefactorContextEnableEpoch = 680
+
     # FailExecutionOnEveryAPIErrorEnableEpoch represent the epoch when new protection in VM is enabled to fail all wrong API calls
     FailExecutionOnEveryAPIErrorEnableEpoch = 1000000
 
