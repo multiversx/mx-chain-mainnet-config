@@ -206,7 +206,7 @@
     CheckFunctionArgumentEnableEpoch = 708
 
     # CheckExecuteOnReadOnlyEnableEpoch represents the epoch when the extra checks are enabled for execution on read only
-    CheckExecuteOnReadOnlyEnableEpoch = 708
+    CheckExecuteOnReadOnlyEnableEpoch = 707
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
