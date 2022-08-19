@@ -80,7 +80,7 @@
     # NumActivePersisters - this will set the number of persisters to keep active at a moment. This works even if
     # the node removes old epochs data or not. In case of a node which removes old epochs data, this value has to be
     # smaller or equal to the NumOfEpochsToKeep flag
-    NumActivePersisters = 60
+    NumActivePersisters = 3
 
     # FullArchiveNumActivePersisters represents the number of persisters to be kept in cache as to allow better response
     # to inquiring peers. This value will get multiplied by the number of persisters required by the node to function so
