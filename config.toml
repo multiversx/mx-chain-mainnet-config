@@ -11,7 +11,11 @@
     # available in local disk
     StartInEpochEnabled = true
 
-    # ChainID identifies the blockChain
+    # ChainID represents the chain identifier
+    # The currently supported constants are:
+    #   "1" for Mainnet
+    #   "D" for Devnet
+    #   "T" for Testnet
     ChainID = "1"
 
     # MinTransactionVersion represents the minimum transaction version accepted
@@ -669,6 +673,7 @@
 [StateTriesConfig]
     CheckpointRoundsModulus = 100
     CheckpointsEnabled = false
+    SnapshotsEnabled = true
     AccountsStatePruningEnabled = true
     PeerStatePruningEnabled = true
     MaxStateTrieLevelInMemory = 5
@@ -705,6 +710,14 @@
         # If set to 0, then MaxUInt64 will be used
         ShardMaxGasPerVmQuery = 1500000000  #1.5b
         MetaMaxGasPerVmQuery = 0  #unlimited
+
+[BuiltInFunctions]
+    AutomaticCrawlerAddresses =[
+        "erd13cv2nllvka35dshazqxtcym8vyamnmjay26nzcjswnjyxxpny7yq6twx0v", #shard 0
+        "erd14zpxzaf3s00j6s4ke2ct475dk9285ekejujvtkt4h6azm2rfkfdsyjqkk4", #shard 1
+        "erd1zj06ewmmmm2ntng4d8art4ta8fz0n5xr4f0yn9knuf2k8mm7gzhqqf74cr", #shard 2
+    ]
+    MaxNumAddressesInTransferRole = 100
 
 [Hardfork]
     EnableTrigger = true
@@ -796,10 +809,10 @@
         ProcessDataTrieOnCommitEpoch = false
 
 [Health]
-    IntervalVerifyMemoryInSeconds = 5
+    IntervalVerifyMemoryInSeconds = 30
     IntervalDiagnoseComponentsInSeconds = 30
     IntervalDiagnoseComponentsDeeplyInSeconds = 120
-    MemoryUsageToCreateProfiles = 2415919104 # 2.25GB
+    MemoryUsageToCreateProfiles = 3221225472 # 3 GB
     NumMemoryUsageRecordsToKeep = 100
     FolderPath = "health-records"
 
@@ -894,8 +907,32 @@
     MaxHardCapForMissingNodes = 5000
     #available versions: 1 and 2. 1 is the initial version, 2 is updated, more efficient version
     TrieSyncerVersion         = 2
+    CheckNodesOnDisk          = false
 
 [Resolvers]
     NumCrossShardPeers  = 2
-    NumIntraShardPeers  = 1
+    NumTotalPeers       = 3 # NumCrossShardPeers + num intra shard
     NumFullHistoryPeers = 3
+
+[HeartbeatV2]
+    PeerAuthenticationTimeBetweenSendsInSec          = 7200 # 2h
+    PeerAuthenticationTimeBetweenSendsWhenErrorInSec = 60   # 1min
+    PeerAuthenticationThresholdBetweenSends          = 0.1  # 10%
+    HeartbeatTimeBetweenSendsInSec                   = 300  # 5min
+    HeartbeatTimeBetweenSendsWhenErrorInSec          = 60   # 1min
+    HeartbeatThresholdBetweenSends                   = 0.1  # 10%
+    HeartbeatExpiryTimespanInSec                     = 14400 # 4h
+    MinPeersThreshold                                = 0.8  # 80%
+    DelayBetweenRequestsInSec                        = 10   # 10sec
+    MaxTimeoutInSec                                  = 7200 # 2h
+    DelayBetweenConnectionNotificationsInSec         = 60   # 1min
+    MaxMissingKeysInRequest                          = 1000
+    MaxDurationPeerUnresponsiveInSec                 = 900  # 15min
+    HideInactiveValidatorIntervalInSec               = 3600 # 1h
+    HardforkTimeBetweenSendsInSec                    = 60   # 1min
+    TimeBetweenConnectionsMetricsUpdateInSec         = 30   # 30sec
+    [HeartbeatV2.HeartbeatPool]
+        Name = "HeartbeatPool"
+        Capacity = 1000
+        Type = "SizeLRU"
+        SizeInBytes = 314572800 #300MB
