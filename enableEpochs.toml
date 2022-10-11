@@ -222,7 +222,7 @@
     FixAsyncCallBackArgsListEnableEpoch = 795
 
     # FixOldTokenLiquidityEnableEpoch represents the epoch when the fix for old token liquidity is enabled
-    FixOldTokenLiquidityEnableEpoch = 999999
+    FixOldTokenLiquidityEnableEpoch = 811
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
