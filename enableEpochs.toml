@@ -251,4 +251,5 @@
         { StartEpoch = 460, FileName = "gasScheduleV4.toml" },
         { StartEpoch = 582, FileName = "gasScheduleV5.toml" },
         { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
+        { StartEpoch = 999999, FileName = "gasScheduleV7.toml" },
     ]
