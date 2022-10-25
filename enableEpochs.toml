@@ -118,8 +118,8 @@
     # BackwardCompSaveKeyValueEnableEpoch represents the epoch when the backward compatibility for save key value error is enabled
     BackwardCompSaveKeyValueEnableEpoch = 427
 
-    # ESDTNFTCreateOnMultiShard represents the epoch when esdt nft creation is enabled on multiple shards
-    ESDTNFTCreateOnMultiShard = 460
+    # ESDTNFTCreateOnMultiShardEnableEpoch represents the epoch when esdt nft creation is enabled on multiple shards
+    ESDTNFTCreateOnMultiShardEnableEpoch = 460
 
     # MetaESDTSetEnableEpoch represents the epoch when the backward compatibility for save key value error is enabled
     MetaESDTSetEnableEpoch = 460
@@ -251,4 +251,5 @@
         { StartEpoch = 460, FileName = "gasScheduleV4.toml" },
         { StartEpoch = 582, FileName = "gasScheduleV5.toml" },
         { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
+        { StartEpoch = 999999, FileName = "gasScheduleV7.toml" },
     ]
