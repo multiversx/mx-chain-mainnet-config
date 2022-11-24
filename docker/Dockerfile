@@ -21,7 +21,8 @@ RUN cp -r * /go/elrond-go/cmd/node/config/
 WORKDIR /go/elrond-go/cmd/node
 
 # ===== SECOND STAGE ======
-FROM ubuntu:18.04
+FROM ubuntu:22.04
+RUN apt-get update -y && apt-get upgrade -y
 COPY --from=builder "/go/elrond-go/cmd/node" "/go/elrond-go/cmd/node/"
 COPY --from=builder "/lib/libwasmer_linux_amd64.so" "/lib/libwasmer_linux_amd64.so"
 WORKDIR /go/elrond-go/cmd/node/
