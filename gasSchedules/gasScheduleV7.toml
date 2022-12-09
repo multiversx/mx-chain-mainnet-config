@@ -687,3 +687,8 @@
     LocalsUnmetered = 100
     MaxMemoryGrowDelta = 1
     MaxMemoryGrow = 10
+
+[MaxPerTransaction]
+    MaxBuiltInCallsPerTx = 1000000      # TODO adjust these
+    MaxNumberOfTransfersPerTx = 1000000 # TODO adjust these
+    MaxNumberOfTrieReadsPerTx = 1000000 # TODO adjust these

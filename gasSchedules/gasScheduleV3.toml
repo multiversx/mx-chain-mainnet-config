@@ -686,3 +686,8 @@
     LocalsUnmetered = 100
     MaxMemoryGrowDelta = 100
     MaxMemoryGrow = 100
+
+[MaxPerTransaction]
+    MaxBuiltInCallsPerTx = 1000000      # out of reach value
+    MaxNumberOfTransfersPerTx = 1000000 # out of reach value
+    MaxNumberOfTrieReadsPerTx = 1000000 # out of reach value
