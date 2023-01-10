@@ -62,8 +62,8 @@
     #If the initial peers list is left empty, the node will not try to connect to other peers during initial bootstrap
     #phase but will accept connections and will do the network discovery if another peer connects to it
     InitialPeerList = [
-        "/dns4/gondor.mainnet.elrond.com/tcp/10000/p2p/16Uiu2HAmQihd2Di6JrDCRf6bnxXEmgfFy8C3S7WDnq7WNXscfkrG",
-        "/dns4/isengard.mainnet.elrond.com/tcp/10000/p2p/16Uiu2HAkxWoEwkkxMfUgi2CkxjWkZ7cccjvh4V57gxUQQC6c45N6",
+        "/dns4/seed1.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAmQihd2Di6JrDCRf6bnxXEmgfFy8C3S7WDnq7WNXscfkrG",
+        "/dns4/seed2.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAkxWoEwkkxMfUgi2CkxjWkZ7cccjvh4V57gxUQQC6c45N6",
         "/ip4/188.166.192.50/tcp/10000/p2p/16Uiu2HAmT2rqgzWYnFe7YL4poyjXvKhGtrwkhaAibSDFCjGATDZ7",
         "/ip4/188.166.203.198/tcp/10000/p2p/16Uiu2HAmJeuEEczm6kLyBKAJQobVn7ARmGFQ5mPrbNVsjdhJz9s1",
     ]

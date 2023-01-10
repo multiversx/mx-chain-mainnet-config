@@ -443,7 +443,7 @@
     SizeInBytes = 26214400  # 25MB per each pair (metachain, destinationShard)
     Shards = 4
 
-#PublicKeyPeerId represents the main cache used to map Elrond block signing public keys to their associated peer id's.
+#PublicKeyPeerId represents the main cache used to map MultiversX block signing public keys to their associated peer id's.
 [PublicKeyPeerId]
     Name = "PublicKeyPeerId"
     Capacity = 30000
@@ -817,7 +817,7 @@
     FolderPath = "health-records"
 
 [SoftwareVersionConfig]
-    StableTagLocation = "https://api.github.com/repos/ElrondNetwork/elrond-config-mainnet/releases/latest"
+    StableTagLocation = "https://api.github.com/repos/multiversx/mx-chain-mainnet-config/releases/latest"
     PollingIntervalInMinutes = 65
 
 [LogsAndEvents]

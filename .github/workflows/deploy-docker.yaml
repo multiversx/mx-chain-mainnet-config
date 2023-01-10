@@ -1,6 +1,6 @@
 env:
-  IMAGE_NODE: elrond-go-node-mainnet
-  REGISTRY_HOSTNAME: elrondnetwork
+  IMAGE_NODE: multiversx-node-mainnet
+  REGISTRY_HOSTNAME: multiversx
 
 name: Build Docker image & push
 

@@ -4,21 +4,21 @@ cd ..
 
 TAG_FROM_BINARY=$(cat binaryVersion)
 #check if the tag binaryVersion file exits on the github
-TAG_EXITS=$(git ls-remote https://github.com/ElrondNetwork/elrond-go.git "${TAG_FROM_BINARY}")
+TAG_EXITS=$(git ls-remote https://github.com/multiversx/mx-chain-go.git "${TAG_FROM_BINARY}")
 if [ -z "${TAG_EXITS}" ]; then
       echo "tag from binaryVersion file(${TAG_FROM_BINARY}) does not exit"
       exit 1
 fi
 
 # build docker image
-export IMAGE_NAME=elrond-node-image-test
+export IMAGE_NAME=multiversx-node-image-test
 docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
 
 # generate a new BLS key
 OUTPUT_FOLDER=~/output/keys
 if [ ! -f "${OUTPUT_FOLDER}/validatorKey.pem" ]; then
   mkdir -p ${OUTPUT_FOLDER}
-  docker run --rm --mount type=bind,source=${OUTPUT_FOLDER},destination=/keys --workdir /keys elrondnetwork/elrond-go-keygenerator:latest
+  docker run --rm --mount type=bind,source=${OUTPUT_FOLDER},destination=/keys --workdir /keys multiversx/mx-chain-keygenerator:latest
 fi
 
 ## run docker image
