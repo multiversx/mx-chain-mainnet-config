@@ -7,7 +7,7 @@
 
 <br>
 
-[![](https://img.shields.io/badge/made%20by-MultiverX-blue.svg?style=flat-square)](http://multiversx.com/)
+[![](https://img.shields.io/badge/made%20by-MultiversX-blue.svg?style=flat-square)](http://multiversx.com/)
 [![](https://img.shields.io/badge/project-MultiversX%20Mainnet-blue.svg?style=flat-square)](http://multiversx.com/)
 
 # mx-chain config for mainnet
