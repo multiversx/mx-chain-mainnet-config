@@ -1,5 +1,5 @@
 env:
-  IMAGE_NODE: multiversx-node-mainnet
+  IMAGE_NODE: chain-mainnet
   REGISTRY_HOSTNAME: multiversx
 
 name: Build Docker image & push
