@@ -11,14 +11,14 @@ if [ -z "${TAG_EXITS}" ]; then
 fi
 
 # build docker image
-export IMAGE_NAME=multiversx-node-image-test
+export IMAGE_NAME=chain-test
 docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
 
 # generate a new BLS key
 OUTPUT_FOLDER=~/output/keys
 if [ ! -f "${OUTPUT_FOLDER}/validatorKey.pem" ]; then
   mkdir -p ${OUTPUT_FOLDER}
-  docker run --rm --mount type=bind,source=${OUTPUT_FOLDER},destination=/keys --workdir /keys multiversx/mx-chain-keygenerator:latest
+  docker run --rm --mount type=bind,source=${OUTPUT_FOLDER},destination=/keys --workdir /keys multiversx/chain-keygenerator:latest
 fi
 
 ## run docker image
