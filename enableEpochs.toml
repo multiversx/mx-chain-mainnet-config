@@ -118,8 +118,8 @@
     # BackwardCompSaveKeyValueEnableEpoch represents the epoch when the backward compatibility for save key value error is enabled
     BackwardCompSaveKeyValueEnableEpoch = 427
 
-    # ESDTNFTCreateOnMultiShard represents the epoch when esdt nft creation is enabled on multiple shards
-    ESDTNFTCreateOnMultiShard = 460
+    # ESDTNFTCreateOnMultiShardEnableEpoch represents the epoch when esdt nft creation is enabled on multiple shards
+    ESDTNFTCreateOnMultiShardEnableEpoch = 460
 
     # MetaESDTSetEnableEpoch represents the epoch when the backward compatibility for save key value error is enabled
     MetaESDTSetEnableEpoch = 460
@@ -163,7 +163,7 @@
     # CleanUpInformativeSCRsEnableEpoch represents the epoch when the informative-only scrs are cleaned from miniblocks and logs are created from them
     CleanUpInformativeSCRsEnableEpoch = 613
 
-    # StorageAPICostOptimizationEnableEpoch represents the epoch when new storage helper functions are enabled and cost is reduced in Arwen
+    # StorageAPICostOptimizationEnableEpoch represents the epoch when new storage helper functions are enabled and cost is reduced in Wasm VM
     StorageAPICostOptimizationEnableEpoch = 613
 
     # TransformToMultiShardCreateEnableEpoch represents the epoch when the new function on esdt system sc is enabled to transfer create role into multishard
@@ -212,9 +212,6 @@
     # ESDTMetadataContinuousCleanupEnableEpoch represents the epoch when esdt metadata is automatically deleted according to inshard liquidity
     ESDTMetadataContinuousCleanupEnableEpoch = 795
 
-    # HeartbeatDisableEpoch represents the epoch when heartbeat v1 messages stop being sent and processed
-    HeartbeatDisableEpoch = 795
-
     # MiniBlockPartialExecutionEnableEpoch represents the epoch when mini block partial execution will be enabled
     MiniBlockPartialExecutionEnableEpoch = 795
 
@@ -223,6 +220,30 @@
 
     # FixOldTokenLiquidityEnableEpoch represents the epoch when the fix for old token liquidity is enabled
     FixOldTokenLiquidityEnableEpoch = 811
+
+    # RuntimeMemStoreLimitEnableEpoch represents the epoch when the condition for Runtime MemStore is enabled
+    RuntimeMemStoreLimitEnableEpoch = 938
+
+    # SetSenderInEeiOutputTransferEnableEpoch represents the epoch when setting the sender in eei output transfers will be enabled
+    SetSenderInEeiOutputTransferEnableEpoch = 938
+
+    # RefactorPeersMiniBlocksEnableEpoch represents the epoch when refactor of the peers mini blocks will be enabled
+    RefactorPeersMiniBlocksEnableEpoch = 938
+
+    # MaxBlockchainHookCountersEnableEpoch represents the epoch when the max blockchainhook counters are enabled
+	MaxBlockchainHookCountersEnableEpoch = 938
+
+    # WipeSingleNFTLiquidityDecreaseEnableEpoch represents the epoch when the system account liquidity is decreased for wipeSingleNFT as well
+    WipeSingleNFTLiquidityDecreaseEnableEpoch = 938
+
+    # AlwaysSaveTokenMetaDataEnableEpoch represents the epoch when the token metadata is always saved
+    AlwaysSaveTokenMetaDataEnableEpoch = 938
+
+    # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
+    BLSMultiSignerEnableEpoch = [
+        { EnableEpoch = 0, Type = "no-KOSK"},
+        { EnableEpoch = 938, Type = "KOSK"}
+    ]
 
     # MaxNodesChangeEnableEpoch holds configuration for changing the maximum number of nodes and the enabling epoch
     MaxNodesChangeEnableEpoch = [
@@ -239,4 +260,5 @@
         { StartEpoch = 460, FileName = "gasScheduleV4.toml" },
         { StartEpoch = 582, FileName = "gasScheduleV5.toml" },
         { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
+        { StartEpoch = 938, FileName = "gasScheduleV7.toml" },
     ]
