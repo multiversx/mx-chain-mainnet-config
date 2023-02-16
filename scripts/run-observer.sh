@@ -13,17 +13,30 @@ fi
 # build docker image
 export IMAGE_NAME=chain-test
 docker image build . -t ${IMAGE_NAME} -f ./docker/Dockerfile
+if [ $? -ne 0 ]; then
+  echo "image build failed"
+  exit 1
+fi
 
 # generate a new BLS key
 OUTPUT_FOLDER=~/output/keys
 if [ ! -f "${OUTPUT_FOLDER}/validatorKey.pem" ]; then
   mkdir -p ${OUTPUT_FOLDER}
   docker run --rm --mount type=bind,source=${OUTPUT_FOLDER},destination=/keys --workdir /keys multiversx/chain-keygenerator:latest
+  if [ $? -ne 0 ]; then
+    echo "cannot run keygenerator image"
+    exit 1
+  fi
 fi
 
 ## run docker image
 PORT=8080
-docker run -d -p 8080:${PORT} --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save --destination-shard-as-observer=${SHARD}
+docker run -d -p ${PORT}:8080 --mount type=bind,source=${OUTPUT_FOLDER}/,destination=/data ${IMAGE_NAME} --validator-key-pem-file="/data/validatorKey.pem" --log-level *:DEBUG --log-save --destination-shard-as-observer=${SHARD}
+if [ $? -ne 0 ]; then
+    echo "cannot run node image"
+    exit 1
+fi
+
 
 export ADDRESS_WITH_ROUTE=http://localhost:${PORT}/network/status
 
