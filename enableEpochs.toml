@@ -242,6 +242,9 @@
     # RuntimeCodeSizeFixEnableEpoch represents the epoch when the code size fix in the VM is enabled
     RuntimeCodeSizeFixEnableEpoch = 970
 
+    # RelayedNonceFixEnableEpoch represents the epoch when the nonce fix for relayed txs is enabled
+    RelayedNonceFixEnableEpoch = 999999
+
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
         { EnableEpoch = 0, Type = "no-KOSK"},
