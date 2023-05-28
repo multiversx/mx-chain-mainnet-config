@@ -243,7 +243,7 @@
     RuntimeCodeSizeFixEnableEpoch = 970
 
     # RelayedNonceFixEnableEpoch represents the epoch when the nonce fix for relayed txs is enabled
-    RelayedNonceFixEnableEpoch = 999999
+    RelayedNonceFixEnableEpoch = 999998
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
