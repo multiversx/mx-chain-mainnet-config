@@ -50,8 +50,11 @@
     InitialPeerList = [
         "/dns4/seed1.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAmQihd2Di6JrDCRf6bnxXEmgfFy8C3S7WDnq7WNXscfkrG",
         "/dns4/seed2.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAkxWoEwkkxMfUgi2CkxjWkZ7cccjvh4V57gxUQQC6c45N6",
+        "/ip4/209.151.150.243/tcp/10000/p2p/16Uiu2HAm9Yt2Y5R4y1AYWEwsVPE6WjoDkNyxvsQY1BHTHFmYYhFM",
+        "/ip4/18.192.233.66/tcp/10000/p2p/16Uiu2HAmGeV1cTWEqCAQ7JxakUa2JsthT6k72XCVBuqA52CBH26j",
         "/ip4/188.166.192.50/tcp/10000/p2p/16Uiu2HAmT2rqgzWYnFe7YL4poyjXvKhGtrwkhaAibSDFCjGATDZ7",
         "/ip4/188.166.203.198/tcp/10000/p2p/16Uiu2HAmJeuEEczm6kLyBKAJQobVn7ARmGFQ5mPrbNVsjdhJz9s1",
+        "/dns4/xseed.staking.agency/tcp/12345/p2p/16Uiu2HAmGLLqCpguvqFoMoHq7m5yxjyM56gSAyp2g66BWt3UQWan",
     ]
 
     #kademlia's routing table bucket size
