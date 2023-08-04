@@ -1,4 +1,4 @@
-FROM golang:1.17.6 as builder
+FROM golang:1.20.5 as builder
 MAINTAINER multiversx
 
 RUN apt-get update && apt-get install -y
@@ -12,7 +12,7 @@ WORKDIR /go/mx-chain-go
 
 # MultiversX node
 WORKDIR /go/mx-chain-go/cmd/node
-RUN go build -i -v -ldflags="-X main.appVersion=$(git --git-dir /config/.git describe --tags --long --dirty)"
+RUN go build -v -ldflags="-X main.appVersion=$(git --git-dir /config/.git describe --tags --long --dirty)"
 RUN cp /go/pkg/mod/github.com/multiversx/$(cat /go/mx-chain-go/go.mod | grep mx-chain-vm-v | sort -n | tail -n -1| awk -F '/' '{print$3}'| sed 's/ /@/g')/wasmer/libwasmer_linux_amd64.so /lib/libwasmer_linux_amd64.so
 
 WORKDIR /config
