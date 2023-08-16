@@ -692,7 +692,7 @@
             { StartEpoch = 0, Version = "v1.2" },
             { StartEpoch = 326, Version = "v1.3" },
             { StartEpoch = 432, Version = "v1.4" },
-            { StartEpoch = 999999, Version = "v1.5" },
+            { StartEpoch = 433, Version = "v1.5" },
         ]
 
     [VirtualMachine.Querying]
@@ -703,7 +703,7 @@
             { StartEpoch = 0, Version = "v1.2" },
             { StartEpoch = 326, Version = "v1.3" },
             { StartEpoch = 432, Version = "v1.4" },
-            { StartEpoch = 999999, Version = "v1.5" },
+            { StartEpoch = 433, Version = "v1.5" },
         ]
 
     [VirtualMachine.GasConfig]
