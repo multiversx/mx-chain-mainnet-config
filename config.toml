@@ -675,6 +675,7 @@
 [StateTriesConfig]
     CheckpointRoundsModulus = 100
     CheckpointsEnabled = false
+    SnapshotsEnabled = true
     AccountsStatePruningEnabled = false
     PeerStatePruningEnabled = true
     MaxStateTrieLevelInMemory = 5
@@ -940,7 +941,7 @@
     PeerAuthenticationMaxTimeoutForRequestsInSec     = 7200  # 2h         # max timeout allowed to receive peer auth messages from peers
     PeerShardTimeBetweenSendsInSec                   = 7200  # 2h
     PeerShardTimeThresholdBetweenSends               = 0.1   # 10%        # max random threshold between messages, representing a percent of PeerShardTimeBetweenSendsInSec
-    MaxMissingKeysInRequest                          = 500               # max number of missing keys allowed in a request
+    MaxMissingKeysInRequest                          = 500                # max number of missing keys allowed in a request
     MaxDurationPeerUnresponsiveInSec                 = 900   # 15min      # max duration after which a peer is considered inactive
     HideInactiveValidatorIntervalInSec               = 3600  # 1h         # time that an inactive validator is returned through api
     HardforkTimeBetweenSendsInSec                    = 60    # 1min       # time between hardfork messages

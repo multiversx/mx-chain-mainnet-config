@@ -62,7 +62,7 @@
     ESDTEnableEpoch = 272
 
     # GovernanceEnableEpoch represents the epoch when governance is enabled
-    GovernanceEnableEpoch = 1000000
+    GovernanceEnableEpoch = 999999
 
     # DelegationManagerEnableEpoch represents the epoch when the delegation manager is enabled
     # epoch should not be 0
@@ -247,6 +247,9 @@
 
     # SetGuardianEnableEpoch represents the epoch when the guard account feature is enabled in the protocol
     SetGuardianEnableEpoch = 1075
+
+    # DeterministicSortOnValidatorsInfoEnableEpoch represents the epoch when the deterministic sorting on validators info is enabled
+    DeterministicSortOnValidatorsInfoEnableEpoch = 1126
 
     # SCProcessorV2EnableEpoch represents the epoch when SC processor V2 will be used
     SCProcessorV2EnableEpoch = 999999
