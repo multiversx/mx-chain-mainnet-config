@@ -44,8 +44,8 @@
     # RefreshIntervalInSec represents the time in seconds between querying for new peers
     RefreshIntervalInSec = 10
 
-    #ProtocolID represents the protocol that this node will advertize to other peers
-    #To connect to other nodes, those nodes should have the same ProtocolID string
+    # ProtocolID represents the protocol that this node will advertize to other peers
+    # To connect to other nodes, those nodes should have the same ProtocolID string
     ProtocolID = "/erd/kad/1.1.0"
 
     # InitialPeerList represents the list of strings of some known nodes that will bootstrap this node
@@ -73,9 +73,9 @@
 [Sharding]
     # The targeted number of peer connections
     TargetPeerCount = 75
-    MaxIntraShardValidators = 25
+    MaxIntraShardValidators = 20
     MaxCrossShardValidators = 15
-    MaxIntraShardObservers = 15
+    MaxIntraShardObservers = 20
     MaxCrossShardObservers = 15
     MaxSeeders = 2
 
