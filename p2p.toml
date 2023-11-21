@@ -23,6 +23,10 @@
         [Node.Transports.TCP]
             ListenAddress = "/ip4/0.0.0.0/tcp/%d" # TCP listen address
             PreventPortReuse = false
+        [Node.ResourceLimiter]
+            Type = "default autoscale" #available options "default autoscale", "infinite", "default with manual scale".
+            ManualSystemMemoryInMB = 0 # not taken into account if the type is not "default with manual scale"
+            ManualMaximumFD = 0 # not taken into account if the type is not "default with manual scale"
 
 # P2P peer discovery section
 
@@ -61,7 +65,7 @@
         "/dns4/seed1.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAmQihd2Di6JrDCRf6bnxXEmgfFy8C3S7WDnq7WNXscfkrG",
         "/dns4/seed2.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAkxWoEwkkxMfUgi2CkxjWkZ7cccjvh4V57gxUQQC6c45N6",
         "/ip4/188.166.192.50/tcp/10000/p2p/16Uiu2HAmT2rqgzWYnFe7YL4poyjXvKhGtrwkhaAibSDFCjGATDZ7",
-        "/ip4/188.166.203.198/tcp/10000/p2p/16Uiu2HAmJeuEEczm6kLyBKAJQobVn7ARmGFQ5mPrbNVsjdhJz9s1",
+        "/ip4/188.166.203.198/tcp/10000/p2p/16Uiu2HAmJeuEEczm6kLyBKAJQobVn7ARmGFQ5mPrbNVsjdhJz9s1", # TODO add 2 new seeders to this list
     ]
 
     # kademlia's routing table bucket size
