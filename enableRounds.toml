@@ -10,4 +10,4 @@
 [RoundActivations]
     [RoundActivations.DisableAsyncCallV1]
         Options = []
-        Round = "18446744073709551614" # TODO compute this
+        Round = "18109712" # epoch 1258 should begin at round 18110212 (500 will be subtracted)
