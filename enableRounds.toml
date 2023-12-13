@@ -10,4 +10,4 @@
 [RoundActivations]
     [RoundActivations.DisableAsyncCallV1]
         Options = []
-        Round = "18109712" # epoch 1258 should begin at round 18110212 (500 will be subtracted)
+        Round = "18130363" # epoch 1258 should begin at round 18130863 (500 will be subtracted)
