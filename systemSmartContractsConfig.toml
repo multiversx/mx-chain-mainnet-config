@@ -17,6 +17,7 @@
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
     OwnerAddress = "erd1ze6pgefwc7mdx0rhje3h50kkgt26ut3gx8ytezndkz8fjcf96gsqsd7ugw"
+    DelegationTicker = "DEL"
 
 [GovernanceSystemSCConfig]
     OwnerAddress = "erd1qqqqqqqqqqqqqpgq0gq09608js3gje72v0yzc56k6glc852gl94sgtahk2"
