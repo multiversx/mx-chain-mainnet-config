@@ -17,7 +17,6 @@
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
     OwnerAddress = "erd1ze6pgefwc7mdx0rhje3h50kkgt26ut3gx8ytezndkz8fjcf96gsqsd7ugw"
-    DelegationTicker = "DEL"
 
 [GovernanceSystemSCConfig]
     OwnerAddress = "erd1qqqqqqqqqqqqqpgq0gq09608js3gje72v0yzc56k6glc852gl94sgtahk2"
@@ -42,3 +41,10 @@
 [DelegationSystemSCConfig]
     MinServiceFee  = 0
     MaxServiceFee  = 10000
+
+# Changing this config is not backwards compatible
+[SoftAuctionConfig]
+    TopUpStep = "10000000000000000000" # 10 EGLD
+    MinTopUp = "1000000000000000000" # 1 EGLD should be minimum
+    MaxTopUp = "32000000000000000000000000" # 32 mil EGLD
+    MaxNumberOfIterations = 100000 # 100k max number of iterations for soft auction config
