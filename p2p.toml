@@ -65,8 +65,6 @@
     InitialPeerList = [
         "/ip4/159.89.24.251/tcp/10000/p2p/16Uiu2HAm2WGUwnyg6fKTVtPMrDdhyhzhwNqUFN5qLZytQoCwN6a6",
         "/ip4/209.151.150.243/tcp/10000/p2p/16Uiu2HAkyuCWFj29ajUtKFDAUkPAj9AXqyeNe2B3yDQ4kjAD3iFx",
-        "/dns4/seed1.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAmQihd2Di6JrDCRf6bnxXEmgfFy8C3S7WDnq7WNXscfkrG", # TODO remove this in next release
-        "/dns4/seed2.mainnet.multiversx.com/tcp/10000/p2p/16Uiu2HAkxWoEwkkxMfUgi2CkxjWkZ7cccjvh4V57gxUQQC6c45N6", # TODO remove this in next release
         "/ip4/188.166.192.50/tcp/10000/p2p/16Uiu2HAmT2rqgzWYnFe7YL4poyjXvKhGtrwkhaAibSDFCjGATDZ7",
         "/ip4/188.166.203.198/tcp/10000/p2p/16Uiu2HAmJeuEEczm6kLyBKAJQobVn7ARmGFQ5mPrbNVsjdhJz9s1",
     ]
