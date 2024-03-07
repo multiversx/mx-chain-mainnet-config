@@ -291,9 +291,6 @@
     FixGasRemainingForSaveKeyValueBuiltinFunctionEnableEpoch = 1265
 
     # CurrentRandomnessOnSortingEnableEpoch represents the epoch when the current randomness on sorting is enabled
-    CurrentRandomnessOnSortingEnableEpoch = 999999
-
-    # CurrentRandomnessOnSortingEnableEpoch represents the epoch when the current randomness on sorting is enabled
     CurrentRandomnessOnSortingEnableEpoch = 2000
 
     # StakeLimitsEnableEpoch represents the epoch when stake limits on validators are enabled
