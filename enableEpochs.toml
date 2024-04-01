@@ -285,25 +285,25 @@
     FixGasRemainingForSaveKeyValueBuiltinFunctionEnableEpoch = 1265
 
     # CurrentRandomnessOnSortingEnableEpoch represents the epoch when the current randomness on sorting is enabled
-    CurrentRandomnessOnSortingEnableEpoch = 1341
+    CurrentRandomnessOnSortingEnableEpoch = 999991
 
     # StakeLimitsEnableEpoch represents the epoch when stake limits on validators are enabled
     # Should have the same value as StakingV4Step1EnableEpoch that triggers the automatic unstake operations for the queue nodes
-    StakeLimitsEnableEpoch = 1341
+    StakeLimitsEnableEpoch = 999991
 
     # StakingV4Step1EnableEpoch represents the epoch when staking v4 is initialized. This is the epoch in which
     # all nodes from staking queue are moved in the auction list
-    StakingV4Step1EnableEpoch = 1341
+    StakingV4Step1EnableEpoch = 999991
 
     # StakingV4Step2EnableEpoch represents the epoch when staking v4 is enabled. Should have a greater value than StakingV4Step1EnableEpoch.
     # From this epoch, all shuffled out nodes are moved to auction nodes. No auction nodes selection is done yet.
-    StakingV4Step2EnableEpoch = 1342
+    StakingV4Step2EnableEpoch = 999992
 
     # StakingV4Step3EnableEpoch represents the epoch in which selected nodes from auction will be distributed to waiting list
-    StakingV4Step3EnableEpoch = 1343
+    StakingV4Step3EnableEpoch = 999993
 
     # AlwaysMergeContextsInEEIEnableEpoch represents the epoch in which the EEI will always merge the contexts
-    AlwaysMergeContextsInEEIEnableEpoch = 1341
+    AlwaysMergeContextsInEEIEnableEpoch = 999991
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
@@ -319,7 +319,7 @@
         # - Enable epoch = StakingV4Step3EnableEpoch
         # - NodesToShufflePerShard = same as previous entry in MaxNodesChangeEnableEpoch
         # - MaxNumNodes = (MaxNumNodesFromPreviousEpochEnable - (numOfShards+1)*NodesToShufflePerShard)
-        { EpochEnable = 1343, MaxNumNodes = 2880, NodesToShufflePerShard = 80 },
+        { EpochEnable = 999993, MaxNumNodes = 2880, NodesToShufflePerShard = 80 },
     ]
 
 [GasSchedule]
