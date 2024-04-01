@@ -293,7 +293,7 @@
 
     # StakingV4Step1EnableEpoch represents the epoch when staking v4 is initialized. This is the epoch in which
     # all nodes from staking queue are moved in the auction list
-    StakingV4Step1EnableEpoch = 1342
+    StakingV4Step1EnableEpoch = 1341
 
     # StakingV4Step2EnableEpoch represents the epoch when staking v4 is enabled. Should have a greater value than StakingV4Step1EnableEpoch.
     # From this epoch, all shuffled out nodes are moved to auction nodes. No auction nodes selection is done yet.
