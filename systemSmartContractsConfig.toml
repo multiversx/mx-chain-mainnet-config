@@ -11,6 +11,8 @@
     MaxNumberOfNodesForStake = 2169
     UnJailValue = "2500000000000000000" #0.1% of genesis node price
     ActivateBLSPubKeyMessageVerification = true
+    StakeLimitPercentage = 1.0 #fraction of value 1 - 100%, for the time being no stake limit
+    NodeLimitPercentage = 0.03125 #fraction of value 0.1 - 10% (1600*0.03125=50)
 
 [ESDTSystemSCConfig]
     BaseIssuingCost = "5000000000000000000" #5 eGLD
@@ -27,7 +29,7 @@
     [GovernanceSystemSCConfig.Active]
         ProposalCost       = "1000000000000000000000" #1000 eGLD
         LostProposalFee    = "10000000000000000000"   #10 eGLD
-        MinQuorum          = 0.2  #fraction of value 0.2 - 20%
+        MinQuorum          = 0.2  #fraction of value 0.2  - 20%
         MinPassThreshold   = 0.5  #fraction of value 0.5  - 50%
         MinVetoThreshold   = 0.33 #fraction of value 0.33 - 33%
 
@@ -39,3 +41,10 @@
 [DelegationSystemSCConfig]
     MinServiceFee  = 0
     MaxServiceFee  = 10000
+
+# Changing this config is not backwards compatible
+[SoftAuctionConfig]
+    TopUpStep = "10000000000000000000" # 10 EGLD
+    MinTopUp = "1000000000000000000" # 1 EGLD should be minimum
+    MaxTopUp = "32000000000000000000000000" # 32 mil EGLD
+    MaxNumberOfIterations = 100000 # 100k max number of iterations for soft auction config
