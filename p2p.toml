@@ -53,7 +53,7 @@
     # To connect to other nodes, those nodes should have at least one common protocol string
     ProtocolIDs = [
         "/erd/kad/1.1.0",
-        "mvx-mainnet-main",
+        "/mvx/mainnet/1.0.0",
     ]
 
     # InitialPeerList represents the list of strings of some known nodes that will bootstrap this node
