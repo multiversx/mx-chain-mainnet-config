@@ -309,6 +309,9 @@
     # Should have the same value as StakingV4Step1EnableEpoch if the low waiting list has not happened, otherwise should have a greater value
     CleanupAuctionOnLowWaitingListEnableEpoch = 1391
 
+    # UseGasBoundedShouldFailExecutionEnableEpoch represents the epoch when use bounded gas function should fail execution in case of error
+    UseGasBoundedShouldFailExecutionEnableEpoch = 999999
+
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
         { EnableEpoch = 0, Type = "no-KOSK" },
