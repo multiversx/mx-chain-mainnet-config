@@ -305,6 +305,9 @@
     # AlwaysMergeContextsInEEIEnableEpoch represents the epoch in which the EEI will always merge the contexts
     AlwaysMergeContextsInEEIEnableEpoch = 1391
 
+    # UseGasBoundedShouldFailExecutionEnableEpoch represents the epoch when use bounded gas function should fail execution in case of error
+    UseGasBoundedShouldFailExecutionEnableEpoch = 999999
+
     # CleanupAuctionOnLowWaitingListEnableEpoch represents the epoch when duplicated data cleanup from auction list is enabled in the condition of a low waiting list
     # Should have the same value as StakingV4Step1EnableEpoch if the low waiting list has not happened, otherwise should have a greater value
     CleanupAuctionOnLowWaitingListEnableEpoch = 1391
@@ -326,6 +329,12 @@
 
     # FixRelayedBaseCostEnableEpoch represents the epoch when the fix for relayed base cost will be enabled
     FixRelayedBaseCostEnableEpoch = 999999
+
+    # MultiESDTNFTTransferAndExecuteByUserEnableEpoch represents the epoch when enshrined sovereign cross chain opcodes are enabled
+    MultiESDTNFTTransferAndExecuteByUserEnableEpoch = 9999999
+
+    # FixRelayedMoveBalanceToNonPayableSCEnableEpoch represents the epoch when the fix for relayed move balance to non payable sc will be enabled
+    FixRelayedMoveBalanceToNonPayableSCEnableEpoch = 999999
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
