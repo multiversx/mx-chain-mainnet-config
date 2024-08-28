@@ -305,12 +305,12 @@
     # AlwaysMergeContextsInEEIEnableEpoch represents the epoch in which the EEI will always merge the contexts
     AlwaysMergeContextsInEEIEnableEpoch = 1391
 
-    # UseGasBoundedShouldFailExecutionEnableEpoch represents the epoch when use bounded gas function should fail execution in case of error
-    UseGasBoundedShouldFailExecutionEnableEpoch = 999999
-
     # CleanupAuctionOnLowWaitingListEnableEpoch represents the epoch when duplicated data cleanup from auction list is enabled in the condition of a low waiting list
     # Should have the same value as StakingV4Step1EnableEpoch if the low waiting list has not happened, otherwise should have a greater value
     CleanupAuctionOnLowWaitingListEnableEpoch = 1391
+
+    # UseGasBoundedShouldFailExecutionEnableEpoch represents the epoch when use bounded gas function should fail execution in case of error
+    UseGasBoundedShouldFailExecutionEnableEpoch = 1843
 
     # DynamicESDTEnableEpoch represents the epoch when dynamic NFT feature is enabled
     DynamicESDTEnableEpoch = 999999
