@@ -310,7 +310,7 @@
     CleanupAuctionOnLowWaitingListEnableEpoch = 1391
 
     # UseGasBoundedShouldFailExecutionEnableEpoch represents the epoch when use bounded gas function should fail execution in case of error
-    UseGasBoundedShouldFailExecutionEnableEpoch = 1843
+    UseGasBoundedShouldFailExecutionEnableEpoch = 1512
 
     # DynamicESDTEnableEpoch represents the epoch when dynamic NFT feature is enabled
     DynamicESDTEnableEpoch = 9999999
