@@ -677,6 +677,9 @@
             { StartEpoch = 432, Version = "v1.4" },
             { StartEpoch = 1265, Version = "v1.5" },
         ]
+        TransferAndExecuteByUserAddresses = [ # TODO: set real contract addresses for all shards
+            "erd1qqqqqqqqqqqqqpgqr46jrxr6r2unaqh75ugd308dwx5vgnhwh47qtvepe3", #shard 0
+        ]
 
     [VirtualMachine.Querying]
         NumConcurrentVMs = 1
@@ -687,6 +690,9 @@
             { StartEpoch = 326, Version = "v1.3" },
             { StartEpoch = 432, Version = "v1.4" },
             { StartEpoch = 1265, Version = "v1.5" },
+        ]
+        TransferAndExecuteByUserAddresses = [ # TODO: set real contract addresses for all shards
+            "erd1qqqqqqqqqqqqqpgqr46jrxr6r2unaqh75ugd308dwx5vgnhwh47qtvepe3",
         ]
 
     [VirtualMachine.GasConfig]
