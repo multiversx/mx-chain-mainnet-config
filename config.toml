@@ -662,6 +662,8 @@
     MaxStateTrieLevelInMemory = 5
     MaxPeerTrieLevelInMemory = 5
     StateStatisticsEnabled = false
+    StateChangesDataAnalysis = true
+    StateChangesTypesToCollect = ["read", "write"]
 
 [BlockSizeThrottleConfig]
     MinSizeInBytes = 104857 # 104857 is 10% from 1MB
@@ -677,6 +679,9 @@
             { StartEpoch = 432, Version = "v1.4" },
             { StartEpoch = 1265, Version = "v1.5" },
         ]
+        TransferAndExecuteByUserAddresses = [ # TODO: set real contract addresses for all shards
+            "erd1qqqqqqqqqqqqqpgqr46jrxr6r2unaqh75ugd308dwx5vgnhwh47qtvepe3", #shard 0
+         ]
 
     [VirtualMachine.Querying]
         NumConcurrentVMs = 1
@@ -688,6 +693,9 @@
             { StartEpoch = 432, Version = "v1.4" },
             { StartEpoch = 1265, Version = "v1.5" },
         ]
+        TransferAndExecuteByUserAddresses = [ # TODO: set real contract addresses for all shards
+            "erd1qqqqqqqqqqqqqpgqr46jrxr6r2unaqh75ugd308dwx5vgnhwh47qtvepe3", #shard 0
+         ]
 
     [VirtualMachine.GasConfig]
         # The following values define the maximum amount of gas to be allocated for VM Queries coming from API
@@ -943,3 +951,6 @@
     # MaxRoundsOfInactivityAccepted defines the number of rounds missed by a main or higher level backup machine before
     # the current machine will take over and propose/sign blocks. Used in both single-key and multi-key modes.
     MaxRoundsOfInactivityAccepted = 3
+
+[RelayedTransactionConfig]
+    MaxTransactionsAllowed = 50
