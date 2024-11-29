@@ -386,9 +386,9 @@
 [TxDataPool]
     Name = "TxDataPool"
     Capacity = 600000
-    SizePerSender = 1000
+    SizePerSender = 5001
     SizeInBytes = 419430400 #400MB
-    SizeInBytesPerSender = 4194304 #4MB
+    SizeInBytesPerSender = 12288000 #12MB
     Type = "TxCache"
     Shards = 16
 
