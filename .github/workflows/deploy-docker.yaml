@@ -13,7 +13,7 @@ jobs:
   build-docker-image:
     strategy:
       matrix:
-        runs-on: [ubuntu-latest]
+        runs-on: [ubuntu-22.04]
     runs-on: ${{ matrix.runs-on }}
 
     steps:
