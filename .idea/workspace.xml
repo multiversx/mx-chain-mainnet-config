@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a23dac48-25ca-4514-9258-0dace2ba02f7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/api.toml" beforeDir="false" afterPath="$PROJECT_DIR$/api.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV1.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV1.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV2.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV2.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV3.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV3.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV4.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV4.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV5.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV5.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV6.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV6.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV7.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV7.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV8.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV8.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/lib/go-1.18" />
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="rc/v1.7.0" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2PKFKsAnubKhYFUKpRMeSpD57cJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Go Test.go test mx-chain-mainnet-config.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/beniamin/go/src/github.com/ElrondNetwork/mx-chain-mainnet-config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go test mx-chain-mainnet-config" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="mx-chain-mainnet-config" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.go test mx-chain-mainnet-config" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-d297c17c1fbd-85c80fddc9a6-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-243.23654.166" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-GO-243.23654.166" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
