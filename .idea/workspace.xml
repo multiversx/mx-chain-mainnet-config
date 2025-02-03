@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a23dac48-25ca-4514-9258-0dace2ba02f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/api.toml" beforeDir="false" afterPath="$PROJECT_DIR$/api.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV1.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV1.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV2.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV2.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV3.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV3.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV4.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV4.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV5.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV5.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV6.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV6.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV7.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV7.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gasSchedules/gasScheduleV8.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gasSchedules/gasScheduleV8.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
