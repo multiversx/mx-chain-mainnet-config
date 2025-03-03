@@ -30,7 +30,6 @@ WORKDIR /go/mx-chain-go/cmd/node
 # ===== SECOND STAGE ======
 FROM ubuntu:22.04
 ARG TARGETARCH
-RUN apt-get update -y && apt-get upgrade -y
 
 COPY --from=builder "/go/mx-chain-go/cmd/node" "/go/mx-chain-go/cmd/node/"
 
