@@ -38,7 +38,7 @@
         TopUpFactor = 0.5 # fraction of value 0.5 - 50%
 
     [[RewardsSettings.RewardsConfigByEpoch]]
-        EpochEnable = 9999999
+        EpochEnable = 1699
         LeaderPercentage = 0.1 #fraction of value 0.1 - 10%
         DeveloperPercentage = 0.3 #fraction of value 0.3 - 30%
         ProtocolSustainabilityPercentage = 0.1 #fraction of value 0.1 - 10%
