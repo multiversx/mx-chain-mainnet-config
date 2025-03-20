@@ -40,6 +40,12 @@
     # Make sure that this is greater than the unbonding period!
     SetGuardianEpochsDelay = 20 # 2 times the normal unstaking period
 
+# ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
+ChainParametersByEpoch = [
+    { EnableEpoch = 0, RoundDuration = 6000, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false },
+    { EnableEpoch = 9999999, RoundDuration = 6000, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false }
+]
+
 [HardwareRequirements]
     CPUFlags = ["SSE4", "SSE42"]
 
@@ -364,6 +370,10 @@
 [HeadersPoolConfig]
     MaxHeadersPerShard = 1000
     NumElementsToRemoveOnEviction = 200
+
+[ProofsPoolConfig]
+    CleanupNonceDelta = 3
+    BucketSize = 100
 
 [BadBlocksCache]
     Name = "BadBlocksCache"
@@ -949,3 +959,7 @@
     # MaxRoundsOfInactivityAccepted defines the number of rounds missed by a main or higher level backup machine before
     # the current machine will take over and propose/sign blocks. Used in both single-key and multi-key modes.
     MaxRoundsOfInactivityAccepted = 3
+
+[InterceptedDataVerifier]
+    CacheSpanInSec = 30
+    CacheExpiryInSec = 30
