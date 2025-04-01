@@ -662,7 +662,7 @@
     MaxStateTrieLevelInMemory = 5
     MaxPeerTrieLevelInMemory = 5
     StateStatisticsEnabled = false
-    StateChangesTypesToCollect = [READ, WRITE]
+    StateChangesTypesToCollect = ["READ", "WRITE"]
     StateChangesDataAnalysis = true
     StateChangesPeerAccountsEnabled = false
 
