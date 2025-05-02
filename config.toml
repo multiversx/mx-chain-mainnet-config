@@ -43,7 +43,13 @@
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
     { EnableEpoch = 0, RoundDuration = 6000, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false },
-    { EnableEpoch = 9999999, RoundDuration = 6000, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false }
+    { EnableEpoch = 9999999, RoundDuration = 6000, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false }
+]
+
+# EpochChangeGracePeriodEnableEpoch represents the configuration of different grace periods for epoch change with their activation epochs
+EpochChangeGracePeriodByEpoch = [
+    {EnableEpoch = 0, GracePeriodInRounds = 1 },
+    {EnableEpoch = 999999, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
 ]
 
 [HardwareRequirements]
@@ -187,6 +193,19 @@ ChainParametersByEpoch = [
         SizeInBytes = 20971520 #20MB
     [MetaBlockStorage.DB]
         FilePath = "MetaBlock"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 100
+        MaxOpenFiles = 10
+
+[ProofsStorage]
+    [ProofsStorage.Cache]
+        Name = "ProofsStorage"
+        Capacity = 1000
+        Type = "SizeLRU"
+        SizeInBytes = 20971520 #20MB
+    [ProofsStorage.DB]
+        FilePath = "Proofs"
         Type = "LvlDBSerial"
         BatchDelaySeconds = 2
         MaxBatchSize = 100
