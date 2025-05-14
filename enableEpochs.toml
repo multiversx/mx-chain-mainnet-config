@@ -343,7 +343,7 @@
     AndromedaEnableEpoch = 9999999
 
     # CheckBuiltInCallOnTransferValueAndFailEnableRound represents the ROUND when the check on transfer value fix is activated
-    CheckBuiltInCallOnTransferValueAndFailEnableRound = 9999999999999999999 # THIS MUST BE A ROUND
+    CheckBuiltInCallOnTransferValueAndFailEnableRound = 25184293 # THIS MUST BE A ROUND
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
