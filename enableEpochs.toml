@@ -340,7 +340,7 @@
     RelayedTransactionsV3FixESDTTransferEnableEpoch = 1671
 
     # AndromedaEnableEpoch represents the epoch when the equivalent messages and fix order for consensus features are enabled
-    AndromedaEnableEpoch = 9999999
+    AndromedaEnableEpoch = 1763
 
     # CheckBuiltInCallOnTransferValueAndFailEnableRound represents the ROUND when the check on transfer value fix is activated
     CheckBuiltInCallOnTransferValueAndFailEnableRound = 25184293 # THIS MUST BE A ROUND
@@ -373,5 +373,5 @@
         { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
         { StartEpoch = 938, FileName = "gasScheduleV7.toml" },
         { StartEpoch = 1433, FileName = "gasScheduleV8.toml" },
-        { StartEpoch = 9999999, FileName = "gasScheduleV9.toml" },
+        { StartEpoch = 1763, FileName = "gasScheduleV9.toml" },
     ]
