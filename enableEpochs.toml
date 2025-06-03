@@ -339,6 +339,12 @@
     # RelayedTransactionsV3FixESDTTransferEnableEpoch represents the epoch when the fix for relayed transactions v3 with esdt transfer will be enabled
     RelayedTransactionsV3FixESDTTransferEnableEpoch = 1671
 
+    # AndromedaEnableEpoch represents the epoch when the equivalent messages and fix order for consensus features are enabled
+    AndromedaEnableEpoch = 1763
+
+    # CheckBuiltInCallOnTransferValueAndFailEnableRound represents the ROUND when the check on transfer value fix is activated
+    CheckBuiltInCallOnTransferValueAndFailEnableRound = 25184293 # THIS MUST BE A ROUND
+
     # MaskVMInternalDependenciesErrorsEnableEpoch represents the epoch when the additional internal erorr masking in vm is enabled
     MaskVMInternalDependenciesErrorsEnableEpoch = 9999999
 
@@ -382,4 +388,5 @@
         { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
         { StartEpoch = 938, FileName = "gasScheduleV7.toml" },
         { StartEpoch = 1433, FileName = "gasScheduleV8.toml" },
+        { StartEpoch = 1763, FileName = "gasScheduleV9.toml" },
     ]
