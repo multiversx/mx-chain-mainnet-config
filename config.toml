@@ -685,8 +685,8 @@ EpochChangeGracePeriodByEpoch = [
     Version = 0  # Setting 0 means 'use default value'
 
 [StateTriesConfig]
-    SnapshotsEnabled = true
-    AccountsStatePruningEnabled = false
+    SnapshotsEnabled = false
+    AccountsStatePruningEnabled = true
     PeerStatePruningEnabled = true
     MaxStateTrieLevelInMemory = 5
     MaxPeerTrieLevelInMemory = 5
