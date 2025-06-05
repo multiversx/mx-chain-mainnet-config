@@ -110,7 +110,7 @@
 [APIPackages.hardfork]
     Routes = [
         # /hardfork/trigger will receive a trigger request from the client and propagate it for processing
-        { Name = "/trigger", Open = true }
+        { Name = "/trigger", Open = false }
     ]
 
 [APIPackages.network]
