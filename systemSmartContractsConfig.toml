@@ -20,6 +20,7 @@
 
 [GovernanceSystemSCConfig]
     OwnerAddress = "erd1qqqqqqqqqqqqqpgq0gq09608js3gje72v0yzc56k6glc852gl94sgtahk2"
+    MaxVotingDelayPeriodInEpochs = 30
     [GovernanceSystemSCConfig.V1]
         NumNodes           = 500
         ProposalCost       = "5000000000000000000" #5 eGLD

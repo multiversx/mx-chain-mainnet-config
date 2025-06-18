@@ -42,6 +42,9 @@
     DelegateVote          = 1000000
     RevokeVote            = 500000
     CloseProposal         = 1000000
+    ClearProposal         = 1000000
+    ClaimAccumulatedFees  = 1000000
+    ChangeConfig          = 50000000
     DelegationOps         = 1000000
     UnstakeTokens         = 5000000
     UnbondTokens          = 5000000
@@ -114,10 +117,10 @@
     GetCodeHash             = 10000
     IsBuiltinFunction       = 10000
     IsReservedFunctionName  = 10000
-    GetRoundTime             = 1000
-    EpochStartBlockTimeStamp = 1000
-    EpochStartBlockNonce     = 1000
-    EpochStartBlockRound     = 1000
+    GetRoundTime             = 10000
+    EpochStartBlockTimeStamp = 10000
+    EpochStartBlockNonce     = 10000
+    EpochStartBlockRound     = 10000
 
 [EthAPICost]
     UseGas              = 100
