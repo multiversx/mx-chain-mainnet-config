@@ -76,6 +76,9 @@
         # /address/:address/code-hash will return the code hash of a given account
         { Name = "/:address/code-hash", Open = true },
 
+        # address/iterate-keys will return the given num of key-value pairs for the given account. The iteration will start from the given starting state
+        { Name = "/iterate-keys", Open = true },
+
         # /address/:address/keys will return all the key-value pairs of a given account
         { Name = "/:address/keys", Open = true },
 
