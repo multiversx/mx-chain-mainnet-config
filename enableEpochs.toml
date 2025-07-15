@@ -339,6 +339,36 @@
     # RelayedTransactionsV3FixESDTTransferEnableEpoch represents the epoch when the fix for relayed transactions v3 with esdt transfer will be enabled
     RelayedTransactionsV3FixESDTTransferEnableEpoch = 1671
 
+    # AndromedaEnableEpoch represents the epoch when the equivalent messages and fix order for consensus features are enabled
+    AndromedaEnableEpoch = 1763
+
+    # CheckBuiltInCallOnTransferValueAndFailEnableRound represents the ROUND when the check on transfer value fix is activated
+    CheckBuiltInCallOnTransferValueAndFailEnableRound = 25184293 # THIS MUST BE A ROUND
+
+    # MaskVMInternalDependenciesErrorsEnableEpoch represents the epoch when the additional internal erorr masking in vm is enabled
+    MaskVMInternalDependenciesErrorsEnableEpoch = 9999999
+
+    # FixBackTransferOPCODEEnableEpoch represents the epoch when the fix for back transfers opcode will be enabled
+    FixBackTransferOPCODEEnableEpoch = 9999999
+
+    # ValidationOnGobDecodeEnableEpoch represents the epoch when validation on GobDecode will be taken into account
+    ValidationOnGobDecodeEnableEpoch = 9999999
+
+    # BarnardOpcodesEnableEpoch represents the epoch when Barnard opcodes will be enabled
+    BarnardOpcodesEnableEpoch = 9999999
+
+    # AutomaticActivationOfNodesDisableEpoch represents the epoch when automatic activation of nodes for validators is disabled
+    AutomaticActivationOfNodesDisableEpoch = 9999999
+
+    # GovernanceDisableProposeEnableEpoch represents the epoch when governance disable proposal is enabled
+    GovernanceDisableProposeEnableEpoch = 9999999
+
+    # GovernanceFixesEnableEpoch represents the epoch when governance fixes are enabled
+    GovernanceFixesEnableEpoch = 9999999
+
+    # FixGetBalanceEnableEpoch represents the epoch when get balance opcode fix will be enabled
+    FixGetBalanceEnableEpoch = 9999999
+
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
         { EnableEpoch = 0, Type = "no-KOSK" },
@@ -367,4 +397,5 @@
         { StartEpoch = 613, FileName = "gasScheduleV6.toml" },
         { StartEpoch = 938, FileName = "gasScheduleV7.toml" },
         { StartEpoch = 1433, FileName = "gasScheduleV8.toml" },
+        { StartEpoch = 1763, FileName = "gasScheduleV9.toml" },
     ]
