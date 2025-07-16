@@ -364,7 +364,7 @@
     GovernanceDisableProposeEnableEpoch = 1820
 
     # GovernanceFixesEnableEpoch represents the epoch when governance fixes are enabled
-    GovernanceFixesEnableEpoch = 1830
+    GovernanceFixesEnableEpoch = 1831
 
     # FixGetBalanceEnableEpoch represents the epoch when get balance opcode fix will be enabled
     FixGetBalanceEnableEpoch = 1820
