@@ -346,28 +346,28 @@
     CheckBuiltInCallOnTransferValueAndFailEnableRound = 25184293 # THIS MUST BE A ROUND
 
     # MaskVMInternalDependenciesErrorsEnableEpoch represents the epoch when the additional internal erorr masking in vm is enabled
-    MaskVMInternalDependenciesErrorsEnableEpoch = 9999999
+    MaskVMInternalDependenciesErrorsEnableEpoch = 1820
 
     # FixBackTransferOPCODEEnableEpoch represents the epoch when the fix for back transfers opcode will be enabled
-    FixBackTransferOPCODEEnableEpoch = 9999999
+    FixBackTransferOPCODEEnableEpoch = 1820
 
     # ValidationOnGobDecodeEnableEpoch represents the epoch when validation on GobDecode will be taken into account
-    ValidationOnGobDecodeEnableEpoch = 9999999
+    ValidationOnGobDecodeEnableEpoch = 1820
 
     # BarnardOpcodesEnableEpoch represents the epoch when Barnard opcodes will be enabled
-    BarnardOpcodesEnableEpoch = 9999999
+    BarnardOpcodesEnableEpoch = 1820
 
     # AutomaticActivationOfNodesDisableEpoch represents the epoch when automatic activation of nodes for validators is disabled
-    AutomaticActivationOfNodesDisableEpoch = 9999999
+    AutomaticActivationOfNodesDisableEpoch = 1820
 
     # GovernanceDisableProposeEnableEpoch represents the epoch when governance disable proposal is enabled
-    GovernanceDisableProposeEnableEpoch = 9999999
+    GovernanceDisableProposeEnableEpoch = 1820
 
     # GovernanceFixesEnableEpoch represents the epoch when governance fixes are enabled
-    GovernanceFixesEnableEpoch = 9999999
+    GovernanceFixesEnableEpoch = 1820
 
     # FixGetBalanceEnableEpoch represents the epoch when get balance opcode fix will be enabled
-    FixGetBalanceEnableEpoch = 9999999
+    FixGetBalanceEnableEpoch = 1820
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
