@@ -53,7 +53,7 @@ EpochChangeGracePeriodByEpoch = [
 ]
 
 [HardwareRequirements]
-    CPUFlags = ["SSE4", "SSE42"]
+    CPUFlags = []
 
 [Versions]
     DefaultVersion = "default"
