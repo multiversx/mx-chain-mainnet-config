@@ -42,9 +42,9 @@
 
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
-    { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 200, MinRoundsBetweenEpochs = 20, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false },
-    { EnableEpoch = 1763, RoundDuration = 6000, RoundsPerEpoch = 200, MinRoundsBetweenEpochs = 20, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false },
-    { EnableEpoch = 999999, RoundDuration = 600, RoundsPerEpoch = 2000, MinRoundsBetweenEpochs = 50, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false }
+    { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false },
+    { EnableEpoch = 1763, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false },
+    { EnableEpoch = 999999, RoundDuration = 600, RoundsPerEpoch = 144000, MinRoundsBetweenEpochs = 144000, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false }
 ]
 
 # EpochChangeGracePeriodEnableEpoch represents the configuration of different grace periods for epoch change with their activation epochs
@@ -664,8 +664,6 @@ EpochChangeGracePeriodByEpoch = [
 
 [EpochStartConfig]
     GenesisEpoch = 0
-    MinRoundsBetweenEpochs = 14400
-    RoundsPerEpoch         = 14400
     # Min and Max ShuffledOutRestartThreshold represents the minimum and maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
     MinShuffledOutRestartThreshold = 0.01
