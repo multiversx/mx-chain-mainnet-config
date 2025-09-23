@@ -58,3 +58,5 @@
     GasPerDataByte          = "1500"
     DataLimitForBaseCalc    = "10000"
     MaxGasPriceSetGuardian  = "2000000000"
+    BlockCapacityOverestimationFactor = 200 # 200%
+    PercentDecreaseLimitsStep = 10  # 10%
