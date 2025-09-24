@@ -369,6 +369,9 @@
     # FixGetBalanceEnableEpoch represents the epoch when get balance opcode fix will be enabled
     FixGetBalanceEnableEpoch = 1820
 
+    # SupernovaEnableEpoch represents the epoch when sub-second finality will be enabled
+    SupernovaEnableEpoch = 9999999
+
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
         { EnableEpoch = 0, Type = "no-KOSK" },
