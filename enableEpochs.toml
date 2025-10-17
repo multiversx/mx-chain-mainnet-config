@@ -370,7 +370,7 @@
     FixGetBalanceEnableEpoch = 1820
 
     # RelayedTransactionsV1V2DisableEpoch represents the epoch when relayed transactions v1 and v2 are disabled
-    RelayedTransactionsV1V2DisableEpoch = 9999999
+    RelayedTransactionsV1V2DisableEpoch = 1918
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
