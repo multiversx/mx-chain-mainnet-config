@@ -35,6 +35,9 @@
     # SyncProcessTimeInMillis is the value in milliseconds used when processing blocks while synchronizing blocks
     SyncProcessTimeInMillis = 12000
 
+    # SyncProcessTimeSupernovaInMillis is the value in milliseconds used when processing blocks while synchronizing blocks after Supernova
+    SyncProcessTimeSupernovaInMillis = 6000
+
     # SetGuardianEpochsDelay represents the delay in epochs between the execution time of the SetGuardian transaction and
     # the activation of the configured guardian.
     # Make sure that this is greater than the unbonding period!
@@ -54,15 +57,43 @@ EpochChangeGracePeriodByEpoch = [
     {EnableEpoch = 999999, GracePeriodInRounds = 100 }, # Supernova epoch comes with an even longer grace period due to round duration reduction
 ]
 
+# ProcessConfigsByEpoch represents the configuration of process configuration parameters by epoch
+ProcessConfigsByEpoch = [
+    { EnableEpoch = 0, MaxMetaNoncesBehind = 15, MaxMetaNoncesBehindForGlobalStuck = 30, MaxShardNoncesBehind = 15 },
+    { EnableEpoch = 999999, MaxMetaNoncesBehind = 75, MaxMetaNoncesBehindForGlobalStuck = 120, MaxShardNoncesBehind = 75 },
+]
+
+ProcessConfigsByRound = [
+    { EnableRound = 0, MaxRoundsWithoutNewBlockReceived = 10, MaxRoundsWithoutCommittedBlock = 10, RoundModulusTriggerWhenSyncIsStuck = 20 },
+    { EnableRound = 99999999, MaxRoundsWithoutNewBlockReceived = 100, MaxRoundsWithoutCommittedBlock = 100, RoundModulusTriggerWhenSyncIsStuck = 200 },
+]
+
+EpochStartConfigsByEpoch = [
+    { EnableEpoch = 0, GracePeriodRounds = 25, ExtraDelayForRequestBlockInfoInMilliseconds = 3000 },
+    { EnableEpoch = 999999, GracePeriodRounds = 250, ExtraDelayForRequestBlockInfoInMilliseconds = 220 },
+]
+
+EpochStartConfigsByRound = [
+    { EnableRound = 0, MaxRoundsWithoutCommittedStartInEpochBlock = 50 },
+    { EnableRound = 99999999, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
+]
+
+ConsensusConfigsByEpoch = [
+    { EnableEpoch = 0, NumRoundsToWaitBeforeSignalingChronologyStuck = 10 },
+    { EnableEpoch = 999999, NumRoundsToWaitBeforeSignalingChronologyStuck = 100 },
+]
+
 [HardwareRequirements]
     CPUFlags = []
 
 [Versions]
     DefaultVersion = "default"
     VersionsByEpochs = [
-        { StartEpoch = 0, Version = "*" },
+        { StartEpoch = 0, StartRound = 0, Version = "*" },
         # The value of StartEpoch parameter for version 2 should be the same with the ScheduledMiniBlocksEnableEpoch flag from enableEpoch.toml file
-        { StartEpoch = 613, Version = "2" },
+        { StartEpoch = 613, StartRound = 0, Version = "2" },
+        # TODO The value of StartEpoch parameter for version 3 should be the same with the SupernovaEnableEpoch flag from enableEpoch.toml file and StartRound the same with the SupernovaEnableRound flag from enableRounds.toml
+        { StartEpoch = 999999, StartRound = 99999999, Version = "3" },
     ]
     [Versions.Cache]
         Name = "VersionsCache"
@@ -208,6 +239,19 @@ EpochChangeGracePeriodByEpoch = [
         SizeInBytes = 20971520 #20MB
     [ProofsStorage.DB]
         FilePath = "Proofs"
+        Type = "LvlDBSerial"
+        BatchDelaySeconds = 2
+        MaxBatchSize = 100
+        MaxOpenFiles = 10
+
+[ExecutionResultsStorage]
+    [ExecutionResultsStorage.Cache]
+        Name = "ExecutionResultsStorage"
+        Capacity = 1000
+        Type = "SizeLRU"
+        SizeInBytes = 20971520 #20MB
+    [ExecutionResultsStorage.DB]
+        FilePath = "ExecutionResults"
         Type = "LvlDBSerial"
         BatchDelaySeconds = 2
         MaxBatchSize = 100
@@ -438,6 +482,7 @@ EpochChangeGracePeriodByEpoch = [
 
 [TxCacheBounds]
     MaxNumBytesPerSenderUpperBound = 33_554_432 #32MB
+    MaxTrackedBlocks = 100
 
 [TxCacheSelection]
     SelectionMaxNumTxs = 30000
@@ -488,6 +533,18 @@ EpochChangeGracePeriodByEpoch = [
     Capacity = 10000
     SizeInBytes = 31457280  #30MB
     Shards = 4
+
+[ExecutedMiniBlocksCache]
+    Name = "ExecutedMiniBlocksCache"
+    Capacity = 500
+    Type = "SizeLRU"
+    SizeInBytes = 52428800 # 50MB
+
+[PostProcessTransactionsCache]
+    Name = "PostProcessTransactionsCache"
+    Capacity = 250000
+    Type = "SizeLRU"
+    SizeInBytes = 104857600 # 100MB
 
 #PublicKeyPeerId represents the main cache used to map MultiversX block signing public keys to their associated peer id's.
 [PublicKeyPeerId]
@@ -684,7 +741,7 @@ EpochChangeGracePeriodByEpoch = [
 
     MinNumConnectedPeersToStart       = 6
     MinNumOfPeersToConsiderBlockValid = 6
-    ExtraDelayForRequestBlockInfoInMilliseconds = 3000
+    ExtraDelayForRequestBlockInfoInMilliseconds = 220
 
 # ResourceStats, if enabled, will output in a folder called "stats"
 # resource statistics. For example: number of active go routines, memory allocation, number of GC sweeps, etc.
@@ -1020,5 +1077,12 @@ EpochChangeGracePeriodByEpoch = [
     MaxRoundsOfInactivityAccepted = 10
 
 [InterceptedDataVerifier]
+    EnableCaching = true
     CacheSpanInSec = 30
     CacheExpiryInSec = 30
+
+[ExecutionResultInclusionEstimator]
+    # Safety margin = 110 -> 110% -> 10% buffer
+    SafetyMargin = 110
+    # Maximum execution results a single block may carry (0 = unlimited)
+    MaxResultsPerBlock = 20
