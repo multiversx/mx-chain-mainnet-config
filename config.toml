@@ -16,7 +16,7 @@
     #   "1" for Mainnet
     #   "D" for Devnet
     #   "T" for Testnet
-    ChainID = "1"
+    ChainID = "B"
 
     # MinTransactionVersion represents the minimum transaction version accepted
     MinTransactionVersion = 1
