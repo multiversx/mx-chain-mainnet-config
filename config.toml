@@ -64,8 +64,39 @@ ProcessConfigsByEpoch = [
 ]
 
 ProcessConfigsByRound = [
-    { EnableRound = 0, MaxRoundsWithoutNewBlockReceived = 10, MaxRoundsWithoutCommittedBlock = 10, RoundModulusTriggerWhenSyncIsStuck = 20, MaxSyncWithErrorsAllowed = 10, MaxRoundsToKeepUnprocessedMiniBlocks = 300, MaxRoundsToKeepUnprocessedTransactions = 300, NumFloodingRoundsFastReacting = 10, NumFloodingRoundsSlowReacting = 2, NumFloodingRoundsOutOfSpecs = 2 },
-    { EnableRound = 28742700, MaxRoundsWithoutNewBlockReceived = 100, MaxRoundsWithoutCommittedBlock = 100, RoundModulusTriggerWhenSyncIsStuck = 200, MaxSyncWithErrorsAllowed = 100, MaxRoundsToKeepUnprocessedMiniBlocks = 3000, MaxRoundsToKeepUnprocessedTransactions = 3000, NumFloodingRoundsFastReacting = 100, NumFloodingRoundsSlowReacting = 20, NumFloodingRoundsOutOfSpecs = 20 },
+    {
+    EnableRound = 0,
+    MaxRoundsWithoutNewBlockReceived = 10,
+    MaxRoundsWithoutCommittedBlock = 10,
+    RoundModulusTriggerWhenSyncIsStuck = 20,
+    MaxSyncWithErrorsAllowed = 10,
+    MaxRoundsToKeepUnprocessedMiniBlocks = 300,
+    MaxRoundsToKeepUnprocessedTransactions = 300,
+    NumFloodingRoundsFastReacting = 10,
+    NumFloodingRoundsSlowReacting = 2,
+    NumFloodingRoundsOutOfSpecs = 2,
+    # MaxConsecutiveRoundsOfRatingDecrease represents the max number of consecutive rounds in which a block is not proposed
+    # on a shard and the validators' rating could be decreased. If, for instance, a shard gets stuck for more rounds
+    # than this value, then the validators rating decrease should stop so they won't get jailed
+    MaxConsecutiveRoundsOfRatingDecrease = 600,
+    # MaxRoundsOfInactivityAccepted defines the number of rounds missed by a main or higher level backup machine before
+    # the current machine will take over and propose/sign blocks. Used in both single-key and multi-key modes.
+    MaxRoundsOfInactivityAccepted = 3
+    },
+    {
+    EnableRound = 440,
+    MaxRoundsWithoutNewBlockReceived = 100,
+    MaxRoundsWithoutCommittedBlock = 100,
+    RoundModulusTriggerWhenSyncIsStuck = 200,
+    MaxSyncWithErrorsAllowed = 100,
+    MaxRoundsToKeepUnprocessedMiniBlocks = 3000,
+    MaxRoundsToKeepUnprocessedTransactions = 3000,
+    NumFloodingRoundsFastReacting = 100,
+    NumFloodingRoundsSlowReacting = 20,
+    NumFloodingRoundsOutOfSpecs = 20,
+    MaxConsecutiveRoundsOfRatingDecrease = 6000,
+    MaxRoundsOfInactivityAccepted = 30
+    }
 ]
 
 EpochStartConfigsByEpoch = [
