@@ -38,6 +38,9 @@
     # Make sure that this is greater than the unbonding period!
     SetGuardianEpochsDelay = 20 # 2 times the normal unstaking period
 
+    # MaxProposalNonceGap defines the maximum gap allowed between the highest finalized nonce and lowest proposed nonceExpand commentComment on line R41
+    MaxProposalNonceGap = 50
+
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
     { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
