@@ -52,6 +52,11 @@ EpochChangeGracePeriodByEpoch = [
     {EnableEpoch = 1763, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
 ]
 
+[RoundCPUProfiling]
+    Enabled = false
+    RoundsPerFile = 1
+    FolderPath = "round-cpu-profiles"
+
 [HardwareRequirements]
     CPUFlags = []
 
