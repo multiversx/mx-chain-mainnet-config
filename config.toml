@@ -53,7 +53,7 @@ EpochChangeGracePeriodByEpoch = [
 ]
 
 [RoundCPUProfiling]
-    Enabled = false
+    Enabled = true
     RoundsPerFile = 1
     FolderPath = "round-cpu-profiles"
 
