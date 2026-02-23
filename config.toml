@@ -39,7 +39,7 @@
     SetGuardianEpochsDelay = 20 # 2 times the normal unstaking period
 
     # MaxProposalNonceGap defines the maximum gap allowed between the highest finalized nonce and lowest proposed nonceExpand commentComment on line R41
-    MaxProposalNonceGap = 50
+    MaxProposalNonceGap = 20
 
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
