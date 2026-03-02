@@ -238,10 +238,10 @@
         { Name = "/scrs-by-tx-hash/:txhash", Open = true },
 
         # transaction/pool/simulate-selection will simulate a selection, and it will return each selected transaction with the requested fields
-        { Name = "/pool/simulate-selection", Open = true}, # TODO[Sorin]: this should be false
+        { Name = "/pool/simulate-selection", Open = false},
 
         # transaction/pool/:address/virtual-nonce will return the virtual nonce of the account
-        { Name = "/pool/:address/virtual-nonce", Open = true},
+        { Name = "/pool/:address/virtual-nonce", Open = false},
     ]
 
 [APIPackages.block]
