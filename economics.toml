@@ -84,7 +84,7 @@
         {EnableEpoch = 613, MaxGasLimitPerBlock = "1500000000", MaxGasLimitPerMiniBlock = "250000000", MaxGasLimitPerMetaBlock = "15000000000", MaxGasLimitPerMetaMiniBlock = "250000000", MaxGasLimitPerTx = "600000000", MinGasLimit = "50000", ExtraGasLimitGuardedTx  = "50000", MaxGasHigherFactorAccepted = "10"},
         {EnableEpoch = 1820, MaxGasLimitPerBlock = "1500000000", MaxGasLimitPerMiniBlock = "250000000", MaxGasLimitPerMetaBlock = "15000000000", MaxGasLimitPerMetaMiniBlock = "250000000", MaxGasLimitPerTx = "600000000", MinGasLimit = "50000", ExtraGasLimitGuardedTx  = "50000", MaxGasHigherFactorAccepted = "2"},
         {EnableEpoch = 2031, MaxGasLimitPerBlock = "600000000", MaxGasLimitPerMiniBlock = "250000000", MaxGasLimitPerMetaBlock = "12000000000", MaxGasLimitPerMetaMiniBlock = "250000000", MaxGasLimitPerTx = "600000000", MinGasLimit = "50000", ExtraGasLimitGuardedTx  = "50000", MaxGasHigherFactorAccepted = "2"},
-    ]
+    ] # TODO[BON]: update last epoch
     MinGasPrice             = "1000000000" #will yield min tx fee of 0.00005 eGLD
     GasPriceModifier        = 0.01
     GasPerDataByte          = "1500"

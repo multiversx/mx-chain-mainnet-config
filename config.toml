@@ -43,24 +43,24 @@
 
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
-    { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
-    { EnableEpoch = 1763, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
+    { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 4800, MinRoundsBetweenEpochs = 4800, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
+    { EnableEpoch = 1763, RoundDuration = 6000, RoundsPerEpoch = 4800, MinRoundsBetweenEpochs = 4800, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
     { EnableEpoch = 2030, RoundDuration = 6000, RoundsPerEpoch = 2838, MinRoundsBetweenEpochs = 2838, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
     { EnableEpoch = 2031, RoundDuration = 600, RoundsPerEpoch = 36000, MinRoundsBetweenEpochs = 36000, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 2 }
-]
+] # TODO[BON]: update last 2 entries (EnableEpoch, RoundDuration, RoundsPerEpoch, MinRoundsBetweenEpochs)
 
 # EpochChangeGracePeriodEnableEpoch represents the configuration of different grace periods for epoch change with their activation epochs
 EpochChangeGracePeriodByEpoch = [
     {EnableEpoch = 0, GracePeriodInRounds = 1 },
     {EnableEpoch = 1763, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
     {EnableEpoch = 2031, GracePeriodInRounds = 100 }, # Supernova epoch comes with an even longer grace period due to round duration reduction
-]
+] # TODO[BON]: update last epoch
 
 # ProcessConfigsByEpoch represents the configuration of process configuration parameters by epoch
 ProcessConfigsByEpoch = [
     { EnableEpoch = 0, MaxMetaNoncesBehind = 15, MaxMetaNoncesBehindForGlobalStuck = 30, MaxShardNoncesBehind = 15 },
     { EnableEpoch = 2031, MaxMetaNoncesBehind = 75, MaxMetaNoncesBehindForGlobalStuck = 120, MaxShardNoncesBehind = 75 },
-]
+] # TODO[BON]: update last epoch
 
 ProcessConfigsByRound = [
     {
@@ -82,7 +82,7 @@ ProcessConfigsByRound = [
     NumHeadersToRequestInAdvance = 10
     },
     {
-    EnableRound = 29304600,
+    EnableRound = 29304600, # TODO[BON]: update this
     MaxRoundsWithoutNewBlockReceived = 100,
     MaxRoundsWithoutCommittedBlock = 100,
     RoundModulusTriggerWhenSyncIsStuck = 200,
@@ -99,17 +99,17 @@ ProcessConfigsByRound = [
 EpochStartConfigsByEpoch = [
     { EnableEpoch = 0, GracePeriodRounds = 25, ExtraDelayForRequestBlockInfoInMilliseconds = 3000 },
     { EnableEpoch = 2031, GracePeriodRounds = 250, ExtraDelayForRequestBlockInfoInMilliseconds = 220 },
-]
+] # TODO[BON]: update last epoch
 
 EpochStartConfigsByRound = [
     { EnableRound = 0, MaxRoundsWithoutCommittedStartInEpochBlock = 50 },
     { EnableRound = 29304600, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
-]
+] # TODO[BON]: update last round
 
 ConsensusConfigsByEpoch = [
     { EnableEpoch = 0, NumRoundsToWaitBeforeSignalingChronologyStuck = 10 },
     { EnableEpoch = 2031, NumRoundsToWaitBeforeSignalingChronologyStuck = 100 },
-]
+] # TODO[BON]: update last epoch
 
 [HardwareRequirements]
     CPUFlags = []
@@ -122,7 +122,7 @@ ConsensusConfigsByEpoch = [
         { StartEpoch = 613, StartRound = 0, Version = "2" },
         # TODO The value of StartEpoch parameter for version 3 should be the same with the SupernovaEnableEpoch flag from enableEpoch.toml file and StartRound the same with the SupernovaEnableRound flag from enableRounds.toml
         { StartEpoch = 2031, StartRound = 29304600, Version = "3" },
-    ]
+    ] # TODO[BON]: update last entry (StartEpoch, StartRound)
 
 [StoragePruning]
     # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
