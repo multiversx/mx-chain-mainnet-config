@@ -711,7 +711,7 @@ ConsensusConfigsByEpoch = [
             MaxDeviationTimeInMilliseconds = 25
 
     [[Antiflood.ConfigsByRound]]
-        Round = 29304600
+        Round = 29304600 # TODO[BON]: update this
         NumConcurrentResolverJobs = 50
         NumConcurrentResolvingTrieNodesJobs = 30
 
