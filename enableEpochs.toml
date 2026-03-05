@@ -340,7 +340,7 @@
     AndromedaEnableEpoch = 1763
 
     # SupernovaEnableEpoch represents the epoch when sub-second finality will be enabled
-    SupernovaEnableEpoch = 2031 # TODO[BON]: update this
+    SupernovaEnableEpoch = 2038 # TODO[BON]: update this
 
     # CheckBuiltInCallOnTransferValueAndFailEnableRound represents the ROUND when the check on transfer value fix is activated
     CheckBuiltInCallOnTransferValueAndFailEnableRound = 8392400 # THIS MUST BE A ROUND

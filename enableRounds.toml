@@ -13,4 +13,4 @@
         Round = "6072765" # epoch 1265 should begin at round 4801 * 1265 = 6073265 (500 will be subtracted)
     [RoundActivations.SupernovaEnableRound]
         Options = []
-        Round = "29304600" # TODO[BON]: update this
+        Round = "29434900" # TODO[BON]: update this
