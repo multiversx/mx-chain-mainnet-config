@@ -502,7 +502,7 @@ ConsensusConfigsByEpoch = [
 
 [TxDataPool]
     Name = "TxDataPool"
-    Capacity = 600000
+    Capacity = 1000000
     SizePerSender = 5000
     SizeInBytes = 419430400 #400MB
     SizeInBytesPerSender = 12288000 #12MB
