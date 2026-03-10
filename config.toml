@@ -16,7 +16,7 @@
     #   "1" for Mainnet
     #   "D" for Devnet
     #   "T" for Testnet
-    ChainID = "1"
+    ChainID = "B"
 
     # MinTransactionVersion represents the minimum transaction version accepted
     MinTransactionVersion = 1
@@ -51,6 +51,11 @@ EpochChangeGracePeriodByEpoch = [
     {EnableEpoch = 0, GracePeriodInRounds = 1 },
     {EnableEpoch = 1763, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
 ]
+
+[RoundCPUProfiling]
+    Enabled = false
+    RoundsPerFile = 1
+    FolderPath = "round-cpu-profiles"
 
 [HardwareRequirements]
     CPUFlags = []
@@ -427,7 +432,7 @@ EpochChangeGracePeriodByEpoch = [
 
 [TxDataPool]
     Name = "TxDataPool"
-    Capacity = 600000
+    Capacity = 1000000
     SizePerSender = 5000
     SizeInBytes = 419430400 #400MB
     SizeInBytesPerSender = 12288000 #12MB
@@ -664,8 +669,8 @@ EpochChangeGracePeriodByEpoch = [
 
 [EpochStartConfig]
     GenesisEpoch = 0
-    MinRoundsBetweenEpochs = 14400
-    RoundsPerEpoch         = 14400
+    MinRoundsBetweenEpochs = 4800
+    RoundsPerEpoch         = 4800
     # Min and Max ShuffledOutRestartThreshold represents the minimum and maximum duration of an epoch (in percentage) after a node which
     # has been shuffled out has to restart its process in order to start in a new shard
     MinShuffledOutRestartThreshold = 0.01

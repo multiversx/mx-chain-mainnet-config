@@ -343,7 +343,7 @@
     AndromedaEnableEpoch = 1763
 
     # CheckBuiltInCallOnTransferValueAndFailEnableRound represents the ROUND when the check on transfer value fix is activated
-    CheckBuiltInCallOnTransferValueAndFailEnableRound = 25184293 # THIS MUST BE A ROUND
+    CheckBuiltInCallOnTransferValueAndFailEnableRound = 8392400 # THIS MUST BE A ROUND
 
     # MaskVMInternalDependenciesErrorsEnableEpoch represents the epoch when the additional internal erorr masking in vm is enabled
     MaskVMInternalDependenciesErrorsEnableEpoch = 1820
