@@ -32,7 +32,7 @@
    # possible options:
    #  - "disabled" - no connection watching should be made
    #  - "print" - new connection found will be printed in the log file
-   ConnectionWatcherType = "disabled"
+   ConnectionWatcherType = "print"
 
    # OverridableConfigTomlValues represents an array of items to be overloaded inside other configuration files, which can be helpful
    # so that certain config values need to remain the same during upgrades.
