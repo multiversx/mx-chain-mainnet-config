@@ -59,7 +59,7 @@
 # This can be useful for snapshotting different stuff and also for debugging purposes.
 [BlockProcessingCutoff]
    # If set to true, the node will stop at the given coordinate
-   Enabled = true
+   Enabled = false
 
    # Mode represents the cutoff mode. possible values: "pause" or "process-error".
    # "pause" mode will halt the processing at the block with the given coordinates. Useful for snapshots/analytics
@@ -71,7 +71,7 @@
    CutoffTrigger = "round"
 
    # The minimum value of the cutoff. For example, if CutoffType is set to "round", and Value to 20, then the node will stop processing at round 20+
-   Value = 29903053
+   Value = 0
 
 # NamedIdentity represents an identity that runs nodes on the multikey
 # There can be multiple identities set on the same node, each one of them having different bls keys, just by duplicating the NamedIdentity
