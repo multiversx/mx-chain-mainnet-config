@@ -16,7 +16,7 @@
     #   "1" for Mainnet
     #   "D" for Devnet
     #   "T" for Testnet
-    ChainID = "1"
+    ChainID = "B"
 
     # MinTransactionVersion represents the minimum transaction version accepted
     MinTransactionVersion = 1
@@ -43,23 +43,23 @@
 
 # ChainParametersByEpoch defines chain operation configurable values that can be modified based on epochs
 ChainParametersByEpoch = [
-    { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
-    { EnableEpoch = 1763, RoundDuration = 6000, RoundsPerEpoch = 14400, MinRoundsBetweenEpochs = 14400, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
-    { EnableEpoch = 999999, RoundDuration = 600, RoundsPerEpoch = 144000, MinRoundsBetweenEpochs = 144000, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 2 }
-]
+    { EnableEpoch = 0, RoundDuration = 6000, RoundsPerEpoch = 4800, MinRoundsBetweenEpochs = 4800, ShardConsensusGroupSize = 63, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
+    { EnableEpoch = 1763, RoundDuration = 6000, RoundsPerEpoch = 4800, MinRoundsBetweenEpochs = 4800, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 0 },
+    { EnableEpoch = 2048, RoundDuration = 600, RoundsPerEpoch = 48000, MinRoundsBetweenEpochs = 48000, ShardConsensusGroupSize = 400, ShardMinNumNodes = 400, MetachainConsensusGroupSize = 400, MetachainMinNumNodes = 400, Hysteresis = 0.2, Adaptivity = false, Offset = 2 }
+] # TODO[BON]: update last 2 entries (EnableEpoch, RoundDuration, RoundsPerEpoch, MinRoundsBetweenEpochs)
 
 # EpochChangeGracePeriodEnableEpoch represents the configuration of different grace periods for epoch change with their activation epochs
 EpochChangeGracePeriodByEpoch = [
     {EnableEpoch = 0, GracePeriodInRounds = 1 },
     {EnableEpoch = 1763, GracePeriodInRounds = 10 }, # Andromeda epoch comes with a longer grace period
-    {EnableEpoch = 999999, GracePeriodInRounds = 100 }, # Supernova epoch comes with an even longer grace period due to round duration reduction
-]
+    {EnableEpoch = 2048, GracePeriodInRounds = 100 }, # Supernova epoch comes with an even longer grace period due to round duration reduction
+] # TODO[BON]: update last epoch
 
 # ProcessConfigsByEpoch represents the configuration of process configuration parameters by epoch
 ProcessConfigsByEpoch = [
     { EnableEpoch = 0, MaxMetaNoncesBehind = 15, MaxMetaNoncesBehindForGlobalStuck = 30, MaxShardNoncesBehind = 15 },
-    { EnableEpoch = 999999, MaxMetaNoncesBehind = 75, MaxMetaNoncesBehindForGlobalStuck = 120, MaxShardNoncesBehind = 75 },
-]
+    { EnableEpoch = 2048, MaxMetaNoncesBehind = 75, MaxMetaNoncesBehindForGlobalStuck = 120, MaxShardNoncesBehind = 75 },
+] # TODO[BON]: update last epoch
 
 ProcessConfigsByRound = [
     {
@@ -81,7 +81,7 @@ ProcessConfigsByRound = [
     NumHeadersToRequestInAdvance = 10
     },
     {
-    EnableRound = 99999999,
+    EnableRound = 29589115, # TODO[BON]: update this
     MaxRoundsWithoutNewBlockReceived = 100,
     MaxRoundsWithoutCommittedBlock = 100,
     RoundModulusTriggerWhenSyncIsStuck = 200,
@@ -97,18 +97,18 @@ ProcessConfigsByRound = [
 
 EpochStartConfigsByEpoch = [
     { EnableEpoch = 0, GracePeriodRounds = 25, ExtraDelayForRequestBlockInfoInMilliseconds = 3000 },
-    { EnableEpoch = 999999, GracePeriodRounds = 250, ExtraDelayForRequestBlockInfoInMilliseconds = 220 },
-]
+    { EnableEpoch = 2048, GracePeriodRounds = 250, ExtraDelayForRequestBlockInfoInMilliseconds = 220 },
+] # TODO[BON]: update last epoch
 
 EpochStartConfigsByRound = [
     { EnableRound = 0, MaxRoundsWithoutCommittedStartInEpochBlock = 50 },
-    { EnableRound = 99999999, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
-]
+    { EnableRound = 29589115, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
+] # TODO[BON]: update last round
 
 ConsensusConfigsByEpoch = [
     { EnableEpoch = 0, NumRoundsToWaitBeforeSignalingChronologyStuck = 10 },
-    { EnableEpoch = 999999, NumRoundsToWaitBeforeSignalingChronologyStuck = 100 },
-]
+    { EnableEpoch = 2048, NumRoundsToWaitBeforeSignalingChronologyStuck = 100 },
+] # TODO[BON]: update last epoch
 
 [HardwareRequirements]
     CPUFlags = []
@@ -120,8 +120,8 @@ ConsensusConfigsByEpoch = [
         # The value of StartEpoch parameter for version 2 should be the same with the ScheduledMiniBlocksEnableEpoch flag from enableEpoch.toml file
         { StartEpoch = 613, StartRound = 0, Version = "2" },
         # TODO The value of StartEpoch parameter for version 3 should be the same with the SupernovaEnableEpoch flag from enableEpoch.toml file and StartRound the same with the SupernovaEnableRound flag from enableRounds.toml
-        { StartEpoch = 999999, StartRound = 99999999, Version = "3" },
-    ]
+        { StartEpoch = 2048, StartRound = 29589115, Version = "3" },
+    ] # TODO[BON]: update last entry (StartEpoch, StartRound)
 
 [StoragePruning]
     # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
@@ -502,7 +502,7 @@ ConsensusConfigsByEpoch = [
 
 [TxDataPool]
     Name = "TxDataPool"
-    Capacity = 600000
+    Capacity = 2000000
     SizePerSender = 5000
     SizeInBytes = 419430400 #400MB
     SizeInBytesPerSender = 12288000 #12MB
@@ -512,6 +512,7 @@ ConsensusConfigsByEpoch = [
 [TxCacheBounds]
     MaxNumBytesPerSenderUpperBound = 33_554_432 #32MB
     MaxTrackedBlocks = 100
+    PropagationGracePeriodMs = 200
 
 [TxCacheSelection]
     SelectionMaxNumTxs = 30000
@@ -710,68 +711,68 @@ ConsensusConfigsByEpoch = [
             MaxDeviationTimeInMilliseconds = 25
 
     [[Antiflood.ConfigsByRound]]
-        Round = 99999999
+        Round = 29589115 # TODO[BON]: update this
         NumConcurrentResolverJobs = 50
-        NumConcurrentResolvingTrieNodesJobs = 3
+        NumConcurrentResolvingTrieNodesJobs = 30
 
         [Antiflood.ConfigsByRound.FastReacting]
             IntervalInSeconds = 1
             ReservedPercent   = 20.0
             [Antiflood.ConfigsByRound.FastReacting.PeerMaxInput]
-                BaseMessagesPerInterval  = 280
-                TotalSizePerInterval = 4194304 #4MB/s
+                BaseMessagesPerInterval  = 2800
+                TotalSizePerInterval = 41943040 #4MB/s
                 [Antiflood.ConfigsByRound.FastReacting.PeerMaxInput.IncreaseFactor]
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 1.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.FastReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 10000
-                ThresholdSizePerInterval = 12388608 #12MB/s
-                NumFloodingRounds = 100
+                ThresholdNumMessagesPerInterval = 100000
+                ThresholdSizePerInterval = 123886080 #12MB/s
+                NumFloodingRounds = 10
                 PeerBanDurationInSeconds = 300
 
         [Antiflood.ConfigsByRound.SlowReacting]
             IntervalInSeconds = 30
             ReservedPercent   = 20.0
             [Antiflood.ConfigsByRound.SlowReacting.PeerMaxInput]
-                BaseMessagesPerInterval = 6000
-                TotalSizePerInterval = 18874368 # 18MB/interval
+                BaseMessagesPerInterval = 60000
+                TotalSizePerInterval = 188743680 # 18MB/interval
                 [Antiflood.ConfigsByRound.SlowReacting.PeerMaxInput.IncreaseFactor]
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 0.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.SlowReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 100000
-                ThresholdSizePerInterval = 60748736 # 60MB/interval
-                NumFloodingRounds = 20
+                ThresholdNumMessagesPerInterval = 1000000
+                ThresholdSizePerInterval = 607487360 # 60MB/interval
+                NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
         [Antiflood.ConfigsByRound.OutOfSpecs]
             IntervalInSeconds = 1
             ReservedPercent   = 0.0
             [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput]
-                BaseMessagesPerInterval = 20000
-                TotalSizePerInterval = 104857600 # 100MB/interval
+                BaseMessagesPerInterval = 200000
+                TotalSizePerInterval = 504857600 # 100MB/interval
                 [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput.IncreaseFactor]
                     Threshold = 0 #if consensus size will exceed this value, then
                     Factor = 0.0     #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.OutOfSpecs.BlackList]
-                ThresholdNumMessagesPerInterval = 36000
-                ThresholdSizePerInterval = 18582912 # 18MB/interval
-                NumFloodingRounds = 20
+                ThresholdNumMessagesPerInterval = 360000
+                ThresholdSizePerInterval = 185829120 # 18MB/interval
+                NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
         [Antiflood.ConfigsByRound.PeerMaxOutput]
             [Antiflood.ConfigsByRound.PeerMaxOutput.PeerMaxInput]
-                BaseMessagesPerInterval  = 150
-                TotalSizePerInterval     = 2097152 #2MB/s
+                BaseMessagesPerInterval  = 150000
+                TotalSizePerInterval     = 309715200 #30MB/s
 
         [Antiflood.ConfigsByRound.Cache]
             Name = "Antiflood"
-            Capacity = 7000
+            Capacity = 70000
             Type = "LRU"
         [Antiflood.ConfigsByRound.Topic]
-            DefaultMaxMessagesPerSec = 15000
-            MaxMessages = [{ Topic = "shardBlocks*", NumMessagesPerSec = 30 },
-                { Topic = "metachainBlocks", NumMessagesPerSec = 30 }]
+            DefaultMaxMessagesPerSec = 150000
+            MaxMessages = [{ Topic = "shardBlocks*", NumMessagesPerSec = 300 },
+                { Topic = "metachainBlocks", NumMessagesPerSec = 300 }]
 
         [Antiflood.ConfigsByRound.TxAccumulator]
             # MaxAllowedTimeInMilliseconds is used as a time frame in which the node gathers transactions.
