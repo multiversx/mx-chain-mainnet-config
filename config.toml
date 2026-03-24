@@ -133,7 +133,7 @@ ConsensusConfigsByEpoch = [
 
     # If this flag is set to false, the node won't delete any database between epochs
     # Applicable only for observers
-    ObserverCleanOldEpochsData = false
+    ObserverCleanOldEpochsData = true
 
     # If this flag is set to false, the node won't delete the AccountsTrie database for old epochs
     # Applicable for both observers and validators
@@ -788,10 +788,10 @@ ConsensusConfigsByEpoch = [
     WebServerAntifloodEnabled = true
     # SimultaneousRequests represents the number of concurrent requests accepted by the web server
     # this is a global throttler that acts on all http connections regardless of the originating source
-    SimultaneousRequests = 100
+    SimultaneousRequests = 100000
     # SameSourceRequests defines how many requests are allowed from the same source in the specified
     # time frame (SameSourceResetIntervalInSec)
-    SameSourceRequests = 10000
+    SameSourceRequests = 100000
     # SameSourceResetIntervalInSec time frame between counter reset, in seconds
     SameSourceResetIntervalInSec = 1
     # TrieOperationsDeadlineMilliseconds represents the maximum duration that an API call targeting a trie operation
@@ -800,12 +800,12 @@ ConsensusConfigsByEpoch = [
     # GetAddressesBulkMaxSize represents the maximum number of addresses to be fetched in a bulk per API request. 0 means unlimited
     GetAddressesBulkMaxSize = 100
     # VmQueryDelayAfterStartInSec represents the number of seconds to wait when starting node before accepting vm query requests
-    VmQueryDelayAfterStartInSec = 120
+    VmQueryDelayAfterStartInSec = 30
     # EndpointsThrottlers represents a map for maximum simultaneous go routines for an endpoint
-    EndpointsThrottlers = [{ Endpoint = "/transaction/:hash", MaxNumGoRoutines = 10 },
-                           { Endpoint = "/transaction/send", MaxNumGoRoutines = 2 },
-                           { Endpoint = "/transaction/simulate", MaxNumGoRoutines = 1 },
-                           { Endpoint = "/transaction/send-multiple", MaxNumGoRoutines = 2 }]
+    EndpointsThrottlers = [{ Endpoint = "/transaction/:hash", MaxNumGoRoutines = 1000 },
+                           { Endpoint = "/transaction/send", MaxNumGoRoutines = 200 },
+                           { Endpoint = "/transaction/simulate", MaxNumGoRoutines = 1000 },
+                           { Endpoint = "/transaction/send-multiple", MaxNumGoRoutines = 200 }]
 
 [AddressPubkeyConverter]
     Length = 32
@@ -881,8 +881,8 @@ ConsensusConfigsByEpoch = [
     OutOfBoundsThreshold = 120
 
 [StateTriesConfig]
-    SnapshotsEnabled = true
-    AccountsStatePruningEnabled = false
+    SnapshotsEnabled = false
+    AccountsStatePruningEnabled = true
     PeerStatePruningEnabled = true
     MaxStateTrieLevelInMemory = 5
     MaxPeerTrieLevelInMemory = 5
@@ -917,7 +917,7 @@ ConsensusConfigsByEpoch = [
         ]
 
     [VirtualMachine.Querying]
-        NumConcurrentVMs = 1
+        NumConcurrentVMs = 10
         TimeOutForSCExecutionInMilliseconds = 10000 # 10 seconds = 10000 milliseconds
         WasmerSIGSEGVPassthrough            = false # must be false for release
         WasmVMVersions = [
@@ -933,8 +933,8 @@ ConsensusConfigsByEpoch = [
     [VirtualMachine.GasConfig]
         # The following values define the maximum amount of gas to be allocated for VM Queries coming from API
         # If set to 0, then MaxUInt64 will be used
-        ShardMaxGasPerVmQuery = 1500000000  #1.5b
-        MetaMaxGasPerVmQuery = 0  #unlimited
+        ShardMaxGasPerVmQuery = 300000000000  #1.5b
+        MetaMaxGasPerVmQuery = 300000000000  #unlimited
 
 [BuiltInFunctions]
     AutomaticCrawlerAddresses =[
@@ -1077,7 +1077,7 @@ ConsensusConfigsByEpoch = [
         MaxOpenFiles = 10
 
 [DbLookupExtensions]
-    Enabled = false
+    Enabled = true
     DbLookupMaxActivePersisters = 10
     [DbLookupExtensions.MiniblocksMetadataStorageConfig.Cache]
         Name = "DbLookupExtensions.MiniblocksMetadataStorage"

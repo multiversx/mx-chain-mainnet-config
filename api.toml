@@ -2,11 +2,11 @@
 [Logging]
     # LoggingEnabled - if this flag is set to true, then if a requests exceeds a threshold or it is unsuccessful, then
     # a log will be printed
-    LoggingEnabled = false
+    LoggingEnabled = true
 
     # ThresholdInMicroSeconds represents the maximum duration to consider a request as normal. Above this, if the LoggingEnabled
     # flag is set to true, then a log will be printed
-    ThresholdInMicroSeconds = 1000
+    ThresholdInMicroSeconds = 30000
 
 # API routes configuration
 [APIPackages]
