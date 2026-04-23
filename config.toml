@@ -968,6 +968,7 @@ EpochChangeGracePeriodByEpoch = [
     NumCrossShardPeers  = 2
     NumTotalPeers       = 3 # NumCrossShardPeers + num intra shard
     NumFullHistoryPeers = 3
+    RequestProofByNonceDelayMs = 100 # delay proof requests by nonce to allow the header to be received first
 
 [HeartbeatV2]
     PeerAuthenticationTimeBetweenSendsInSec          = 7200  # 2h
