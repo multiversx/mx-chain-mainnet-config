@@ -1,4 +1,4 @@
-FROM golang:1.26.3 AS builder
+FROM golang:1.26.5 AS builder
 LABEL maintainer="multiversx"
 
 RUN apt-get update && apt-get install -y
