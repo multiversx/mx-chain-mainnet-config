@@ -61,6 +61,29 @@ ProcessConfigsByEpoch = [
     { EnableEpoch = 999999, MaxMetaNoncesBehind = 75, MaxMetaNoncesBehindForGlobalStuck = 120, MaxShardNoncesBehind = 75 },
 ]
 
+ConsensusConfigsByRound = [
+    {
+    EnableRound = 0,
+    SubroundsTiming = [
+        { StartTime = 0.0,  EndTime = 0.05 },  # start round
+        { StartTime = 0.05, EndTime = 0.25 },  # block
+        { StartTime = 0.25, EndTime = 0.85 },  # signature
+        { StartTime = 0.85, EndTime = 0.95 },  # end round
+    ],
+    ProcessingThresholdPercent = 85
+    },
+    {
+    EnableRound = 99999999,
+    SubroundsTiming = [
+        { StartTime = 0.0,  EndTime = 0.05 },  # start round
+        { StartTime = 0.05, EndTime = 0.35 },  # block
+        { StartTime = 0.35, EndTime = 0.55 },  # signature
+        { StartTime = 0.55, EndTime = 0.95 },  # end round
+    ],
+    ProcessingThresholdPercent = 85
+    }
+]
+
 ProcessConfigsByRound = [
     {
     EnableRound = 0,
@@ -533,6 +556,7 @@ ConsensusConfigsByEpoch = [
 [TxCacheBounds]
     MaxNumBytesPerSenderUpperBound = 33_554_432 #32MB
     MaxTrackedBlocks = 100
+    PropagationGracePeriodMs = 200
 
 [TxCacheSelection]
     SelectionMaxNumTxs = 30000
