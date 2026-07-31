@@ -77,8 +77,8 @@ ConsensusConfigsByRound = [
     SubroundsTiming = [
         { StartTime = 0.0,  EndTime = 0.05 },  # start round
         { StartTime = 0.05, EndTime = 0.35 },  # block
-        { StartTime = 0.35, EndTime = 0.55 },  # signature
-        { StartTime = 0.55, EndTime = 0.95 },  # end round
+        { StartTime = 0.35, EndTime = 0.65 },  # signature
+        { StartTime = 0.65, EndTime = 0.95 },  # end round
     ],
     ProcessingThresholdPercent = 85
     }
@@ -1089,6 +1089,8 @@ ConsensusConfigsByEpoch = [
         ExtraPrintsOnShuffleOut = true
         DoProfileOnShuffleOut = true
     [Debug.EpochStart]
+        # dumps every goroutine stack on each epoch start, which stops the world and floods the log
+        # exactly while the epoch start snapshot runs; enable only when investigating goroutine leaks
         GoRoutineAnalyserEnabled = false
         ProcessDataTrieOnCommitEpoch = false
     [Debug.Process]
