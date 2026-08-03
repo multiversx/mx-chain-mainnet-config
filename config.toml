@@ -73,7 +73,7 @@ ConsensusConfigsByRound = [
     ProcessingThresholdPercent = 85
     },
     {
-    EnableRound = 99999999,
+    EnableRound = 99999999999,
     SubroundsTiming = [
         { StartTime = 0.0,  EndTime = 0.05 },  # start round
         { StartTime = 0.05, EndTime = 0.35 },  # block
@@ -104,7 +104,7 @@ ProcessConfigsByRound = [
     NumHeadersToRequestInAdvance = 10
     },
     {
-    EnableRound = 99999999,
+    EnableRound = 99999999999,
     MaxRoundsWithoutNewBlockReceived = 100,
     MaxRoundsWithoutCommittedBlock = 100,
     RoundModulusTriggerWhenSyncIsStuck = 200,
@@ -125,7 +125,7 @@ EpochStartConfigsByEpoch = [
 
 EpochStartConfigsByRound = [
     { EnableRound = 0, MaxRoundsWithoutCommittedStartInEpochBlock = 50 },
-    { EnableRound = 99999999, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
+    { EnableRound = 99999999999, MaxRoundsWithoutCommittedStartInEpochBlock = 500 },
 ]
 
 ConsensusConfigsByEpoch = [
@@ -143,7 +143,7 @@ ConsensusConfigsByEpoch = [
         # The value of StartEpoch parameter for version 2 should be the same with the ScheduledMiniBlocksEnableEpoch flag from enableEpoch.toml file
         { StartEpoch = 613, StartRound = 0, Version = "2" },
         # TODO The value of StartEpoch parameter for version 3 should be the same with the SupernovaEnableEpoch flag from enableEpoch.toml file and StartRound the same with the SupernovaEnableRound flag from enableRounds.toml
-        { StartEpoch = 999999, StartRound = 99999999, Version = "3" },
+        { StartEpoch = 999999, StartRound = 99999999999, Version = "3" },
     ]
 
 [StoragePruning]
@@ -761,7 +761,7 @@ ConsensusConfigsByEpoch = [
             MaxDeviationTimeInMilliseconds = 25
 
     [[Antiflood.ConfigsByRound]]
-        Round = 99999999
+        Round = 99999999999
         NumConcurrentResolverJobs = 50
         NumConcurrentResolvingTrieNodesJobs = 3
 
