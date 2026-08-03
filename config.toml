@@ -769,60 +769,60 @@ ConsensusConfigsByEpoch = [
             IntervalInSeconds = 1
             ReservedPercent   = 20.0
             [Antiflood.ConfigsByRound.FastReacting.PeerMaxInput]
-                BaseMessagesPerInterval  = 280
-                TotalSizePerInterval = 4194304 #4MB/s
+                BaseMessagesPerInterval  = 2800
+                TotalSizePerInterval = 41943040 # 40MB/s
                 [Antiflood.ConfigsByRound.FastReacting.PeerMaxInput.IncreaseFactor]
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 1.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.FastReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 10000
-                ThresholdSizePerInterval = 12388608 #12MB/s
-                NumFloodingRounds = 100
+                ThresholdNumMessagesPerInterval = 100000
+                ThresholdSizePerInterval = 123886080 # 120MB/s
+                NumFloodingRounds = 10
                 PeerBanDurationInSeconds = 300
 
         [Antiflood.ConfigsByRound.SlowReacting]
             IntervalInSeconds = 30
             ReservedPercent   = 20.0
             [Antiflood.ConfigsByRound.SlowReacting.PeerMaxInput]
-                BaseMessagesPerInterval = 6000
-                TotalSizePerInterval = 18874368 # 18MB/interval
+                BaseMessagesPerInterval = 60000
+                TotalSizePerInterval = 188743680 # 180MB/interval
                 [Antiflood.ConfigsByRound.SlowReacting.PeerMaxInput.IncreaseFactor]
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 0.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.SlowReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 100000
-                ThresholdSizePerInterval = 60748736 # 60MB/interval
-                NumFloodingRounds = 20
+                ThresholdNumMessagesPerInterval = 1000000
+                ThresholdSizePerInterval = 607487360 # 600MB/interval
+                NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
         [Antiflood.ConfigsByRound.OutOfSpecs]
             IntervalInSeconds = 1
             ReservedPercent   = 0.0
             [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput]
-                BaseMessagesPerInterval = 20000
-                TotalSizePerInterval = 104857600 # 100MB/interval
+                BaseMessagesPerInterval = 200000
+                TotalSizePerInterval = 1048576000 # 1000MB/interval
                 [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput.IncreaseFactor]
                     Threshold = 0 #if consensus size will exceed this value, then
                     Factor = 0.0     #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.OutOfSpecs.BlackList]
-                ThresholdNumMessagesPerInterval = 36000
-                ThresholdSizePerInterval = 18582912 # 18MB/interval
-                NumFloodingRounds = 20
+                ThresholdNumMessagesPerInterval = 360000
+                ThresholdSizePerInterval = 185829120 # 180MB/interval
+                NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
         [Antiflood.ConfigsByRound.PeerMaxOutput]
             [Antiflood.ConfigsByRound.PeerMaxOutput.PeerMaxInput]
-                BaseMessagesPerInterval  = 150
-                TotalSizePerInterval     = 2097152 #2MB/s
+                BaseMessagesPerInterval  = 150000
+                TotalSizePerInterval     = 309715200 #30MB/s
 
         [Antiflood.ConfigsByRound.Cache]
             Name = "Antiflood"
-            Capacity = 7000
+            Capacity = 70000
             Type = "LRU"
         [Antiflood.ConfigsByRound.Topic]
-            DefaultMaxMessagesPerSec = 15000
-            MaxMessages = [{ Topic = "shardBlocks*", NumMessagesPerSec = 30 },
-                { Topic = "metachainBlocks", NumMessagesPerSec = 30 }]
+            DefaultMaxMessagesPerSec = 150000
+            MaxMessages = [{ Topic = "shardBlocks*", NumMessagesPerSec = 300 },
+                { Topic = "metachainBlocks", NumMessagesPerSec = 300 }]
 
         [Antiflood.ConfigsByRound.TxAccumulator]
             # MaxAllowedTimeInMilliseconds is used as a time frame in which the node gathers transactions.
