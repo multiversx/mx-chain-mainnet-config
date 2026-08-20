@@ -768,7 +768,7 @@ ConsensusConfigsByEpoch = [
             MaxDeviationTimeInMilliseconds = 25
 
     [[Antiflood.ConfigsByRound]]
-        Round = 99999999999
+        Round = 32157661
         NumConcurrentResolverJobs = 50
         NumConcurrentResolvingTrieNodesJobs = 3
 
