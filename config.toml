@@ -58,7 +58,9 @@ EpochChangeGracePeriodByEpoch = [
 # ProcessConfigsByEpoch represents the configuration of process configuration parameters by epoch
 ProcessConfigsByEpoch = [
     { EnableEpoch = 0, MaxMetaNoncesBehind = 15, MaxMetaNoncesBehindForGlobalStuck = 30, MaxShardNoncesBehind = 15 },
-    { EnableEpoch = 999999, MaxMetaNoncesBehind = 75, MaxMetaNoncesBehindForGlobalStuck = 120, MaxShardNoncesBehind = 75 },
+    # Pre-Supernova epoch (immediately before Supernova) configuration
+    { EnableEpoch = 999999, MaxMetaNoncesBehind = 5, MaxMetaNoncesBehindForGlobalStuck = 8, MaxShardNoncesBehind = 5 },
+    { EnableEpoch = 999999, MaxMetaNoncesBehind = 15, MaxMetaNoncesBehindForGlobalStuck = 30, MaxShardNoncesBehind = 15 },
 ]
 
 ConsensusConfigsByRound = [
@@ -180,6 +182,12 @@ ConsensusConfigsByEpoch = [
     # the node removes old epochs data or not. In case of a node which removes old epochs data, this value has to be
     # smaller or equal to the NumOfEpochsToKeep flag
     NumActivePersisters = 3
+
+    # AssumedPeersNumActivePersisters represents the NumActivePersisters value the other (pruning) nodes in the
+    # network are assumed to run with. Used only to decide up to which epoch data can still be requested from
+    # regular peers. Keep in sync with the NumActivePersisters default shipped to validators/observers.
+    # A missing or 0 value falls back to the default of 3, with a warning at startup
+    AssumedPeersNumActivePersisters = 3
 
     # FullArchiveNumActivePersisters represents the number of persisters to be kept in cache as to allow better response
     # to inquiring peers. This value will get multiplied by the number of persisters required by the node to function so
@@ -573,7 +581,7 @@ ConsensusConfigsByEpoch = [
     # Ahead-of-Time transaction selection - pre-selects transactions before consensus round
     Enabled = true
     CacheSize = 10                                          # Number of pre-selection results to cache
-    SelectionTimeoutMs = 150                                # Max time for AOT selection in milliseconds
+    SelectionTimeoutMs = 100                                # Max time for AOT selection in milliseconds
 
 [TrieNodesChunksDataPool]
     Name = "TrieNodesDataPool"
@@ -776,8 +784,8 @@ ConsensusConfigsByEpoch = [
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 1.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.FastReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 100000
-                ThresholdSizePerInterval = 123886080 # 120MB/s
+                ThresholdNumMessagesPerInterval = 10000
+                ThresholdSizePerInterval = 83886080 #80MB/s
                 NumFloodingRounds = 10
                 PeerBanDurationInSeconds = 300
 
@@ -791,8 +799,8 @@ ConsensusConfigsByEpoch = [
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 0.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.SlowReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 1000000
-                ThresholdSizePerInterval = 607487360 # 600MB/interval
+                ThresholdNumMessagesPerInterval = 100000
+                ThresholdSizePerInterval = 377487360 # 360MB/interval
                 NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
@@ -800,21 +808,21 @@ ConsensusConfigsByEpoch = [
             IntervalInSeconds = 1
             ReservedPercent   = 0.0
             [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput]
-                BaseMessagesPerInterval = 200000
-                TotalSizePerInterval = 1048576000 # 1000MB/interval
+                BaseMessagesPerInterval = 20000
+                TotalSizePerInterval = 104857600 # 100MB/interval
                 [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput.IncreaseFactor]
                     Threshold = 0 #if consensus size will exceed this value, then
                     Factor = 0.0     #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.OutOfSpecs.BlackList]
-                ThresholdNumMessagesPerInterval = 360000
-                ThresholdSizePerInterval = 185829120 # 180MB/interval
+                ThresholdNumMessagesPerInterval = 36000
+                ThresholdSizePerInterval = 125829120 # 120MB/interval
                 NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
         [Antiflood.ConfigsByRound.PeerMaxOutput]
             [Antiflood.ConfigsByRound.PeerMaxOutput.PeerMaxInput]
-                BaseMessagesPerInterval  = 150000
-                TotalSizePerInterval     = 309715200 #30MB/s
+                BaseMessagesPerInterval  = 1500
+                TotalSizePerInterval     = 20971520 #20MB/s
 
         [Antiflood.ConfigsByRound.Cache]
             Name = "Antiflood"
