@@ -784,8 +784,8 @@ ConsensusConfigsByEpoch = [
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 1.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.FastReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 100000
-                ThresholdSizePerInterval = 123886080 # 120MB/s
+                ThresholdNumMessagesPerInterval = 10000
+                ThresholdSizePerInterval = 83886080 #80MB/s
                 NumFloodingRounds = 10
                 PeerBanDurationInSeconds = 300
 
@@ -799,8 +799,8 @@ ConsensusConfigsByEpoch = [
                     Threshold = 10 #if consensus size will exceed this value, then
                     Factor = 0.0   #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.SlowReacting.BlackList]
-                ThresholdNumMessagesPerInterval = 1000000
-                ThresholdSizePerInterval = 607487360 # 600MB/interval
+                ThresholdNumMessagesPerInterval = 100000
+                ThresholdSizePerInterval = 377487360 # 360MB/interval
                 NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
@@ -808,21 +808,21 @@ ConsensusConfigsByEpoch = [
             IntervalInSeconds = 1
             ReservedPercent   = 0.0
             [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput]
-                BaseMessagesPerInterval = 200000
-                TotalSizePerInterval = 1048576000 # 1000MB/interval
+                BaseMessagesPerInterval = 20000
+                TotalSizePerInterval = 104857600 # 100MB/interval
                 [Antiflood.ConfigsByRound.OutOfSpecs.PeerMaxInput.IncreaseFactor]
                     Threshold = 0 #if consensus size will exceed this value, then
                     Factor = 0.0     #increase the base value with [factor*consensus size]
             [Antiflood.ConfigsByRound.OutOfSpecs.BlackList]
-                ThresholdNumMessagesPerInterval = 360000
-                ThresholdSizePerInterval = 185829120 # 180MB/interval
+                ThresholdNumMessagesPerInterval = 36000
+                ThresholdSizePerInterval = 125829120 # 120MB/interval
                 NumFloodingRounds = 2
                 PeerBanDurationInSeconds = 3600
 
         [Antiflood.ConfigsByRound.PeerMaxOutput]
             [Antiflood.ConfigsByRound.PeerMaxOutput.PeerMaxInput]
-                BaseMessagesPerInterval  = 150000
-                TotalSizePerInterval     = 309715200 #30MB/s
+                BaseMessagesPerInterval  = 1500
+                TotalSizePerInterval     = 20971520 #20MB/s
 
         [Antiflood.ConfigsByRound.Cache]
             Name = "Antiflood"
