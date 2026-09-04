@@ -103,7 +103,10 @@ ProcessConfigsByRound = [
     # the current machine will take over and propose/sign blocks. Used in both single-key and multi-key modes.
     MaxRoundsOfInactivityAccepted = 3,
     MaxBlockProcessingTimeMs = 6000, # this is only used after Supernova
-    NumHeadersToRequestInAdvance = 10
+    NumHeadersToRequestInAdvance = 10,
+    ExtraDelayForBroadcastBlockInfoMs = 1000,
+    ExtraDelayBetweenBroadcastMbsAndTxsMs = 1000,
+    EtraDelayForRequestBlockInfoMs = 3000
     },
     {
     EnableRound = 32157661,
@@ -116,7 +119,10 @@ ProcessConfigsByRound = [
     MaxConsecutiveRoundsOfRatingDecrease = 6000,
     MaxRoundsOfInactivityAccepted = 30,
     MaxBlockProcessingTimeMs = 6000,
-    NumHeadersToRequestInAdvance = 10
+    NumHeadersToRequestInAdvance = 10,
+    ExtraDelayForBroadcastBlockInfoMs = 30,
+    ExtraDelayBetweenBroadcastMbsAndTxsMs = 50,
+    ExtraDelayForRequestBlockInfoMs = 400
     }
 ]
 
