@@ -62,6 +62,11 @@ check_nonce_grows() {
     CONTAINER_ID=$(docker ps -q  --filter ancestor=${IMAGE_NAME})
     if [ -z "${CONTAINER_ID}" ]; then
       echo "node is not running"
+      LAST_CONTAINER_ID=$(docker ps -aq --filter ancestor=${IMAGE_NAME} | head -n 1)
+      if [ -n "${LAST_CONTAINER_ID}" ]; then
+        echo "last lines from docker log:"
+        docker logs --tail 50 "${LAST_CONTAINER_ID}"
+      fi
       exit 1
     fi
 
