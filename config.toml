@@ -1013,7 +1013,7 @@ ConsensusConfigsByEpoch = [
 
 [[HardforkRoundExclusions]]
     StartRound = 33384827
-    EndRound = 0 # TODO add here
+    EndRound = 34127017 # TODO change
 
 [HardforkRecoveryCheckpoint]
     Enabled = true
@@ -1031,7 +1031,7 @@ ConsensusConfigsByEpoch = [
     ShardID = 1
     Hash = "48a9fb558d27902d96bd4e8a09c1efab5e9231f98662068b95240943595cf850"
 
-    [[HardforkRecoveryCheckpoint.Headers]]
+[[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 2
     Hash = "a0b6f4347a26b90599ae64a7ac910d87df4b55a1992611df3a57b63e65c3593c"
 
