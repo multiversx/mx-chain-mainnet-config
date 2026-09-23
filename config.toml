@@ -1011,6 +1011,31 @@ ConsensusConfigsByEpoch = [
         "erd1qqqqqqqqqqqqqpgqw0klqcd9e7srnf83katehmgsm7jneu7zawhstk3zde",
     ]
 
+[[HardforkRoundExclusions]]
+    StartRound = 33384827
+    EndRound = 0 # TODO add here
+
+[HardforkRecoveryCheckpoint]
+    Enabled = true
+    Round = 33384826
+
+[[HardforkRecoveryCheckpoint.Headers]]
+    ShardID = 4294967295
+    Hash = "1f036cc21c9cb9fde00bad869666d9dd9c6b12278b55df5e07ce67c4db8e41a6"
+
+[[HardforkRecoveryCheckpoint.Headers]]
+    ShardID = 0
+    Hash = "8c5b2e8a75ce938960b63503b98b88ca670286cb4cf60d16088ea6a7dae9f1a2"
+
+[[HardforkRecoveryCheckpoint.Headers]]
+    ShardID = 1
+    Hash = "48a9fb558d27902d96bd4e8a09c1efab5e9231f98662068b95240943595cf850"
+
+    [[HardforkRecoveryCheckpoint.Headers]]
+    ShardID = 2
+    Hash = "a0b6f4347a26b90599ae64a7ac910d87df4b55a1992611df3a57b63e65c3593c"
+
+
 [Hardfork]
     EnableTrigger = true
     EnableTriggerFromP2P = true
