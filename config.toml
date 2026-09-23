@@ -1025,7 +1025,7 @@ ConsensusConfigsByEpoch = [
 
 [[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 0
-    Hash = "8c5b2e8a75ce938960b63503b98b88ca670286cb4cf60d16088ea6a7dae9f1a2"
+    Hash = "8c5b2e8a75ce938960b63503d98b88ca670286cb4cf60d16088ea6a7dae9f1a2"
 
 [[HardforkRecoveryCheckpoint.Headers]]
     ShardID = 1
