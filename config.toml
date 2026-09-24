@@ -1013,7 +1013,11 @@ ConsensusConfigsByEpoch = [
 
 [[HardforkRoundExclusions]]
     StartRound = 33384827
-    EndRound = 54020551
+    EndRound = 34020551  # 23sep2026, aprox 19:35 UTC  ( 25 min + 4h)
+
+[[HardforkRoundExclusions]]
+    StartRound = 34047051 # 00:00 Ro time 24 sep (21:00 UTC)
+    EndRound = 34152051   # 17:30 RO time 24 sep (14:30 UTC)
 
 [HardforkRecoveryCheckpoint]
     Enabled = true
