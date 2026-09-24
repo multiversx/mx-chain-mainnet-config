@@ -1017,7 +1017,7 @@ ConsensusConfigsByEpoch = [
 
 [[HardforkRoundExclusions]]
     StartRound = 34047051 # WED, 23 Sep 2026 21:00:00 UTC
-    EndRound = 34152051   # Thu, 24 Sep 2026 14:30:00 UTC
+    EndRound = 34158051   # Thu, 24 Sep 2026 15:30:00 UTC
 
 [HardforkRecoveryCheckpoint]
     Enabled = true
