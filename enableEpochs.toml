@@ -385,11 +385,11 @@
     # AttributeExtraGasUsageEnableEpoch represents the epoch when the extra gas usage for attributes is enabled
     AttributeExtraGasUsageEnableEpoch = 2198
 
-    FixCorrectSmallIntAndGasLimitsEnableEpoch = 99999
+    FixCorrectSmallIntAndGasLimitsEnableEpoch = 9999999
 
-    FixGasCostForDynamicESDTOperationsEnableEpoch = 99999
+    FixGasCostForDynamicESDTOperationsEnableEpoch = 9999999
 
-    KeepReturnDataOnAsyncTransferCallbackEnableEpoch = 99999
+    KeepReturnDataOnAsyncTransferCallbackEnableEpoch = 9999999
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
     BLSMultiSignerEnableEpoch = [
