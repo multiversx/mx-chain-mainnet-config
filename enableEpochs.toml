@@ -387,8 +387,6 @@
 
     FixCorrectSmallIntAndGasLimitsEnableEpoch = 9999999
 
-    FixGasCostForDynamicESDTOperationsEnableEpoch = 9999999
-
     KeepReturnDataOnAsyncTransferCallbackEnableEpoch = 9999999
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
