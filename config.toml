@@ -1020,7 +1020,7 @@ ConsensusConfigsByEpoch = [
     EndRound = 34158051   # Thu, 24 Sep 2026 15:30:00 UTC
 
 [HardforkRecoveryCheckpoint]
-    Enabled = true
+    Enabled = false
     Round = 33384826
 
 [[HardforkRecoveryCheckpoint.Headers]]
