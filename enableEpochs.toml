@@ -389,6 +389,8 @@
 
     FixCorrectSmallIntAndGasLimitsEnableEpoch = 9999999
 
+    OutputRollbackOnDestContextEnableEpoch = 2243
+
     KeepReturnDataOnAsyncTransferCallbackEnableEpoch = 9999999
 
     # BLSMultiSignerEnableEpoch represents the activation epoch for different types of BLS multi-signers
