@@ -508,7 +508,7 @@ ConsensusConfigsByEpoch = [
         SizeInBytes = 104857600 #100MB
     [PeerAccountsTrieStorage.DB]
         FilePath = "PeerAccountsTrie"
-        Type = "LvlDBSerial"
+        Type = "MemoryDB"
         BatchDelaySeconds = 2
         MaxBatchSize = 1000
         MaxOpenFiles = 10
@@ -945,9 +945,10 @@ ConsensusConfigsByEpoch = [
     OutOfBoundsThreshold = 120
 
 [StateTriesConfig]
+    ImportDBPeerSnapshotRoundsInterval = 200
     SnapshotsEnabled = true
     AccountsStatePruningEnabled = false
-    PeerStatePruningEnabled = true
+    PeerStatePruningEnabled = false
     MaxStateTrieLevelInMemory = 5
     MaxPeerTrieLevelInMemory = 5
     StateStatisticsEnabled = false
