@@ -950,7 +950,7 @@ ConsensusConfigsByEpoch = [
     AccountsStatePruningEnabled = false
     PeerStatePruningEnabled = false
     MaxStateTrieLevelInMemory = 5
-    MaxPeerTrieLevelInMemory = 8
+    MaxPeerTrieLevelInMemory = 6
     StateStatisticsEnabled = false
 
 [TrieLeavesRetrieverConfig]
