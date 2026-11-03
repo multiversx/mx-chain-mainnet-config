@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8fe14c0b-e786-4594-acd5-0b10e72287cf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/home/beniamin/go/src/github.com/multiversx/mx-chain-mainnet-config" value="3KxVHZgmC88ZrruFfyLxesKDXYF" />
+    </persistenceIdMap>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="import-db-improvements" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="GoLinterSelectedExecutable" path="$USER_HOME$/bin/golangci-lint" />
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.1524566571931286E-6" />
+      <entry key="MS500" value="0.1935607557619602" />
+      <entry key="S2" value="3.5514205242315056" />
+      <entry key="S5" value="8.199257283346746" />
+      <entry key="S10" value="11.372389727977442" />
+      <entry key="S30" value="19.37995486012619" />
+      <entry key="S60" value="33.78311582041508" />
+      <entry key="M2" value="53.512480479195446" />
+      <entry key="M5" value="75.59074088702108" />
+      <entry key="M10" value="85.81922659165267" />
+      <entry key="M15" value="89.6436126998553" />
+      <entry key="M30" value="93.69871146048068" />
+      <entry key="H1" value="95.81757193267883" />
+      <entry key="H2" value="96.9007098635227" />
+      <entry key="H4" value="97.44831938674277" />
+      <entry key="D1" value="97.90776910264097" />
+      <entry key="W1" value="97.98681718075457" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0" />
+      <entry key="H1" value="1.0" />
+      <entry key="H2" value="1.0" />
+      <entry key="H4" value="1.0" />
+      <entry key="D1" value="1.0" />
+      <entry key="W1" value="1.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.003129558565001363" />
+      <entry key="MS500" value="0.4940443956158864" />
+      <entry key="S2" value="4.2654510315600795" />
+      <entry key="S5" value="9.066710524018841" />
+      <entry key="S10" value="12.302098311026839" />
+      <entry key="S30" value="20.35491670591367" />
+      <entry key="S60" value="34.76962195607727" />
+      <entry key="M2" value="54.50507091568296" />
+      <entry key="M5" value="76.58747740109261" />
+      <entry key="M10" value="86.81752505828506" />
+      <entry key="M15" value="90.64246091859047" />
+      <entry key="M30" value="94.69812632393207" />
+      <entry key="H1" value="96.81727694743044" />
+      <entry key="H2" value="97.9005617529597" />
+      <entry key="H4" value="98.44824517523179" />
+      <entry key="D1" value="98.90775671220752" />
+      <entry key="W1" value="98.98681541015569" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3KxVHV7ArELFbfN49KRTqwJPnDW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboardingV2": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.GoOptimizationToolWindowEnableInLayout.v333333": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.analysis.ui.options.defaults": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "state-analysis-tool",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/home/beniamin/go/src/github.com/multiversx/mx-chain-go-ghsa-jxmp-2m66-3mj2",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-63c95d513abe-08e7ff217c2b-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-262.11879.101" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-GO-262.11879.101" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fe14c0b-e786-4594-acd5-0b10e72287cf" name="Changes" comment="" />
+      <created>1792499118479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792499118479</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+  </component>d
+</project>
