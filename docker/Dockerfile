@@ -32,11 +32,16 @@ FROM ubuntu:22.04
 ARG TARGETARCH
 RUN apt-get update -y && apt-get upgrade -y
 
+RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin appuser
+
 COPY --from=builder "/go/mx-chain-go/cmd/node" "/go/mx-chain-go/cmd/node/"
 
 # Copy architecture-specific files
 COPY --from=builder "/lib_${TARGETARCH}/*" "/lib/"
 
+RUN chown -R appuser:appuser /go/mx-chain-go/cmd/node
+
 WORKDIR /go/mx-chain-go/cmd/node/
+USER appuser
 EXPOSE 8080
 ENTRYPOINT ["/go/mx-chain-go/cmd/node/node", "--rest-api-interface=:8080"]
