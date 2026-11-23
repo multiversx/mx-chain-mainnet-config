@@ -948,9 +948,16 @@ ConsensusConfigsByEpoch = [
     SnapshotsEnabled = true
     AccountsStatePruningEnabled = false
     PeerStatePruningEnabled = true
-    MaxStateTrieLevelInMemory = 5
-    MaxPeerTrieLevelInMemory = 5
     StateStatisticsEnabled = false
+    MaxUserTrieSizeInMemory = 524288000 # 500 MiB
+    MaxPeerTrieSizeInMemory = 104857600 # 100 MiB
+    DataTriesSizeInMemory = 524288000 # 500 MiB
+    # Each API and proposal cache has its own 125 MiB budget.
+    DataTriesSizeInMemoryForCurrentAPI = 131072000
+    DataTriesSizeInMemoryForFinalAPI = 131072000
+    DataTriesSizeInMemoryForHistoricalAPI = 131072000
+    DataTriesSizeInMemoryForProposal = 131072000
+    NumLeavesToCollapseSingleRun = 100
 
 [TrieLeavesRetrieverConfig]
     Enabled = false
